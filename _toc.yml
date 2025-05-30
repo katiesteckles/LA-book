@@ -11,7 +11,7 @@ parts:
   - glob: _pages/0.*
 
 - caption: Chapters
-  numbered: true
+  numbered: 3
   chapters:
   - file: _pages/1.0_Matrices
     sections:
@@ -37,12 +37,14 @@ parts:
     sections:
     - glob: _pages/6*
 
-- caption: "Appendices"
+  # - file: _pages/7.0_Exam_Questions
+  #   sections:
+  #   - glob: _pages/7*
+
+- caption: "Exercise Solutions"
   numbered: false
   chapters:  
-  - file: _pages/A_Exercise_solutions
-    sections:
-    - glob: _pages/A*
+  - glob: _pages/A*
 
 - caption: ""
   numbered: false

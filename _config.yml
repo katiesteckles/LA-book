@@ -8,8 +8,8 @@
 title                 : Linear Algebra
 author                : Dr Jon Shiach
 copyright             : "2024"
-logo                  : ""
-only_build_toc_files  : true
+logo                  : "_images/LA_logo.png"
+# only_build_toc_files  : true
 
 #######################################################################################
 # Execution settings
@@ -84,7 +84,6 @@ sphinx:
     mathjax3_config:
       tex:
         macros:
-          "vec": ["\\mathbf{#1}", 1]
           "adj": ["\\operatorname{adj}", 0]
   extra_extensions:
     - sphinx_proof
