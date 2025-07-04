@@ -109,7 +109,7 @@ The examples and exercises contained in this book have the solutions hidden from
 
 ````{grid-item}
 Dr Katie Steckles <br>
-Homepage: <a href="[https://jonshiach.github.io/](https://mmuintranet.mmu.ac.uk/profile/17088)" target="_blank">MMU website profile</a> <br>
+Homepage: <a href="https://mmuintranet.mmu.ac.uk/profile/17088" target="_blank">MMU website profile</a> <br>
 Email: <a href="mailto:k.steckles@mmu.ac.uk">k.steckles@mmu.ac.uk</a> <br>
 Office: 3.27 (Dalton Building)
 ````
