@@ -1,7 +1,7 @@
 
 # Introduction
 
-These are the materials that accompany the teaching of linear algebra on the first year of the Mathematics course at the Manchester Metropolitan University. Whilst these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information either on the internet or textbooks. Mathematical notation can differ between authors and these notes have been written to use notation that is most commonly found online.
+These are the materials that accompany the linear algebra part of the module Linear Algebra and Programming skills, as part of the first year of the Mathematics course at Manchester Metropolitan University. While these notes cover all of the material necessary for students to successfully pass the unit, it is advisable to seek out other sources of information - either on the internet, or in textbooks. Mathematical notation can differ between authors, and these notes have been written using notation that is commonly found elsewhere, but might have some differences.
 
 `````{grid} 1 1 2 3
 :class-container: text-center
@@ -91,7 +91,7 @@ Linear Transformations
 ````
 `````
 
-Students are advised to read through the relevant section of the lecture notes prior to attending the lecture. Do not worry about trying to understand everything when you first read through them. Reading mathematics is not like reading a novel, it often requires repeated reading of a passage before you fully grasp the concepts that are being explained. In the lectures we will explain the various topics and provide more insight than what is written in the notes.
+Students are advised to read through the relevant section of the lecture notes prior to attending the lecture. Do not worry about trying to understand everything when you first read through it. Reading mathematics is not like reading a novel: it often requires repeated reading of a passage before you fully grasp the concepts that are being explained. In the lectures we will explain the various topics and provide more insight to complement what is written in the notes.
 
 The examples and exercises contained in this book have the solutions hidden from the reader by default but can be revealed by clicking on the drop down link. Readers are advised to avoid the temptation of accessing the solutions before an attempt has been made to answer the questions.
 
@@ -100,35 +100,18 @@ The examples and exercises contained in this book have the solutions hidden from
 `````{grid}
 ````{grid-item}
 :columns: 2
-```{image} ../_images/jon_Shiach.jpeg
+```{image} ../_images/katie_steckles.jpg
 :width: 125px
 :align: left
-:alt: Jon Shiach
+:alt: Katie Steckles
 ```
 ````
 
 ````{grid-item}
-Dr Jon Shiach <br>
-Homepage: <a href="https://jonshiach.github.io/" target="_blank">jonshiach.github.io</a> <br>
-Email: <a href="mailto:j.shiach@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
-Tel: 0161 247 1515 <br>
+Dr Katie Steckles <br>
+Homepage: <a href="[https://jonshiach.github.io/](https://mmuintranet.mmu.ac.uk/profile/17088)" target="_blank">MMU website profile</a> <br>
+Email: <a href="mailto:k.steckles@mmu.ac.uk">k.steckles@mmu.ac.uk</a> <br>
 Office: 3.27 (Dalton Building)
 ````
 
-````{grid-item}
-:columns: 2
-```{image} ../_images/0_Ling_Qian.jpeg
-:width: 125px
-:align: left
-:alt: Ling Qian
-```
-````
-
-````{grid-item}
-Prof. Ling Qian <br>
-Homepage: <a href="https://www.mmu.ac.uk/staff/profile/professor-ling-qian" target="_blank">https://www.mmu.ac.uk/staff/profile/professor-ling-qian</a><br>
-Email: <a href="mailto:l.qian@mmu.ac.uk">j.shiach@mmu.ac.uk</a> <br>
-Tel: 0161 247 1548 <br>
-Office: 4.38 (Dalton Building)
-````
 `````
