@@ -103,7 +103,7 @@ The examples and exercises contained in this book have the solutions hidden from
 ```{image} ../_images/katie_steckles.jpg
 :width: 125px
 :align: left
-:alt: Katie Steckles
+:alt: Photo of Katie Steckles, a white woman with long brown hair which is partly dyed blue and pink, wearing a dark blue jumper
 ```
 ````
 
