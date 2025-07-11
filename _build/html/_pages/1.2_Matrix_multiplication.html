@@ -431,18 +431,18 @@ document.write(`
 </section>
 </div><p>For example, the following pairs of matrices can be multiplied together:</p>
 <div class="math notranslate nohighlight">
-\[ 2 \times \textcolor{red}{2} with \textcolor{red}{2} \times 2 \qquad 4 \times \textcolor{red}{3} with \textcolor{red}{3} \times 2 \qquad 3 \times \textcolor{red}{3} with \textcolor{red}{3} \times 5 \]</div>
+\[ (2 \times \textcolor{red}{2}) \cdot (\textcolor{red}{2} \times 2) \qquad (4 \times \textcolor{red}{3}) \cdot (\textcolor{red}{3} \times 2) \qquad (3 \times \textcolor{red}{3}) \cdot (\textcolor{red}{3} \times 5) \]</div>
 <p>These pairs cannot:</p>
 <div class="math notranslate nohighlight">
-\[ 2 \times \textcolor{red}{2} with \textcolor{blue}{4} \times 3 \qquad 4 \times \textcolor{red}{5} with \textcolor{blue}{3} \times 1 \qquad 1 \times \textcolor{red}{3} with \textcolor{blue}{2} \times 2 \]</div>
+\[ (2 \times \textcolor{red}{2}) \cdot (\textcolor{blue}{4} \times 3) \qquad (4 \times \textcolor{red}{5}) \cdot (\textcolor{blue}{3} \times 1) \qquad (1 \times \textcolor{red}{3}) \cdot (\textcolor{blue}{2} \times 2) \]</div>
 <p>To check whether matrix multiplication is defined for a given pair of matrices, one easy check is to write the dimensions of the matrices next to each other, e.g. underneath the matrices, and if the two inside numbers are the same, the matrix multiplication can be performed.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \underset{2 \times \textcolor{red}{2}}{\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}}
     \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} e &amp; f \\ g &amp; h \end{pmatrix}}
 \qquad
-    \underset{3 \times \textcolor{red}{2}}{\begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \end{pmatrix}}
-    \underset{\textcolor{red}{2} \times 4}{\begin{pmatrix} g &amp; h \\ i &amp; k \\ k &amp; l \\ m &amp; n \end{pmatrix}}
+    \underset{3 \times \textcolor{red}{2}}{\begin{pmatrix} a &amp; b \\ c &amp; d \\ e &amp; f \end{pmatrix}}
+    \underset{\textcolor{red}{2} \times 4}{\begin{pmatrix} g &amp; h &amp; i &amp; j \\  k &amp; l &amp; m &amp; n \end{pmatrix}}
 \end{align*} \end{split}\]</div>
 <p>Furthermore, the dimensions of the product of these two matrices is given by the two outside numbers - in the example above, we’d get a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix and a <span class="math notranslate nohighlight">\(3 \times 4\)</span> matrix.</p>
 <section id="multiplying-two-matrices">
@@ -454,7 +454,7 @@ document.write(`
     B &amp;= \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. They are <span class="math notranslate nohighlight">\(2 \times \textcolor{red}{2}\)</span> and <span class="math notranslate nohighlight">\(\textcolor{red}{2} \times 2\)</span>, so this works.</p>
-<p>Using the rule given in equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.5)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> (the <span class="math notranslate nohighlight">\((1,1)\)</span>th entry in the product) we use row <span class="math notranslate nohighlight">\(i=1\)</span> and column <span class="math notranslate nohighlight">\(j=1\)</span>. We move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>, multiplying the corresponding values and summing the result:</p>
+<p>Using the rule given in equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.5)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> (the <span class="math notranslate nohighlight">\((1,1)\)</span>th entry in the product <span class="math notranslate nohighlight">\(AB\)</span>) we use row <span class="math notranslate nohighlight">\(i=1\)</span> and column <span class="math notranslate nohighlight">\(j=1\)</span>. We move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>, multiplying the corresponding values and summing the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -472,8 +472,9 @@ document.write(`
     = \begin{pmatrix} 5 + 14 &amp; {\color{lightgray}{\square}} \\ {\color{lightgray}{\square}} &amp; {\color{lightgray}{\square}} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; {\color{lightgray}{\square}} \\ {\color{lightgray}{\square}} &amp; {\color{lightgray}{\square}} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>We can write this as:
-$<span class="math notranslate nohighlight">\( [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1 \cdot 5 + 2 \cdot 7 = 5 + 14 = 19\)</span>$</p>
+<p>We can write this as:</p>
+<div class="math notranslate nohighlight">
+\[ [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1 \cdot 5 + 2 \cdot 7 = 5 + 14 = 19\]</div>
 <p>Carrying on across the top row of our product matrix <span class="math notranslate nohighlight">\(AB\)</span>: next we need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now our row number is <span class="math notranslate nohighlight">\(i = 1\)</span> and column number is <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -562,7 +563,7 @@ $<span class="math notranslate nohighlight">\( [AB]_{11} = a_{11}b_{11} + a_{12}
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     AB &amp;= \begin{pmatrix} 1 &amp; 0 \\ -2 &amp; 3 \end{pmatrix} \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix}
-    = \begin{pmatrix} 1(2) + 0(1) &amp; 1(3) + 0(5)\\ -2(2) + 3(1) &amp; -2(3) + 3(5) \end{pmatrix} \\
+    = \begin{pmatrix} 1 \cdot 2 + 0 \cdot 1 &amp; 1 \cdot 3 + 0 \cdot 5\\ -2 \cdot 2 + 3 \cdot 1 &amp; -2 \cdot 3 + 3 \cdot 5 \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2 + 0 &amp; 3 + 0 \\ -4 + 3 &amp; -6 + 15\end{pmatrix}
     = \begin{pmatrix} 2 &amp; 3 \\ -1 &amp; 9 \end{pmatrix}
 \end{align*} \end{split}\]</div>
@@ -571,8 +572,8 @@ $<span class="math notranslate nohighlight">\( [AB]_{11} = a_{11}b_{11} + a_{12}
 \[\begin{split} \begin{align*}
     BC &amp;= \begin{pmatrix} 2 &amp; 3 \\ 1 &amp; 5 \end{pmatrix} \begin{pmatrix} 1 &amp; 1 &amp; 0 \\ 3 &amp; -2 &amp; 1 \end{pmatrix}
     = \begin{pmatrix}
-        2(1) + 3(3) &amp; 2(1) + 3(-2) &amp; 2(0) + 3(1) \\
-        1(1) + 5(3) &amp; 1(1) + 5(-2) &amp; 1(0) + 5(1)
+        2 \cdot 1 + 3 \cdot 3 &amp; 2 \cdot 1 + 3 \cdot -2 &amp; 2 \cdot 0 + 3 \cdot 1 \\
+        1 \cdot 1 + 5 \cdot 3 &amp; 1 \cdot 1 + 5 \cdot -2 &amp; 1 \cdot 0 + 5 \cdot 1
     \end{pmatrix} \\
     &amp;= \begin{pmatrix} 2+9 &amp; 2-6 &amp; 0+3 \\ 1+15 &amp; 1-10 &amp; 0+5 \end{pmatrix}
     = \begin{pmatrix}11 &amp; -4 &amp; 3 \\ 16 &amp; -9 &amp; 5 \end{pmatrix}
@@ -586,8 +587,8 @@ $<span class="math notranslate nohighlight">\( [AB]_{11} = a_{11}b_{11} + a_{12}
     \begin{pmatrix} 1 &amp; 3 \\ 1 &amp; -2 \\ 0 &amp; 1 \end{pmatrix}
     =
     \begin{pmatrix}
-        1(1) + 1(1) + 0(0) &amp; 1(3) + 1(-2) + 0(1) \\
-        3(1) + (-2)(1) + 1(0) &amp; 3(3) + (-2)(-2) + 1(1)
+        1 \cdot 1 + 1 \cdot 1 + 0 \cdot 0 &amp; 1 \cdot 3 + 1 \cdot -2 + 0 \cdot 1 \\
+        3 \cdot 1 + -2 \cdot 1 + 1 \cdot 0 &amp; 3 \cdot 3 + -2 \cdot -2 + 1 \cdot 1
     \end{pmatrix} \\
     &amp;=
     \begin{pmatrix}
