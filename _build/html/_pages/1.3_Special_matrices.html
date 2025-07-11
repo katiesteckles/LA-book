@@ -452,13 +452,23 @@ document.write(`
 <div class="proof theorem admonition" id="theorem-0">
 <span id="index-7"></span><span id="index-6"></span><span id="index-5"></span><span id="index-4"></span><span id="index-3"></span><span id="index-2"></span><p class="admonition-title"><span class="caption-number">Theorem 1.5 </span> (Properties of special matrices)</p>
 <section class="theorem-content" id="proof-content">
-<p>For any <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> and the zero matrix is the neutral element with respect to matrix addition and multiplication, i.e.,</p>
+<p>We say the zero matrix is the <strong>identity element</strong> or sometimes a <strong>neutral element</strong>, with respect to matrix addition, since it doesn’t change the matrix it’s added to: i.e., for any <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\( A + \mathbf{0} = \mathbf{0} + A = A\)</span></p></li>
+</ul>
+<p>However, for multiplication, it is not neutral:</p>
+<ul class="simple">
 <li><p><span class="math notranslate nohighlight">\( A \mathbf{0} = \mathbf{0} A = \mathbf{0}\)</span></p></li>
+</ul>
+<p>The identity matrix is called this because it’s the identity element for multiplication:</p>
+<ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(I A = A I = A\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(AA^{-1} = I\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of <span class="math notranslate nohighlight">\(A\)</span> (see <a class="reference internal" href="1.5_Inverse_matrix.html#inverse-matrix-section"><span class="std std-ref">inverse matrices</span></a>)</p></li>
+</ul>
+<p>It also allows us to define <a class="reference internal" href="1.5_Inverse_matrix.html#inverse-matrix-section"><span class="std std-ref">inverse matrices</span></a>, which we’ll cover next:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(AA^{-1} = I\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of <span class="math notranslate nohighlight">\(A\)</span></p></li>
 <li><p>If <span class="math notranslate nohighlight">\(A = A^\mathsf{T}\)</span> then <span class="math notranslate nohighlight">\(A\)</span> is a symmetric matrix</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an upper triangular matrix, then <span class="math notranslate nohighlight">\(A^\mathsf{T}\)</span> is a lower triangular matrix, and vice versa.</p></li>
 </ul>
 </section>
 </div></section>

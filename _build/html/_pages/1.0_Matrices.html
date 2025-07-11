@@ -405,7 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-matrix">1.1. Indexing a matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-entries-in-a-matrix">1.1. Labelling entries in a matrix</a></li>
 </ul>
             </nav>
         </div>
@@ -419,13 +419,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrices">
 <span id="matrices-chapter"></span><h1><span class="section-number">1. </span>Matrices<a class="headerlink" href="#matrices" title="Link to this heading">#</a></h1>
-<p id="index-0">A <strong>matrix</strong> is a rectangular array of elements which can be numbers, mathematical expressions, symbols, or even other matrices. Matrices are arranged in rows and columns and enclosed by parentheses, for example</p>
+<p id="index-0">A <strong>matrix</strong> is a rectangular array of elements which can be numbers, mathematical expressions, symbols, or even other matrices. Matrices are arranged in rows and columns and enclosed by parentheses. For example:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
     1 &amp; 2 &amp; 3 \\
     4 &amp; 5 &amp; 6
 \end{pmatrix}.\end{split}\]</div>
-<p>This matrix contains 6 elements arranged in 2 (horizontal) rows and 3 (vertical) columns. Alternative representations of matrices include using square brackets or even no brackets at all (which isn’t recommended), i.e.,</p>
+<p>This matrix contains 6 elements arranged in 2 (horizontal) rows and 3 (vertical) columns. Sometimes matrices are shown using square brackets, or even no brackets at all i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp;\begin{bmatrix}
@@ -437,10 +437,11 @@ document.write(`
         4 &amp; 5 &amp; 6
     \end{matrix}
 \end{align*} \end{split}\]</div>
+<p>It is more useful to enclose a matrix in brackets, since we often write them next to other matrices or numbers, and the brackets make it clear where the matrix starts and ends, and what size it is.</p>
 <div class="proof definition admonition" id="matrix-dimension-definition">
 <span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 1.1 </span> (Dimension of a matrix)</p>
 <section class="definition-content" id="proof-content">
-<p>The dimension or size of a matrix is expressed using <span class="math notranslate nohighlight">\(m \times n\)</span> where <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are the number of <strong>rows</strong> and <strong>columns</strong> of the matrix respectively. If <span class="math notranslate nohighlight">\(m = n\)</span> columns we say that the matrix is a square matrix.</p>
+<p>The dimension or size of a matrix is written as <span class="math notranslate nohighlight">\(m \times n\)</span>, where <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(n\)</span> are the number of <strong>rows</strong> and <strong>columns</strong> of the matrix respectively. We might say it is an “<span class="math notranslate nohighlight">\(m\)</span> by <span class="math notranslate nohighlight">\(n\)</span> matrix”. If <span class="math notranslate nohighlight">\(m = n\)</span>, so the number of rows and columns are equal we say that the matrix is a <strong>square matrix</strong>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp;\,\,\,\begin{matrix} \leftarrow &amp; \!\!\text{columns}\!\! &amp; \rightarrow \end{matrix} \\
@@ -463,10 +464,14 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>we see that <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(2\times 2\)</span> matrix, <span class="math notranslate nohighlight">\(B\)</span> is a <span class="math notranslate nohighlight">\(3 \times 2\)</span> matrix, <span class="math notranslate nohighlight">\(C\)</span> is a <span class="math notranslate nohighlight">\(1 \times 4\)</span> matrix and <span class="math notranslate nohighlight">\(D\)</span> is a <span class="math notranslate nohighlight">\(2 \times 3\)</span> matrix.</p>
 <hr class="docutils" />
-<section id="indexing-a-matrix">
-<span id="indexing-a-matrix-section"></span><h2><span class="section-number">1.1. </span>Indexing a matrix<a class="headerlink" href="#indexing-a-matrix" title="Link to this heading">#</a></h2>
-<p>Matrices are typically labeled using uppercase characters, e.g., <span class="math notranslate nohighlight">\(A\)</span>, and the elements of a matrix are labelled with the corresponding lowercase character, e.g. <span class="math notranslate nohighlight">\(a\)</span>. Individual entries of a matrix are indexed using two subscript indices <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> is the row number reading from top to bottom and <span class="math notranslate nohighlight">\(j\)</span> is the column number reading from left to right.</p>
-<p>If <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix then</p>
+<section id="labelling-entries-in-a-matrix">
+<span id="indexing-a-matrix-section"></span><h2><span class="section-number">1.1. </span>Labelling entries in a matrix<a class="headerlink" href="#labelling-entries-in-a-matrix" title="Link to this heading">#</a></h2>
+<p>Matrices are typically given names that are single uppercase characters, e.g., <span class="math notranslate nohighlight">\(A\)</span>, and the elements of a matrix are labelled with the corresponding lowercase character, e.g. <span class="math notranslate nohighlight">\(a\)</span>. The individual entries of a matrix can be indicated using two subscript indices: an entry would be denoted <span class="math notranslate nohighlight">\(a_{ij}\)</span> where <span class="math notranslate nohighlight">\(i\)</span> is the row number reading from top to bottom and <span class="math notranslate nohighlight">\(j\)</span> is the column number reading from left to right.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It will be generally useful to remember that the numbers represent <strong>rows</strong>, then <strong>columns</strong>. Come up with your own way of remembering that it’s rows first, then columns.</p>
+</div>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A =
 \begin{pmatrix}
@@ -481,7 +486,7 @@ document.write(`
 <p>For example, given the matrix</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{pmatrix} 2 &amp; 0 &amp; -3 \\ 1 &amp; 7 &amp; 4 \end{pmatrix},\end{split}\]</div>
-<p>then <span class="math notranslate nohighlight">\(a_{12} = 0\)</span>, <span class="math notranslate nohighlight">\(a_{21} = 1\)</span>, <span class="math notranslate nohighlight">\([A]_{13} = -3\)</span> and <span class="math notranslate nohighlight">\(A(2,2) = 7\)</span></p>
+<p>then we could write <span class="math notranslate nohighlight">\(a_{12} = 0\)</span>, <span class="math notranslate nohighlight">\(a_{21} = 1\)</span>, <span class="math notranslate nohighlight">\([A]_{13} = -3\)</span> and <span class="math notranslate nohighlight">\(A(2,2) = 7\)</span>.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -551,7 +556,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-a-matrix">1.1. Indexing a matrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling-entries-in-a-matrix">1.1. Labelling entries in a matrix</a></li>
 </ul>
   </nav></div>
 

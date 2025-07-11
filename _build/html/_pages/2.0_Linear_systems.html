@@ -406,7 +406,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equation-as-a-matrix-equation">2.1. Representing systems of linear equation as a matrix equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-with-determinants">2.2.1. The link with determinants</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -495,6 +498,47 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ 4(1) + 3(2) = 10, \]</div>
 <p>so we know that <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> is the solution. Whilst this approach is simple to implement for small systems of linear equations the algebra will soon become unwieldy for larger systems which is why we use the methods that are covered in this chapter.</p>
+<section id="the-link-with-determinants">
+<h3><span class="section-number">2.2.1. </span>The link with determinants<a class="headerlink" href="#the-link-with-determinants" title="Link to this heading">#</a></h3>
+<p>Consider the system of two linear equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    ax + by &amp;= e, \\
+    cx + dy &amp;= f.
+\end{align*} \end{split}\]</div>
+<p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could look to eliminate <span class="math notranslate nohighlight">\(y\)</span> by multiplying the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> to give</p>
+<div class="math notranslate nohighlight">
+\[ \frac{b}{d}c x + by = \frac{b}{d}f,\]</div>
+<p>Subtract this from the first equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    ax - \frac{b}{d}c x &amp;= e - \frac{b}{d}f \\
+    (ad - bc)x &amp;= (de - bf) \\
+    x &amp;= \frac{de - bf}{ad - bc}.
+\end{align*} \end{split}\]</div>
+<p>We can also solve for <span class="math notranslate nohighlight">\(y\)</span> by multiplying the first equation by <span class="math notranslate nohighlight">\(\dfrac{c}{a}\)</span> to give</p>
+<div class="math notranslate nohighlight">
+\[ c x + \frac{c}{a} b y = \frac{c}{a} e. \]</div>
+<p>Subtract this from the second equation</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    d y - \frac{c}{a} b y &amp;= f - \frac{c}{a} e \\
+    (ad - bc) y &amp;= af - ce \\
+    y &amp;= \frac{af - ce}{ad - bc}.
+\end{align*} \end{split}\]</div>
+<p>The denominators in the solutions to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are both <span class="math notranslate nohighlight">\(a d - b c\)</span>, so if this value is zero then the system of equations does not have a solution. If we write the system using matrices i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
+    \begin{pmatrix} x \\ y \end{pmatrix} =
+    \begin{pmatrix} e \\ f \end{pmatrix} \quad \implies \quad
+    \begin{matrix}
+        ax + by \!\!\! &amp;= e, \\
+        cx + dy \!\!\! &amp;= f.
+    \end{matrix}
+\end{align*} \end{split}\]</div>
+<p>We see that the requirement for the system to have a solution is the same as the requirement for matrix to be invertible, i.e, that the value of <span class="math notranslate nohighlight">\(ad-bc\)</span> is non-zero. We can solve systems of linear equations using inverse matrices.</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -565,7 +609,10 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equation-as-a-matrix-equation">2.1. Representing systems of linear equation as a matrix equation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-with-determinants">2.2.1. The link with determinants</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

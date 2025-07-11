@@ -422,7 +422,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="arithmetic-operations-on-matrices">
 <span id="matrix-operations-section"></span><h1><span class="section-number">1.2. </span>Arithmetic operations on matrices<a class="headerlink" href="#arithmetic-operations-on-matrices" title="Link to this heading">#</a></h1>
-<p>So far, we have given a fancy name to a rectangular array of objects and showed how we can index its elements. Now we are going to fully develop an algebra for matrices. A system, where there are operations of addition and multiplication and necessarily rules that accompany them. This system resembles that of real numbers, but we will see some differences and new concepts. For simplicity, we are going to assume that the entries of our matrices are numbers, however the developed theory applies to a broader range of objects.</p>
+<p>So far, we have given a fancy name to a rectangular array of objects and showed how we can index its elements. Matrices are important objects in mathematics, and much like numbers themselves, matrices can be added together, multiplied, and modified in different ways. We will develop an <strong>algebra</strong> for matrices - a system the matrices inhabit, with all the necessary rules and definitions. This system resembles that of real numbers, but we will see some differences and new concepts.</p>
+<p>For simplicity, we are going to assume that the entries of our matrices are numbers - however the developed theory applies to a broader range of objects, and it’s possible to define matrices with other types of object as the entries.</p>
 <section id="matrix-equality">
 <span id="index-0"></span><h2><span class="section-number">1.2.1. </span>Matrix equality<a class="headerlink" href="#matrix-equality" title="Link to this heading">#</a></h2>
 <div class="proof definition admonition" id="matrix-equality-definition">
@@ -448,23 +449,40 @@ document.write(`
 <div class="proof definition admonition" id="matrix-addition-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.3 </span> (Matrix addition and subtraction)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices. The addition or subtraction of two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A \pm B\)</span> defined by:</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices. The sum of two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A \pm B\)</span> defined by:</p>
 <div class="math notranslate nohighlight" id="equation-matrix-addition-equation">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-matrix-addition-equation" title="Link to this equation">#</a></span>\[ [A \pm B]_{ij} = a_{ij} \pm b_{ij}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>. For example, the addition or subtraction of two <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices is</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-matrix-addition-equation" title="Link to this equation">#</a></span>\[ [A + B]_{ij} = a_{ij} + b_{ij}, \]</div>
+<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>. For example, the sum of two <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrices is given by matrix addition:</p>
+<div class="math notranslate nohighlight" id="equation-matrix-addition-equation">
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-matrix-addition-equation" title="Link to this equation">#</a></span>\[ \begin{align}\begin{aligned}\begin{split} \begin{align*}
     \begin{pmatrix}
         a_{11} &amp; a_{12} \\
         a_{21} &amp; a_{22}
-    \end{pmatrix} \pm
+    \end{pmatrix} +
     \begin{pmatrix}
         b_{11} &amp; b_{12} \\
         b_{21} &amp; b_{22}
     \end{pmatrix} =
     \begin{pmatrix}
-        a_{11} \pm b_{11} &amp; a_{12} \pm b_{12} \\
-        a_{21} \pm b_{21} &amp; a_{22} \pm b_{22}
+        a_{11} + b_{11} &amp; a_{12} + b_{12} \\
+        a_{21} + b_{21} &amp; a_{22} + b_{22}
+    \end{pmatrix}.
+\end{align*} \end{split}\\Similarly, we can define the difference of two matrices using matrix subtraction: \\
+$$ [A - B]_{ij} = a_{ij} - b_{ij}, \end{aligned}\end{align} \]</div>
+<p>where <span class="math notranslate nohighlight">\(1 \leq i \leq m\)</span> and <span class="math notranslate nohighlight">\(1 \leq j \leq n\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix}
+        a_{11} &amp; a_{12} \\
+        a_{21} &amp; a_{22}
+    \end{pmatrix} -
+    \begin{pmatrix}
+        b_{11} &amp; b_{12} \\
+        b_{21} &amp; b_{22}
+    \end{pmatrix} =
+    \begin{pmatrix}
+        a_{11} - b_{11} &amp; a_{12} - b_{12} \\
+        a_{21} - b_{21} &amp; a_{22} - b_{22}
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>
@@ -496,13 +514,14 @@ document.write(`
 </div></section>
 <section id="scalar-multiplication">
 <span id="index-2"></span><h2><span class="section-number">1.2.3. </span>Scalar multiplication<a class="headerlink" href="#scalar-multiplication" title="Link to this heading">#</a></h2>
+<p><strong>Scalar</strong> is a term used to denote a value drawn from the same set we use for the entries in a matrix. Here, since we’re working with matrices of numbers, we can think of a scalar as simply a single number.</p>
 <div class="proof definition admonition" id="scalar-multiplication-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.4 </span> (Scalar multiplication)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a matrix and <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> be a scalar. The <strong>scalar multiplication</strong> <span class="math notranslate nohighlight">\(kA\)</span> is defined by</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> be a matrix and <span class="math notranslate nohighlight">\(k \in \mathbb{R}\)</span> be a scalar. The product of the scalar and the matrix, <span class="math notranslate nohighlight">\(kA\)</span>, can be found using <strong>scalar multiplication</strong>, defined as:</p>
 <div class="math notranslate nohighlight" id="equation-matrix-scalar-multiplication-equation">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-matrix-scalar-multiplication-equation" title="Link to this equation">#</a></span>\[ [kA]_{ij} = ka_{ij}, \]</div>
-<p>i.e.,</p>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-matrix-scalar-multiplication-equation" title="Link to this equation">#</a></span>\[ [kA]_{ij} = k\cdot a_{ij}, \]</div>
+<p>i.e., we multiply each element in the matrix by the scalar.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     k
@@ -523,7 +542,7 @@ document.write(`
 </div><div class="proof theorem admonition" id="properties-of-scalar-multiplication-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 1.2 </span> (Properties of scalar multiplication)</p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices and <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span> are scalars then</p>
+<p>Let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be two <span class="math notranslate nohighlight">\(m \times n\)</span> matrices, and <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(\ell\)</span> be two scalars. Then</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(kA = Ak\)</span>    (commutative)</p></li>
 <li><p><span class="math notranslate nohighlight">\(k (A + B) = kA + kB\)</span>    (distributive over matrix addition)</p></li>
@@ -556,9 +575,9 @@ document.write(`
 <div class="proof definition admonition" id="matrix-transpose-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.5 </span> (Matrix transpose)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>transpose</strong> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(n \times m\)</span> matrix denoted by <span class="math notranslate nohighlight">\(A^\mathsf{T}\)</span> formed by switching the rows and columns of <span class="math notranslate nohighlight">\(A\)</span>, i.e.,</p>
+<p>The <strong>transpose</strong> of an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times m\)</span> matrix denoted by <span class="math notranslate nohighlight">\(A^\mathsf{T}\)</span> formed by switching the rows and columns of <span class="math notranslate nohighlight">\(A\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-matrix-transpose-equation">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-matrix-transpose-equation" title="Link to this equation">#</a></span>\[ [A^\mathsf{T}]_{ij}=a_{ji}. \]</div>
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-matrix-transpose-equation" title="Link to this equation">#</a></span>\[ [A^\mathsf{T}]_{ij}=a_{ji}. \]</div>
 </section>
 </div><p>Transposing a matrix switches the rows and columns around so that row <span class="math notranslate nohighlight">\(i\)</span> becomes column <span class="math notranslate nohighlight">\(i\)</span> and column <span class="math notranslate nohighlight">\(j\)</span> becomes row <span class="math notranslate nohighlight">\(j\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
@@ -576,6 +595,20 @@ document.write(`
         a_{1n} &amp; a_{2n} &amp; \cdots &amp; a_{mn}
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
+<p>For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \begin{pmatrix}
+        \textcolor{blue}{2} &amp; \textcolor{blue}{0} &amp; \textcolor{blue}{3} \\
+        4 &amp; 1 &amp; 5 \\
+    \end{pmatrix}^\mathsf{T} =
+    \begin{pmatrix}
+        \textcolor{blue}{2} &amp; 4 \\
+        \textcolor{blue}{0} &amp; 1 \\
+        \textcolor{blue}{3} &amp; 5
+    \end{pmatrix}.
+\end{align*} \end{split}\]</div>
+<p>Note that what was previously the first row of the matrix is now the first column, and so on. The number of rows and columns in the matrix have been swapped.</p>
 <div class="proof theorem admonition" id="properties-of-matrix-transpose-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 1.3 </span> (Properties of matrix transpose)</p>
 <section class="theorem-content" id="proof-content">
@@ -584,7 +617,6 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\((A^\mathsf{T})^\mathsf{T} = A\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((A + B)^\mathsf{T} = A^\mathsf{T} + B^\mathsf{T}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\((k A)^\mathsf{T} = k (A^\mathsf{T})\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\((AB)^\mathsf{T} = B^\mathsf{T}A^\mathsf{T}\)</span>    (the product of two matrices is defined in the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-section"><span class="std std-ref">following section</span></a>)</p></li>
 </ul>
 </section>
 </div><div class="proof example admonition" id="matrix-transpose-example">

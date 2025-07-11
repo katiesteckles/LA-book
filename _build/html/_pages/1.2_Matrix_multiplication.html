@@ -405,7 +405,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.3.1. Matrix exponents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-two-matrices">1.3.1. Multiplying two matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.3.2. Matrix exponents</a></li>
 </ul>
             </nav>
         </div>
@@ -419,31 +420,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrix-multiplication">
 <span id="index-0"></span><span id="matrix-multiplication-section"></span><h1><span class="section-number">1.3. </span>Matrix multiplication<a class="headerlink" href="#matrix-multiplication" title="Link to this heading">#</a></h1>
-<p>We saw in the <a class="reference internal" href="1.1_Matrix_operations.html#matrix-operations-section"><span class="std std-ref">previous section</span></a> that we can perform the arithmetic operations of addition, subtraction and multiplication by a scalar on matrices. Here we will look at multiplication of two matrices.</p>
+<p>We saw in the <a class="reference internal" href="1.1_Matrix_operations.html#matrix-operations-section"><span class="std std-ref">previous section</span></a> that we can perform the arithmetic operations of addition and subtraction on matrices, and multiply a matrix by a scalar. Here we will look at multiplication of two matrices.</p>
 <div class="proof definition admonition" id="matrix-multiplication-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.6 </span> (Matrix multiplication)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be an <span class="math notranslate nohighlight">\(m \times n\)</span> matrix and <span class="math notranslate nohighlight">\(B\)</span> a <span class="math notranslate nohighlight">\(p \times q\)</span> matrix, the product <span class="math notranslate nohighlight">\(AB\)</span> is defined as</p>
 <div class="math notranslate nohighlight" id="equation-matrix-multiplication-equation">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-matrix-multiplication-equation" title="Link to this equation">#</a></span>\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-matrix-multiplication-equation" title="Link to this equation">#</a></span>\[ [AB]_{ij} = \sum_{k=1}^n a_{ik}b_{kj}. \]</div>
 <p>The product <span class="math notranslate nohighlight">\(AB\)</span> is only defined if the number of columns in the first matrix is the same as the number of rows in the second matrix, i.e., <span class="math notranslate nohighlight">\(n = p\)</span>, and the resulting matrix has the same number of rows as the first matrix and the same number of columns of the second matrix, i.e., a <span class="math notranslate nohighlight">\(m \times q\)</span> matrix.</p>
 </section>
-</div><p>The technique used to multiply two matrices together requires us to move across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply corresponding elements together and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
+</div><p>For example, the following pairs of matrices can be multiplied together:</p>
+<div class="math notranslate nohighlight">
+\[ 2 \times \textcolor{red}{2} with \textcolor{red}{2} \times 2 \qquad 4 \times \textcolor{red}{3} with \textcolor{red}{3} \times 2 \qquad 3 \times \textcolor{red}{3} with \textcolor{red}{3} \times 5 \]</div>
+<p>These pairs cannot:</p>
+<div class="math notranslate nohighlight">
+\[ 2 \times \textcolor{red}{2} with \textcolor{blue}{4} \times 3 \qquad 4 \times \textcolor{red}{5} with \textcolor{blue}{3} \times 1 \qquad 1 \times \textcolor{red}{3} with \textcolor{blue}{2} \times 2 \]</div>
+<p>To check whether matrix multiplication is defined for a given pair of matrices, one easy check is to write the dimensions of the matrices next to each other, e.g. underneath the matrices, and if the two inside numbers are the same, the matrix multiplication can be performed.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    \underset{2 \times \textcolor{red}{2}}{\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}}
+    \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} e &amp; f \\ g &amp; h \end{pmatrix}}
+\qquad
+    \underset{3 \times \textcolor{red}{2}}{\begin{pmatrix} a &amp; b &amp; c \\ d &amp; e &amp; f \end{pmatrix}}
+    \underset{\textcolor{red}{2} \times 4}{\begin{pmatrix} g &amp; h \\ i &amp; k \\ k &amp; l \\ m &amp; n \end{pmatrix}}
+\end{align*} \end{split}\]</div>
+<p>Furthermore, the dimensions of the product of these two matrices is given by the two outside numbers - in the example above, we’d get a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix and a <span class="math notranslate nohighlight">\(3 \times 4\)</span> matrix.</p>
+<section id="multiplying-two-matrices">
+<h2><span class="section-number">1.3.1. </span>Multiplying two matrices<a class="headerlink" href="#multiplying-two-matrices" title="Link to this heading">#</a></h2>
+<p>The technique used to multiply two matrices together requires us to work across the horizontal rows of the first matrix (the <span class="math notranslate nohighlight">\(i\)</span> index) and down the vertical columns of the second matrix (the <span class="math notranslate nohighlight">\(j\)</span> index). We multiply the corresponding elements together, and sum the result. For example, consider the multiplication of the two <span class="math notranslate nohighlight">\(2\times 2\)</span> matrices <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> given below</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= \begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}, &amp;
     B &amp;= \begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. An easy way to do this is to write the dimensions of the matrix underneath, e.g.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \begin{align*}
-    AB = \underset{2 \times \textcolor{red}{2}}{\begin{pmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{pmatrix}}
-    \underset{\textcolor{red}{2} \times 2}{\begin{pmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{pmatrix}}.
-\end{align*} \end{split}\]</div>
-<p>Here the two inside numbers are the same, so this matrix multiplication is defined. Furthermore, the dimensions of the product of these two matrices is given by the two outside numbers. Using equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.4)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> we have <span class="math notranslate nohighlight">\(i=1\)</span> and <span class="math notranslate nohighlight">\(j=1\)</span> so move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>, multiplying the corresponding values and summing the result</p>
-<div class="math notranslate nohighlight">
-\[ [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1(5) + 2(7) = 5 + 14 = 19. \]</div>
-<p>So we have</p>
+<p>The first thing we need to do is check whether matrix multiplication is defined for these matrices. They are <span class="math notranslate nohighlight">\(2 \times \textcolor{red}{2}\)</span> and <span class="math notranslate nohighlight">\(\textcolor{red}{2} \times 2\)</span>, so this works.</p>
+<p>Using the rule given in equation <a class="reference internal" href="#equation-matrix-multiplication-equation">(1.5)</a>, to calculate <span class="math notranslate nohighlight">\([AB]_{11}\)</span> (the <span class="math notranslate nohighlight">\((1,1)\)</span>th entry in the product) we use row <span class="math notranslate nohighlight">\(i=1\)</span> and column <span class="math notranslate nohighlight">\(j=1\)</span>. We move through the elements from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span>, multiplying the corresponding values and summing the result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -455,16 +466,15 @@ document.write(`
         {\color{red}{7}} &amp; {\color{lightgray}{8}}
     \end{pmatrix} =
     \begin{pmatrix}
-        {\color{blue}{1}} ({\color{red}{5}}) + {\color{blue}{2}} ({\color{red}{7}}) &amp; {\color{lightgray}{\square}} \\
+        {\color{blue}{1}} \cdot {\color{red}{5}} + {\color{blue}{2}} \cdot {\color{red}{7}} &amp; {\color{lightgray}{\square}} \\
         {\color{lightgray}{\square}} &amp; {\color{lightgray}{\square}}
     \end{pmatrix}
     = \begin{pmatrix} 5 + 14 &amp; {\color{lightgray}{\square}} \\ {\color{lightgray}{\square}} &amp; {\color{lightgray}{\square}} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; {\color{lightgray}{\square}} \\ {\color{lightgray}{\square}} &amp; {\color{lightgray}{\square}} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Moving across the top row we then need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now <span class="math notranslate nohighlight">\(i = 1\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
-<div class="math notranslate nohighlight">
-\[ [AB]_{12} = a_{11}b_{12} + a_{12}b_{22} = 1(6) + 2(8) = 6 + 16 = 22. \]</div>
-<p>So we have</p>
+<p>We can write this as:
+$<span class="math notranslate nohighlight">\( [AB]_{11} = a_{11}b_{11} + a_{12}b_{21} = 1 \cdot 5 + 2 \cdot 7 = 5 + 14 = 19\)</span>$</p>
+<p>Carrying on across the top row of our product matrix <span class="math notranslate nohighlight">\(AB\)</span>: next we need to calculate the value of <span class="math notranslate nohighlight">\([AB]_{12}\)</span>. Now our row number is <span class="math notranslate nohighlight">\(i = 1\)</span> and column number is <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 1 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -476,16 +486,16 @@ document.write(`
         \textcolor{lightgray}{7} &amp; \textcolor{red}{8}
     \end{pmatrix} =
     \begin{pmatrix}
-        19 &amp; \textcolor{blue}{1} (\textcolor{red}{6}) + \textcolor{blue}{2} (\textcolor{red}{8}) \\
+        19 &amp; \textcolor{blue}{1} \cdot \textcolor{red}{6} + \textcolor{blue}{2} \cdot \textcolor{red}{8} \\
         \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square}
     \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 6 + 16 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ \textcolor{lightgray}{\square} &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Since <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span>, we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>Or in other words,</p>
 <div class="math notranslate nohighlight">
-\[[AB]_{21} = a_{21} b_{11} + a_{22} b_{21} = 3(5) + 4(7) = 15 + 28 = 43.\]</div>
-<p>So we have</p>
+\[ [AB]_{12} = a_{11}b_{12} + a_{12}b_{22} = 1 \cdot 6 + 2 \cdot 8 = 6 + 16 = 22\]</div>
+<p>Now that we have finished the first row of <span class="math notranslate nohighlight">\(AB\)</span> we now move down to the second row and back to the first column to calculate <span class="math notranslate nohighlight">\([AB]_{21}\)</span>. Since <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 1\)</span>, we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 1 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -498,15 +508,15 @@ document.write(`
     \end{pmatrix} =
     \begin{pmatrix}
         19 &amp; 22 \\
-        \textcolor{blue}{3} (\textcolor{red}{5}) + \textcolor{blue}{4} (\textcolor{red}{7}) &amp; \textcolor{lightgray}{\square}
+        \textcolor{blue}{3} \cdot \textcolor{red}{5} + \textcolor{blue}{4} \cdot \textcolor{red}{7} &amp; \textcolor{lightgray}{\square}
     \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 15 + 28 &amp; \textcolor{lightgray}{\square} \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; \textcolor{lightgray}{\square} \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Moving across we now need to calculate the final element <span class="math notranslate nohighlight">\([AB]_{22}\)</span>. Now <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span>, so we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result</p>
+<p>That is,</p>
 <div class="math notranslate nohighlight">
-\[[AB]_{22} = a_{21} b_{12} + a_{22} b_{22} = 3(6) + 4(8) = 18 + 32 = 50.\]</div>
-<p>So we have</p>
+\[[AB]_{21} = a_{21} b_{11} + a_{22} b_{21} = 3 \cdot 5 + 4 \cdot 7 = 15 + 28 = 43\]</div>
+<p>Finally we calculate the last element of the product matrix, <span class="math notranslate nohighlight">\([AB]_{22}\)</span>. Since <span class="math notranslate nohighlight">\(i = 2\)</span> and <span class="math notranslate nohighlight">\(j = 2\)</span>, we multiply the values from row 2 of <span class="math notranslate nohighlight">\(A\)</span> and column 2 of <span class="math notranslate nohighlight">\(B\)</span> and sum the result.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix}
@@ -519,20 +529,16 @@ document.write(`
     \end{pmatrix} =
     \begin{pmatrix}
         19 &amp; 22 \\
-        43 &amp; \textcolor{blue}{3} (\textcolor{red}{6}) + \textcolor{blue}{4} (\textcolor{red}{8})
+        43 &amp; \textcolor{blue}{3} \cdot \textcolor{red}{6} + \textcolor{blue}{4} \cdot \textcolor{red}{8}
     \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 18 + 32 \end{pmatrix}
     = \begin{pmatrix} 19 &amp; 22 \\ 43 &amp; 50 \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<figure class="margin align-default" id="id1">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/480px-Arthur_Cayley.jpg"><img alt="Arthur Cayley" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Arthur_Cayley.jpg/480px-Arthur_Cayley.jpg" style="width: 200px;" />
-</a>
-<figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Arthur_Cayley" target="_blank">Arthur Cayley (1821 - 1895)</a></span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>This method of multiplying matrices together may seem unnecessarily convoluted when first encountered. The reason we perform matrix multiplication in this way is because English mathematician Arthur Cayley found that it allows for a convenient way to represent <a class="reference internal" href="6.2_Composite_transformations.html#composite-linear-transformations-section"><span class="std std-ref">composite linear transformations</span></a> which we will study towards the end of the semester.</p>
+<p>In other words,</p>
+<div class="math notranslate nohighlight">
+\[[AB]_{22} = a_{21} b_{12} + a_{22} b_{22} = 3 \cdot 6 + 4 \cdot 8 = 18 + 32 = 50\]</div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dPot7peK1NI?si=vOwVpAVNjFKxvuqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Multiplying together larger matrices simply involves adding together the products of all the terms in each row and column, and repeating this for each entry in the product matrix. This is why we require the rows in the first matrix to be the same length as the rows in the second: we need to multiply together one from each, and add the products.</p>
 <div class="proof example admonition" id="matrix-multiplication-example">
 <p class="admonition-title"><span class="caption-number">Example 1.4 </span></p>
 <section class="example-content" id="proof-content">
@@ -596,7 +602,8 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><div class="proof theorem admonition" id="theorem-2">
+</div><p>The method of multiplying matrices together may seem overly complicated, but doing it this way gives us a consistent definition of multiplication that (mostly) behaves the way we expect it to.</p>
+<div class="proof theorem admonition" id="theorem-2">
 <p class="admonition-title"><span class="caption-number">Theorem 1.4 </span> (Properties of matrix multiplication)</p>
 <section class="theorem-content" id="proof-content">
 <p>The following properties hold for matrix multiplication</p>
@@ -609,15 +616,16 @@ document.write(`
 </ul>
 </section>
 </div><hr class="docutils" />
+</section>
 <section id="matrix-exponents">
-<span id="index-1"></span><h2><span class="section-number">1.3.1. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Link to this heading">#</a></h2>
+<span id="index-1"></span><h2><span class="section-number">1.3.2. </span>Matrix exponents<a class="headerlink" href="#matrix-exponents" title="Link to this heading">#</a></h2>
 <p>Just like with scalar quantities we can calculate the exponent of a number <span class="math notranslate nohighlight">\(a^n\)</span> by multiplying by itself <span class="math notranslate nohighlight">\(n\)</span> times, i.e., <span class="math notranslate nohighlight">\(a^3 = a \cdot a \cdot a\)</span>, we can also do this for square matrices that have the same number of rows and columns.</p>
 <div class="proof definition admonition" id="matrix-exponents-definition">
 <p class="admonition-title"><span class="caption-number">Definition 1.7 </span> (Matrix exponents)</p>
 <section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be a square <span class="math notranslate nohighlight">\(n \times n\)</span> matrix. Then we write <span class="math notranslate nohighlight">\(A^2=AA\)</span> and more generally:</p>
 <div class="math notranslate nohighlight" id="equation-matrix-exponent-equation">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-matrix-exponent-equation" title="Link to this equation">#</a></span>\[ \begin{align*}
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-matrix-exponent-equation" title="Link to this equation">#</a></span>\[ \begin{align*}
     A^n = \underbrace{A A \cdots A}_{n \textsf{ times}}.
 \end{align*} \]</div>
 </section>
@@ -727,7 +735,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.3.1. Matrix exponents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplying-two-matrices">1.3.1. Multiplying two matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-exponents">1.3.2. Matrix exponents</a></li>
 </ul>
   </nav></div>
 
