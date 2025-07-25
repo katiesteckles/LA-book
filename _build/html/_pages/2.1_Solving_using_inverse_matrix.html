@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.3. Solving systems of linear equations using the inverse matrix &#8212; Linear Algebra</title>
+    <title>2.3. Solving systems of linear equations inverse matrices &#8212; Linear Algebra</title>
   
   
   
@@ -204,7 +204,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Solving systems of linear equations inverse matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
@@ -393,7 +393,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Solving systems of linear equations using the inverse matrix</h1>
+    <h1>Solving systems of linear equations inverse matrices</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,14 +407,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="solving-systems-of-linear-equations-using-the-inverse-matrix">
-<span id="index-0"></span><span id="solving-systems-using-inverse-section"></span><h1><span class="section-number">2.3. </span>Solving systems of linear equations using the inverse matrix<a class="headerlink" href="#solving-systems-of-linear-equations-using-the-inverse-matrix" title="Link to this heading">#</a></h1>
-<p>Given the system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> then we can use matrix algebra to solve for the variable vector <span class="math notranslate nohighlight">\(\mathbf{x}\)</span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="solving-systems-of-linear-equations-inverse-matrices">
+<span id="index-0"></span><span id="solving-systems-using-inverse-section"></span><h1><span class="section-number">2.3. </span>Solving systems of linear equations inverse matrices<a class="headerlink" href="#solving-systems-of-linear-equations-inverse-matrices" title="Link to this heading">#</a></h1>
+<p>Given the system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span>, we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A\mathbf{x} &amp;= \mathbf{b}\\
     A^{-1}A \mathbf{x} &amp;= A^{-1}\mathbf{b}\\
-    \mathbf{x} &amp;= A^{-1}\mathbf{b} \qquad (\text{since } I = A^{-1}A).
+    \mathbf{x} &amp;= A^{-1}\mathbf{b} \qquad (\text{since } A^{-1}A) = I).
 \end{align*} \end{split}\]</div>
 <p>So we can use the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> to solve for <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>.</p>
 <div class="proof theorem admonition" id="solution-using-inverse-matrix-theorem">
@@ -422,7 +422,7 @@ document.write(`
 <section class="theorem-content" id="proof-content">
 <p>The solution to a system of linear equations <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span>.</p>
 </section>
-</div><p>Consider the system of linear equations from the <a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref">previous section</span></a></p>
+</div><p>Consider the system of linear equations from the <a class="reference internal" href="2.0_Linear_systems.html#systems-of-linear-equations-chapter"><span class="std std-ref">previous section</span></a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix}
     2 &amp; 1 \\
@@ -453,7 +453,7 @@ document.write(`
     3 &amp; -1 \\
     -4 &amp; 2
 \end{pmatrix}. \end{split}\]</div>
-<p>Using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span> the solution is</p>
+<p>Substituting this inverse matrix into the equation <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span>, we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \mathbf{x} = \frac{1}{2}
 \begin{pmatrix}
@@ -462,7 +462,7 @@ document.write(`
 \end{pmatrix}
     \begin{pmatrix} 4 \\ 10 \end{pmatrix} =
     \begin{pmatrix} 1 \\ 2 \end{pmatrix},\end{split}\]</div>
-<p>so <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> (which we saw when we used <a class="reference internal" href="2.0_Linear_systems.html#solving-systems-of-linear-equations-using-algebra-section"><span class="std std-ref">algebra to solve this system</span></a>). We can check whether this is the correct solution by substituting <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> into <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span></p>
+<p>so <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> (which matches what we saw when we used <a class="reference internal" href="2.0_Linear_systems.html#solving-systems-of-linear-equations-using-algebra-section"><span class="std std-ref">algebra to solve this system</span></a>). We can check whether this is the correct solution by substituting <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> into the matrix equation <span class="math notranslate nohighlight">\(A\mathbf{x} = \mathbf{b}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A \mathbf{x} = \begin{pmatrix} 2 &amp; 1 \\ 4 &amp; 3 \end{pmatrix}
     \begin{pmatrix} 1 \\ 2 \end{pmatrix} =
@@ -484,7 +484,7 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
+<p class="sd-card-text">(i)   Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix} 11 \\ -18 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det\begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} &amp;= 8, \\
@@ -504,12 +504,17 @@ document.write(`
 <p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A\mathbf{x} = \begin{pmatrix} 1 &amp; -2 \\ 2 &amp; 4 \end{pmatrix} \begin{pmatrix} 1 \\ -5 \end{pmatrix} = \begin{pmatrix}  11 \\  -18    \end{pmatrix}  = \mathbf{b} \qquad \checkmark\end{split}\]</div>
-<p class="sd-card-text">(ii)   Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}\)</span>. Calculating <span class="math notranslate nohighlight">\(A^{-1}\)</span></p>
+<p class="sd-card-text">(ii)   Here <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = \begin{pmatrix}-7 \\ 8 \\ 7 \end{pmatrix}\)</span>. To calculate <span class="math notranslate nohighlight">\(A^{-1}\)</span>, we can start by finding the determinant - expanding down the first column, to take advantage of the zero entry:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \det \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix} &amp;=
     \begin{vmatrix} 2 &amp; -4 \\ 1 &amp; -4 \end{vmatrix} +
-    3 \begin{vmatrix} -2 &amp; 3 \\ 2 &amp; -4 \end{vmatrix} = -4 + 3(2) = 2, \\
+    3 \begin{vmatrix} -2 &amp; 3 \\ 2 &amp; -4 \end{vmatrix} = -4 + 3(2) = 2
+  \end{align*} 
+\end{split}\]</div>
+<p class="sd-card-text">Then we find the adjoint matrix, by calculating the matrix of cofactors and transposing it:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
     \operatorname{adj} \begin{pmatrix} 1 &amp; -2 &amp; 3 \\ 0 &amp; 2 &amp; -4 \\ 3 &amp; 1 &amp; -4 \end{pmatrix}
     &amp;= \begin{pmatrix} -4 &amp; -12 &amp; -6 \\ -5 &amp; -13 &amp; -7 \\ 2 &amp; 4 &amp; 2 \end{pmatrix}^\mathsf{T}
     = \begin{pmatrix} -4 &amp; -5 &amp; 2 \\ -12 &amp; -13 &amp; 4 \\ -6 &amp; -7 &amp; 2 \end{pmatrix}, \\

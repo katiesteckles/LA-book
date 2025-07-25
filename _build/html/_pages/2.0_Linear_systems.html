@@ -66,7 +66,7 @@
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3. Solving systems of linear equations using the inverse matrix" href="2.1_Solving_using_inverse_matrix.html" />
+    <link rel="next" title="2.3. Solving systems of linear equations inverse matrices" href="2.1_Solving_using_inverse_matrix.html" />
     <link rel="prev" title="1.8. Matrices Exercises" href="1.8_Matrices_exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -204,7 +204,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations inverse matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
@@ -405,9 +405,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equation-as-a-matrix-equation">2.1. Representing systems of linear equation as a matrix equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1. Representing systems of linear equations using matrix equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-with-determinants">2.2.1. The link with determinants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.2.1. Requirements for a system to be solvable</a></li>
 </ul>
 </li>
 </ul>
@@ -423,11 +423,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations">
 <span id="systems-of-linear-equations-chapter"></span><span id="index-0"></span><h1><span class="section-number">2. </span>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Link to this heading">#</a></h1>
-<p id="index-1">Systems of linear equations and the methods used to solve them is a fundamental part of linear algebra. They describe relationships between sets of variables and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations, and we will be covering the most common of these.</p>
-<p>A linear equation is an equation formed using a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong> where the sum is of these is equal to some <strong>constant</strong> scalar value. For example if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
+<p id="index-1">Systems of linear equations, and the methods used to solve them, are a fundamental part of linear algebra. Systems of equations can be used to describe relationships between sets of variables, and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations, and we will be covering the most common of these.</p>
+<p>A linear equation is an equation that involves a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong>, where the sum of these is equal to some <strong>constant</strong> scalar value. Generally, if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
 <div class="math notranslate nohighlight">
 \[ a_1 x_1 + a_2 x_2 + \cdots + a_n x_n = b. \]</div>
-<p>A nonlinear equation is an equation formed where one or more of the variables have exponents not equal to 1 (e.g., a polynomial equation) or two or more of the variables are multiplied by each other. The field of linear algebra is only concerned with linear equations.</p>
+<p>Examples of linear equations:</p>
+<div class="math notranslate nohighlight">
+\[ 3x + 2y = 5 \qquad x = 2 \qquad x + y + z = 2 \]</div>
+<p>A <strong>nonlinear equation</strong> is an equation where one or more of the variables appear with exponents not equal to 1 (e.g. a polynomial equation like <span class="math notranslate nohighlight">\(x^2 = 4\)</span>), or two or more of the variables are multiplied together (e.g. an equation in which <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are variables, that contains a term like <span class="math notranslate nohighlight">\(xy\)</span>). The field of linear algebra is only concerned with linear equations.</p>
+<p>If we were to plot all the points that satisfy a linear equation, we would see a straight line. (Nonlinear equations generally define curved lines.) The solutions to systems of linear equations are points which satisfy all the equations at once, which notionally correspond to points where the lines intersect in <span class="math notranslate nohighlight">\(n\)</span>-dimensional space, where <span class="math notranslate nohighlight">\(n\)</span> is the number of variables in the system.</p>
 <div class="proof definition admonition" id="system-of-linear-equation-definition">
 <p class="admonition-title"><span class="caption-number">Definition 2.1 </span> (System of linear equations)</p>
 <section class="definition-content" id="proof-content">
@@ -441,11 +445,12 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are <strong>variables</strong>, <span class="math notranslate nohighlight">\(a_{11}, a_{12}, \ldots, a_{mn}\)</span> are <strong>coefficients</strong> and <span class="math notranslate nohighlight">\(b_1, b_2, \ldots, b_n\)</span> are <strong>constants</strong>.</p>
 </section>
-</div><p>In general we would know the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span> and <span class="math notranslate nohighlight">\(b_i\)</span> and we would like to find out what the values of <span class="math notranslate nohighlight">\(x_i\)</span> are.</p>
+</div><p>In general we would know the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span> and <span class="math notranslate nohighlight">\(b_i\)</span> and we would like to find out what the values of <span class="math notranslate nohighlight">\(x_i\)</span> are. Note: It is possible for some of the coefficients <span class="math notranslate nohighlight">\(a_{ij}\)</span> to be zero, in which case not all variables will be visible in all the equations.</p>
+<p>Under the right conditions, a system of linear equations will have a single unique solution - one value that each of the variables can take if all the equations are true. For this to happen, we need the number of equations in the system to be the same as the number of unknowns, as well as some conditions on the equations themselves. We will discuss this more in the section on <a class="reference internal" href="2.6_Consistent_systems.html#consistent-inconsistent-and-indeterminate-systems-section"><span class="std std-ref">Consistent, Inconsistent and Indeterminate systems</span></a>.</p>
 <hr class="docutils" />
-<section id="representing-systems-of-linear-equation-as-a-matrix-equation">
-<span id="index-2"></span><h2><span class="section-number">2.1. </span>Representing systems of linear equation as a matrix equation<a class="headerlink" href="#representing-systems-of-linear-equation-as-a-matrix-equation" title="Link to this heading">#</a></h2>
-<p>Systems of linear equations are often represented using the matrix equation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is a <span class="math notranslate nohighlight">\(m \times n\)</span> <strong>coefficient matrix</strong> containing the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is a <span class="math notranslate nohighlight">\(m \times\)</span> <strong>variable vector</strong> containing the variables <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>constant vector</strong> containing the constant terms <span class="math notranslate nohighlight">\(b_i\)</span>. Vectors are introduced in the <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">next chapter</span></a> but for now simply consider them as matrices with a single column.</p>
+<section id="representing-systems-of-linear-equations-using-matrix-equations">
+<span id="index-2"></span><h2><span class="section-number">2.1. </span>Representing systems of linear equations using matrix equations<a class="headerlink" href="#representing-systems-of-linear-equations-using-matrix-equations" title="Link to this heading">#</a></h2>
+<p>Systems of linear equations are often represented using a matrix equation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> <strong>coefficient matrix</strong> containing the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is an <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>variable vector</strong> containing the variables <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>constant vector</strong> containing the constant terms <span class="math notranslate nohighlight">\(b_i\)</span>. (Vectors are more formally introduced in the <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">next chapter</span></a>, but for now simply consider them as matrices with a single column.)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{array}{cccc}
     A &amp; \mathbf{x} &amp; = &amp; \mathbf{b} \\[4pt]
@@ -458,11 +463,11 @@ document.write(`
     \underbrace{\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}}_{\textsf{variable vector}} &amp; = &amp;
     \underbrace{\begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}}_{\textsf{constant vector}}
 \end{array} \end{split}\]</div>
-<p>For example, the follow system of linear equations</p>
+<p>For example, the system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    2x_1 + x_2 &amp;= 4, \\
-    4x_1 + 3x_2 &amp;= 10.
+    2x_1 + x_2 &amp;= 4 \\
+    4x_1 + 3x_2 &amp;= 10
 \end{align*} \end{split}\]</div>
 <p>can be written as the matrix equation</p>
 <div class="math notranslate nohighlight">
@@ -476,37 +481,41 @@ document.write(`
     \end{pmatrix} =
     \begin{pmatrix}
         4 \\ 10
-    \end{pmatrix}.
+    \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <hr class="docutils" />
 </section>
 <section id="solving-systems-of-linear-equations-using-algebra">
 <span id="solving-systems-of-linear-equations-using-algebra-section"></span><h2><span class="section-number">2.2. </span>Solving systems of linear equations using algebra<a class="headerlink" href="#solving-systems-of-linear-equations-using-algebra" title="Link to this heading">#</a></h2>
-<p>One way which we can solve systems of linear equations is using simple algebra. The usual approach is to try to solve for each unknown in turn by eliminating all of the other unknowns. For example, consider the system of linear equations</p>
+<p>One way to solve systems of linear equations is by manipulating them using standard algebraic methods.</p>
+<p>The usual approach is to try to <strong>solve for each unknown</strong> in turn by <strong>eliminating all of the other unknowns</strong>. For example, consider the system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     2x_1 + x_2 &amp;= 4, \\
     4x_1 + 3x_2 &amp;= 10.
 \end{align*} \end{split}\]</div>
-<p>We could eliminate <span class="math notranslate nohighlight">\(x_2\)</span> be subtracting 3 times the first equation from the second to give</p>
+<p>If we wish to eliminate the variable <span class="math notranslate nohighlight">\(x_2\)</span>, we might note that the first equation would still be true if we multiplied both sides by <span class="math notranslate nohighlight">\(3\)</span>, to get</p>
+<div class="math notranslate nohighlight">
+\[ 6x_1 + 3x_2 &amp;= 12 \]</div>
+<p>We could then eliminate <span class="math notranslate nohighlight">\(x_2\)</span> by subtracting this from the second equation, to give</p>
 <div class="math notranslate nohighlight">
 \[ -2 x_1 = -2,\]</div>
-<p>which is easily solved to give <span class="math notranslate nohighlight">\(x_1 = 1\)</span>. Now that we know the value of <span class="math notranslate nohighlight">\(x_1\)</span> we can substitute it into any equation in the system to give <span class="math notranslate nohighlight">\(x_2\)</span>. Substituting <span class="math notranslate nohighlight">\(x_1 = 1\)</span> into the first equation gives</p>
+<p>which is easily solved to give <span class="math notranslate nohighlight">\(x_1 = 1\)</span>. Now that we know the value of <span class="math notranslate nohighlight">\(x_1\)</span> we can substitute it into any equation in the system to find the value of <span class="math notranslate nohighlight">\(x_2\)</span>. Substituting <span class="math notranslate nohighlight">\(x_1 = 1\)</span> into the first equation gives</p>
 <div class="math notranslate nohighlight">
-\[ 2(1) + x_2 = 4, \]</div>
-<p>so <span class="math notranslate nohighlight">\(x_2 = 2\)</span>. The solution should satisfy all equations in the system to checking that it also satisfies the second equation</p>
+\[ 2 \cdot 1 + x_2 = 4, \]</div>
+<p>so <span class="math notranslate nohighlight">\(x_2 = 2\)</span>. The solution should satisfy all equations in the system, so we can also check that these values also satisfy the second equation:</p>
 <div class="math notranslate nohighlight">
-\[ 4(1) + 3(2) = 10, \]</div>
-<p>so we know that <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> is the solution. Whilst this approach is simple to implement for small systems of linear equations the algebra will soon become unwieldy for larger systems which is why we use the methods that are covered in this chapter.</p>
-<section id="the-link-with-determinants">
-<h3><span class="section-number">2.2.1. </span>The link with determinants<a class="headerlink" href="#the-link-with-determinants" title="Link to this heading">#</a></h3>
-<p>Consider the system of two linear equations</p>
+\[ 4x_1 + 3x_2  = 4 \cdot 1 + 3 \cdot 2 = 4 + 6 = 10 \]</div>
+<p>So we know that <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> is the solution to this system. While this approach is simple to implement for small systems of linear equations, the algebra will soon become unwieldy for larger systems, which is why we use the methods that are covered in this chapter.</p>
+<section id="requirements-for-a-system-to-be-solvable">
+<span id="requirements-for-systems-of-linear-equations-to-be-solvable-section"></span><h3><span class="section-number">2.2.1. </span>Requirements for a system to be solvable<a class="headerlink" href="#requirements-for-a-system-to-be-solvable" title="Link to this heading">#</a></h3>
+<p>Consider this system of two linear equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     ax + by &amp;= e, \\
     cx + dy &amp;= f.
 \end{align*} \end{split}\]</div>
-<p>To solve for <span class="math notranslate nohighlight">\(x\)</span> we could look to eliminate <span class="math notranslate nohighlight">\(y\)</span> by multiplying the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> to give</p>
+<p>To solve for <span class="math notranslate nohighlight">\(x\)</span>, we could look to eliminate <span class="math notranslate nohighlight">\(y\)</span> by multiplying the second equation by <span class="math notranslate nohighlight">\(\dfrac{b}{d}\)</span> to give</p>
 <div class="math notranslate nohighlight">
 \[ \frac{b}{d}c x + by = \frac{b}{d}f,\]</div>
 <p>Subtract this from the first equation</p>
@@ -526,7 +535,7 @@ document.write(`
     (ad - bc) y &amp;= af - ce \\
     y &amp;= \frac{af - ce}{ad - bc}.
 \end{align*} \end{split}\]</div>
-<p>The denominators in the solutions to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are both <span class="math notranslate nohighlight">\(a d - b c\)</span>, so if this value is zero then the system of equations does not have a solution. If we write the system using matrices i.e.,</p>
+<p>The denominators (bottom half of the fractions) in the solutions to <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are both <span class="math notranslate nohighlight">\(a d - b c\)</span>, so if this value is zero then the system of equations does not have a solution. If we write the system using matrices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
@@ -537,7 +546,7 @@ document.write(`
         cx + dy \!\!\! &amp;= f.
     \end{matrix}
 \end{align*} \end{split}\]</div>
-<p>We see that the requirement for the system to have a solution is the same as the requirement for matrix to be invertible, i.e, that the value of <span class="math notranslate nohighlight">\(ad-bc\)</span> is non-zero. We can solve systems of linear equations using inverse matrices.</p>
+<p>We see that the requirement for the system to have a solution is the same as the requirement for matrix to be invertible, i.e, that the value of <span class="math notranslate nohighlight">\(ad-bc\)</span> is non-zero. As we will see, inverse matrices are an important tool in solving systems of linear equations.</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -588,7 +597,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Solving systems of linear equations using the inverse matrix</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Solving systems of linear equations inverse matrices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -608,9 +617,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equation-as-a-matrix-equation">2.1. Representing systems of linear equation as a matrix equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1. Representing systems of linear equations using matrix equations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-link-with-determinants">2.2.1. The link with determinants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.2.1. Requirements for a system to be solvable</a></li>
 </ul>
 </li>
 </ul>

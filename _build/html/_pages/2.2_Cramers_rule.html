@@ -67,7 +67,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.5. Gaussian elimination" href="2.3_Gaussian_elimination.html" />
-    <link rel="prev" title="2.3. Solving systems of linear equations using the inverse matrix" href="2.1_Solving_using_inverse_matrix.html" />
+    <link rel="prev" title="2.3. Solving systems of linear equations inverse matrices" href="2.1_Solving_using_inverse_matrix.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,7 +204,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations using the inverse matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations inverse matrices</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Cramer’s rule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
@@ -416,7 +416,7 @@ document.write(`
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text"><a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer (1704 - 1752)</a></span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="1.4_Determinants.html#determinant-section"><span class="std std-ref">determinants</span></a> that the solution to the system of linear equations</p>
+<p><strong>Cramer’s rule</strong>, named after Swiss mathematician <a href="https://en.wikipedia.org/wiki/Gabriel_Cramer" target="_blank">Gabriel Cramer</a>, is an explicit rule for calculating the solution to a system of linear equations using determinants. We saw in the section on <a class="reference internal" href="2.0_Linear_systems.html#requirements-for-systems-of-linear-equations-to-be-solvable-section"><span class="std std-ref">when systems are solvable</span></a>) that the solution to the system of linear equations</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}
     \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} =
@@ -427,27 +427,27 @@ document.write(`
     x_1 &amp;= \frac{de - bf}{ad - bc}, &amp; \qquad
     x_2 &amp;= \frac{af - ce}{ad - bc}.
 \end{align*} \]</div>
-<p>We can recognise that the solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denominator. But what about the numerator? If we consider the solution to <span class="math notranslate nohighlight">\(x_1\)</span> then in <span class="math notranslate nohighlight">\(de - bf\)</span> we can see that the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span> are included, and we have the subtraction of two products which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix, i.e.,</p>
+<p>The solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denominator. But what about the numerator? If we consider the value of <span class="math notranslate nohighlight">\(x_1\)</span>, which is <span class="math notranslate nohighlight">\(de - bf\)</span>, we can see that it includes the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span>, and we have the difference of two products - which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix. In fact, we can say which matrix this is the determinant of:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     de - bf = \begin{vmatrix} e &amp; b \\ f &amp; d \end{vmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Doing similar for the solution to <span class="math notranslate nohighlight">\(x_2\)</span> we see that the numerator is</p>
+<p>Performing a similar analysis for the solution to <span class="math notranslate nohighlight">\(x_2\)</span>, we see that the numerator is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     af - ce = \begin{vmatrix} a &amp; e \\ c &amp; f \end{vmatrix}.
 \end{align*} \end{split}\]</div>
-<p>These determinants are simply the coefficient matrix <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> with columns 1 and 2 replaced by the constant vector <span class="math notranslate nohighlight">\(\begin{pmatrix} e \\ f \end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> respectively. This can be extended to larger systems to give us Cramer’s rule.</p>
+<p>These matrices are simply the coefficient matrix <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> with columns 1 and 2 replaced by the constant vector <span class="math notranslate nohighlight">\(\begin{pmatrix} e \\ f \end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> respectively. This idea can be extended to larger systems, and is known as Cramer’s rule.</p>
 <div class="proof theorem admonition" id="cramers-rule-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Cramer’s rule)</p>
 <section class="theorem-content" id="proof-content">
 <p>The solution to a non-singular linear system of equations of the form <span class="math notranslate nohighlight">\(A\mathbf{x}=\mathbf{b}\)</span> can be calculated using Cramer’s rule which is</p>
 <div class="math notranslate nohighlight" id="equation-cramers-rule-equation">
 <span class="eqno">(2.1)<a class="headerlink" href="#equation-cramers-rule-equation" title="Link to this equation">#</a></span>\[ x_i = \frac{\det(A_i)}{\det(A)}, \]</div>
-<p>where <span class="math notranslate nohighlight">\(A_i\)</span> is a matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
+<p>where <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated using <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span> where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
+<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated as <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
 <div class="math notranslate nohighlight">
 \[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
 <p>so</p>
@@ -455,13 +455,13 @@ document.write(`
 \[ \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}. \]</div>
 <p>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">co-factors</a></p>
 <div class="math notranslate nohighlight">
-\[\begin{split} C^\mathsf{T} = \begin{pmatrix}
+\[\begin{split} \operatorname{adj}(A) = C^\mathsf{T} = \begin{pmatrix}
     C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
     C_{12} &amp; C_{22} &amp; \cdots &amp; C_{n2} \\
     \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
     C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
 \end{pmatrix}. \end{split}\]</div>
-<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
+<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
 <div class="math notranslate nohighlight">
 \[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
 <p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p>
@@ -520,17 +520,17 @@ document.write(`
     = \frac{-12
     \begin{vmatrix} -3 &amp; -1 \\ 4 &amp; 3 \end{vmatrix}}
     {-3\begin{vmatrix} -3 &amp; -1 \\ 4 &amp; 3 \end{vmatrix}}
-    = \frac{-12(-5)}{-3(-5)} = \frac{60}{15} = 4,\\ \\
+    = \frac{-12 \cdot -5}{-3 \cdot -5} = \frac{60}{15} = 4,\\ \\
     x_2 &amp;= \frac{
     \begin{vmatrix} -2 &amp; -5 &amp; -1 \\ -4 &amp; -20 &amp; 3 \\ -3 &amp; -12 &amp; 0 \end{vmatrix}}{15}
     = \frac{-\begin{vmatrix} -4 &amp; -20 \\ -3 &amp; -12 \end{vmatrix}
     - 3\begin{vmatrix}-2 &amp; -5 \\ -3 &amp; -12 \end{vmatrix}}{15}
-    = \frac{12 - 3(9)}{15} = \frac{-15}{15} = -1, \\ \\
+    = \frac{12 - 3 \cdot 9}{15} = \frac{-15}{15} = -1, \\ \\
     x_3 &amp;= \frac{
     \begin{vmatrix} -2 &amp; -3 &amp; - 5 \\ -4 &amp; 4 &amp; -20 \\ -3 &amp; 0 &amp; -12 \end{vmatrix}}{15}
     =\frac{-3\begin{vmatrix} -3 &amp; -5 \\ 4 &amp; -20 \end{vmatrix} -
     12\begin{vmatrix} -2 &amp; -3 \\ -4 &amp; 4 \end{vmatrix}}{15}
-     = \frac{-3(80) - 12(-20)}{15} = \frac{0}{15} = 0.
+     = \frac{-3 \cdot 80 - 12 \cdot -20}{15} = \frac{0}{15} = 0.
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">Checking the solution</p>
 <div class="math notranslate nohighlight">
@@ -580,7 +580,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Solving systems of linear equations using the inverse matrix</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Solving systems of linear equations inverse matrices</p>
       </div>
     </a>
     <a class="right-next"
