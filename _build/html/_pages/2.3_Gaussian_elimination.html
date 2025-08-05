@@ -405,8 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-say-that-a-system-of-linear-equations-is-in-row-echelon-form-if-the-corresponding-augmented-matrix-is-in-row-echelon-form">2.5.1. We say that a system of linear equations is in row echelon form if the corresponding augmented matrix is in row echelon form.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-reduction">2.5.2. Row reduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-reduction">2.5.1. Row reduction</a></li>
 </ul>
             </nav>
         </div>
@@ -516,12 +515,10 @@ document.write(`
     &amp;\begin{pmatrix} \color{red}{1} &amp; 2 &amp; 3 \\ 0 &amp; 0 &amp; \color{red}{4} \end{pmatrix} &amp;
     &amp;\begin{pmatrix} 0 &amp; \color{red}{1} &amp; 3\\ 0 &amp; 0 &amp; \color{red}{4} \\ 0 &amp; 0 &amp; 0\end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Note that the elements below the pivot elements are all zero.</p>
-<section id="we-say-that-a-system-of-linear-equations-is-in-row-echelon-form-if-the-corresponding-augmented-matrix-is-in-row-echelon-form">
-<h2><span class="section-number">2.5.1. </span>We say that a system of linear equations is in row echelon form if the corresponding augmented matrix is in row echelon form.<a class="headerlink" href="#we-say-that-a-system-of-linear-equations-is-in-row-echelon-form-if-the-corresponding-augmented-matrix-is-in-row-echelon-form" title="Link to this heading">#</a></h2>
-</section>
+<p>Note that the elements below the pivot elements are all zero. We say that a system of linear equations is in row echelon form if the corresponding augmented matrix is in row echelon form.</p>
+<hr class="docutils" />
 <section id="row-reduction">
-<span id="index-6"></span><h2><span class="section-number">2.5.2. </span>Row reduction<a class="headerlink" href="#row-reduction" title="Link to this heading">#</a></h2>
+<span id="index-6"></span><h2><span class="section-number">2.5.1. </span>Row reduction<a class="headerlink" href="#row-reduction" title="Link to this heading">#</a></h2>
 <p>The process of transforming a matrix into row echelon form using elementary row operations is known as <strong>row reduction</strong>. For example, we will use Gaussian elimination to solve the same system of linear equations from earlier:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -542,7 +539,7 @@ document.write(`
 \[\begin{split} \begin{align*}
   \left( \begin{array}{ccc|c}
       \color{red}{ 3} &amp; 1 &amp; -2 &amp; 1 \\
-      \color{blue}{ 1 - \frac{1}{3}\cdot 3} &amp; -1 - \frac{1}{3}\cdot 1 &amp; 2 - \frac{1}{3}\cdot -2 &amp; 3 - \frac{1}{3}\cdot 1 \\
+      \color{blue}{ 1 - (\frac{1}{3}\cdot 3)} &amp; -1 - (\frac{1}{3}\cdot 1) &amp; 2 - (\frac{1}{3}\cdot -2) &amp; 3 - (\frac{1}{3}\cdot 1) \\
       \color{blue}{ 2} &amp; -3 &amp; 7 &amp; 4
   \end{array} \right) &amp;
   \longrightarrow
@@ -557,7 +554,7 @@ document.write(`
 \[\begin{split} \left( \begin{array}{ccc|c}
     \color{red}{3} &amp; 1 &amp; -2 &amp; 1 \\
     \color{blue}{0} &amp; -\frac{4}{3} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
-    \color{blue}{2 - \frac{2}{3}\cdot 3} &amp; -3 - \frac{2}{3}\cdot 1 &amp; 7 - \frac{2}{3}\cdot -2 &amp; 4 - \frac{2}{3}\cdot 1
+    \color{blue}{2 - (\frac{2}{3}\cdot 3)} &amp; -3 - (\frac{2}{3}\cdot 1) &amp; 7 - (\frac{2}{3}\cdot -2) &amp; 4 - (\frac{2}{3}\cdot 1)
 \end{array} \right)
 \longrightarrow  
 \left( \begin{array}{ccc|c}
@@ -572,7 +569,7 @@ document.write(`
     0 &amp; \color{red}{-\frac{4}{3}} &amp; \frac{8}{3} &amp; \frac{8}{3} \\
     0 &amp; \color{blue}{-\frac{11}{3}} &amp; \frac{25}{3} &amp; \frac{10}{3}
 \end{array} \right). \end{split}\]</div>
-<p>The element in row 3 column 2 has a value of <span class="math notranslate nohighlight">\(\displaystyle-\dfrac{11}{3}\)</span> and the pivot element has a value of <span class="math notranslate nohighlight">\(\displaystyle-\dfrac{4}{3}\)</span>, so we need to subtract row 2 multiplied by <span class="math notranslate nohighlight">\(\displaystyle-\dfrac{11}{3} \div \left(-\dfrac{4}{3}\right) = \dfrac{11}{4}\)</span> from row 3.</p>
+<p>The element in row 3 column 2 has a value of <span class="math notranslate nohighlight">\(-\dfrac{11}{3}\)</span> and the pivot element has a value of <span class="math notranslate nohighlight">\(-\dfrac{4}{3}\)</span>, so we need to subtract row 2 multiplied by <span class="math notranslate nohighlight">\(-\dfrac{11}{3} \div \left(-\dfrac{4}{3}\right) = \dfrac{11}{4}\)</span> from row 3.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \left( \begin{array}{ccc|c}
     3 &amp; 1 &amp; -2 &amp; 1 \\
@@ -602,7 +599,7 @@ document.write(`
       x_3 &amp;=&amp; -4.
   \end{array}
 \end{align*} \end{split}\]</div>
-<p>(Note that in the earlier calculation, at this stage, we had our second equation as <span class="math notranslate nohighlight">\(x_2 - 2 x_3 &amp;= -2\)</span>. This is obtained by multiplying the second equation here by <span class="math notranslate nohighlight">\(-3\)</span>, and gives an equivalent statement.)</p>
+<p>(Note that in the earlier calculation, at this stage, we had our second equation as <span class="math notranslate nohighlight">\(x_2 - 2 x_3 = -2\)</span>. This is obtained by multiplying the second equation here by <span class="math notranslate nohighlight">\(-3\)</span>, and gives an equivalent statement.)</p>
 <p id="index-7">Since we have reduced the coefficient matrix to row echelon form, we have a single value for the final variable. We can then substitute known values of the variables into the preceding equations to solve for the preceding variables. We continue in this way until we have solutions for all of the variables in the system. This step is known as <strong>back substitution</strong>.</p>
 <p>So, for our system, the final equation gives <span class="math notranslate nohighlight">\(x_3=-4\)</span>, which we can substitute into the second equation to give:</p>
 <div class="math notranslate nohighlight">
@@ -731,8 +728,8 @@ document.write(`
         -2 &amp; 1 &amp; 3 &amp; 3 \\
         -1 &amp; 2 &amp; 4 &amp; 5
     \end{array} \right)
-     &amp;
-    \begin{array}{l} \\ R_2 + 2R_1 \\ R_3 + R_1 \end{array} \longrightarrow &amp;
+     \\ \\
+    \begin{array}{l} R_2 + 2R_1 \\ R_3 + R_1 \end{array} \longrightarrow &amp;
     \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 1 &amp; 3 \\
         0 &amp; 1 &amp; 5 &amp; 9 \\
@@ -749,7 +746,7 @@ document.write(`
 <p class="sd-card-text">Solving for <span class="math notranslate nohighlight">\(x_1\)</span>, <span class="math notranslate nohighlight">\(x_2\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> using back substitution</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-    -5x_3 &amp;= -10 &amp; \therefore x_3 &amp;= \frac{-10}{-5} = 2, \\
+    -5x_3 &amp;= -10 &amp; \therefore x_3 &amp;= \dfrac{-10}{-5} = 2, \\
     x_2 + 5x_3 &amp;= 9 &amp; \therefore x_2 &amp;= 9 - 5x_3 = 9 - 5 \cdot 2 = -1, \\
     x_1 + x_3 &amp;= 3 &amp; \therefore x_1 &amp;= 3 - x_3 = 3 - 2 = 1.
 \end{align*} \end{split}\]</div>
@@ -822,8 +819,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-say-that-a-system-of-linear-equations-is-in-row-echelon-form-if-the-corresponding-augmented-matrix-is-in-row-echelon-form">2.5.1. We say that a system of linear equations is in row echelon form if the corresponding augmented matrix is in row echelon form.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-reduction">2.5.2. Row reduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#row-reduction">2.5.1. Row reduction</a></li>
 </ul>
   </nav></div>
 
