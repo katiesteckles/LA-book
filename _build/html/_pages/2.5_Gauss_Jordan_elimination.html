@@ -501,7 +501,7 @@ document.write(`
         1 &amp; -1 &amp; 2 &amp; 3 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    &amp;
+    \\ \\
      R_1 \leftrightarrow R_2 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
@@ -515,7 +515,7 @@ document.write(`
         0 &amp; 4 &amp; -8 &amp; -8 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right)
-    &amp;
+    \\ \\
     \frac{1}{4} R_2 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
@@ -529,7 +529,7 @@ document.write(`
         0 &amp; 1 &amp; -2 &amp; -2 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
-    &amp;
+    \\ \\
      R_2 + 2R_3 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 1 \\
@@ -557,7 +557,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    R_1 \leftrightarrow R_2 \longrightarrow
+    \qquad R_1 \leftrightarrow R_2 \longrightarrow
     \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -566,7 +566,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    kR_2 \longrightarrow
+    \qquad kR_2 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -575,7 +575,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    R_3 + kR_1 \longrightarrow
+    \qquad R_3 + kR_1 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ k &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <p>Elementary matrices have an inverse, which is obtained by <strong>inverting the elementary row operation</strong> and applying it to the identity matrix. The operations used above have the following inverse operations :</p>
@@ -585,7 +585,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    R_1 \leftrightarrow R_2 \longrightarrow
+    \qquad R_1 \leftrightarrow R_2 \longrightarrow
     \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -594,7 +594,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \frac{1}{k} R_2  \longrightarrow
+    \qquad \frac{1}{k} R_2  \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; \frac{1}{k} &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -603,7 +603,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    R_3 - kR_1 \longrightarrow
+    \qquad R_3 - kR_1 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -k &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <div class="proof theorem admonition" id="elementary-matrix-multiplication-theorem">
@@ -677,7 +677,7 @@ document.write(`
       1 &amp; 4 &amp; 4 &amp; 0 &amp; 0 &amp; 1
     \end{array} \right)
      \\ \\
-    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 - R_1 \end{array} \longrightarrow
+    \begin{array}{l} R_2 - 2R_1 \\ R_3 - R_1 \end{array} \longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
       0 &amp; -1 &amp; -1 &amp; -2 &amp; 1 &amp; 0 \\
