@@ -463,19 +463,20 @@ document.write(`
 <p><strong>Outputs:</strong> An augmented matrix in row echelon form.</p>
 <ul class="simple">
 <li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \mathbf{b} )\)</span></p></li>
-<li><p>Set pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
+<li><p>Initialise pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
 <li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
 <ul>
-<li><p>Perform row swap of the pivot row if necessary (e.g., partial pivoting or pivot element is zero)</p></li>
-<li><p>If pivot element is zero and all elements beneath the pivot element are zero skip to the next column</p></li>
+<li><p>Perform a row swap of the pivot row if necessary (e.g. for partial pivoting, or if pivot element is zero)</p></li>
+<li><p>If pivot element is zero, and all elements beneath the pivot element are zero, skip to the next column by incrementing <span class="math notranslate nohighlight">\(j\)</span></p></li>
+</ul>
+</li>
+<li><p>Divide row <span class="math notranslate nohighlight">\(k\)</span> by pivot <span class="math notranslate nohighlight">\(a_{kj}\)</span></p></li>
 <li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(m\)</span> where <span class="math notranslate nohighlight">\(i \neq k\)</span>:</p>
 <ul>
 <li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
 </ul>
 </li>
-<li><p>Divide row <span class="math notranslate nohighlight">\(k\)</span> by pivot <span class="math notranslate nohighlight">\(a_{kj}\)</span></p></li>
-</ul>
-</li>
+<li><p>Increment <span class="math notranslate nohighlight">\(k\)</span> to <span class="math notranslate nohighlight">\(k+1\)</span> and repeat until you have done all the rows</p></li>
 </ul>
 </section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/KMojbHRNY9o?si=54PqTE2f3Xl_SpQ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -500,36 +501,36 @@ document.write(`
         1 &amp; -1 &amp; 2 &amp; 3 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    \begin{array}{l} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{array} &amp;
-    \longrightarrow
+    &amp;
+     R_1 \leftrightarrow R_2 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         3 &amp; 1 &amp; -2 &amp; 1 \\
         2 &amp; -3 &amp; 7 &amp; 4
     \end{array} \right)
-    \begin{array}{l} \\ R_2 - 3R_1 \\ R_3 - 2R_1 \end{array} \\ \\
-    \longrightarrow
+    \\ \\
+    \begin{array}{l} \\ R_2 - 3R_1 \\ R_3 - 2R_1 \end{array}  \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 4 &amp; -8 &amp; -8 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right)
-    \begin{array}{l} \\ \frac{1}{4} R_2 \\ \phantom{x} \end{array} &amp;
-    \longrightarrow
+    &amp;
+    \frac{1}{4} R_2 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; -1 &amp; 2 &amp; 3 \\
         0 &amp; 1 &amp; -2 &amp; -2 \\
         0 &amp; -1 &amp; 3 &amp; -2
     \end{array} \right)
-    \begin{array}{l} R_1 + R_2 \\ \\ R_3 + R_2 \end{array} \\ \\
-    \longrightarrow
+ 	\\ \\
+    \begin{array}{l} R_1 + R_2 \\ \\ R_3 + R_2 \end{array} \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 1 \\
         0 &amp; 1 &amp; -2 &amp; -2 \\
         0 &amp; 0 &amp; 1 &amp; -4
     \end{array} \right)
-    \begin{array}{l} \\ R_2 + 2R_3 \\ \phantom{x} \end{array} &amp;
-    \longrightarrow
+    &amp;
+     R_2 + 2R_3 \longrightarrow
     &amp; \left( \begin{array}{ccc|c}
         1 &amp; 0 &amp; 0 &amp; 1 \\
         0 &amp; 1 &amp; 0 &amp; -10 \\
@@ -539,24 +540,24 @@ document.write(`
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details></section>
-</div><hr class="docutils" />
+</div><p>For any given matrix, its reduced row echelon form is unique. If the matrix is square (<span class="math notranslate nohighlight">\(n \times n\)</span>) and non-singular (invertible), the reduced row echelon form of the matrix will be <span class="math notranslate nohighlight">\(I_n\)</span>, the <span class="math notranslate nohighlight">\(n \times n\)</span> identity matrix.</p>
+<hr class="docutils" />
 <section id="elementary-matrices">
 <span id="index-4"></span><h2><span class="section-number">2.7.1. </span>Elementary matrices<a class="headerlink" href="#elementary-matrices" title="Link to this heading">#</a></h2>
-<p>Gauss-Jordan elimination allows us to calculate the inverse of matrices which is much more computationally efficient than the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use ERO to calculate an inverse of a matrix we first need to consider elementary matrices.</p>
+<p>Gauss-Jordan elimination allows us to calculate the inverse of matrices, and is much more computationally efficient than the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use row operations to calculate the inverse of a matrix, we first need to consider elementary matrices.</p>
 <div class="proof definition admonition" id="elementary-matrices-definition">
 <p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Elementary matrices)</p>
 <section class="definition-content" id="proof-content">
-<p>An <strong>elementary matrix</strong> is an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix obtained by performing a single elementary row operation to the identity matrix <span class="math notranslate nohighlight">\(I_n\)</span></p>
+<p>An <strong>elementary matrix</strong> is an <span class="math notranslate nohighlight">\(n \times n\)</span> square matrix which can be obtained by performing a single elementary row operation on the identity matrix <span class="math notranslate nohighlight">\(I_n\)</span></p>
 </section>
-</div><p>Since we have <a class="reference internal" href="2.3_Gaussian_elimination.html#ero-definition">three types</a> of elementary row operations there are three types of elementary matrices. Consider the examples of the three type for <span class="math notranslate nohighlight">\(I_3\)</span></p>
+</div><p>Since we have <a class="reference internal" href="2.3_Gaussian_elimination.html#ero-definition">three types</a> of elementary row operations, there are three corresponding types of elementary matrices. Consider examples of each of the three types for <span class="math notranslate nohighlight">\(I_3\)</span>, the <span class="math notranslate nohighlight">\(3 \times 3\)</span> identity matrix:</p>
 <ul class="simple">
 <li><p>Swap row 1 and row 2:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{matrix}
-    \qquad \longrightarrow
+    R_1 \leftrightarrow R_2 \longrightarrow
     \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -565,8 +566,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} \\ kR_2 \\ \phantom{x} \end{matrix}
-    \qquad \longrightarrow
+    kR_2 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; k &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
@@ -575,59 +575,55 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} \\  \\ R_3 + kR_1 \end{matrix}
-    \qquad \longrightarrow
+    R_3 + kR_1 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ k &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Elementary matrices have an inverse which is obtained by inverting the elementary row operation and applying it to the identity matrix. Consider the following inverse operations to those shown above</p>
+<p>Elementary matrices have an inverse, which is obtained by <strong>inverting the elementary row operation</strong> and applying it to the identity matrix. The operations used above have the following inverse operations :</p>
 <ul class="simple">
-<li><p>Swap row 1 and row 2:</p></li>
+<li><p>Swapping row 1 and row 2 can be inverted by simply performing the same swap again:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} R_1 \leftrightarrow R_2 \\ \phantom{x} \\ \phantom{x} \end{matrix}
-    \qquad \longrightarrow
+    R_1 \leftrightarrow R_2 \longrightarrow
     \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>Divide row 2 by <span class="math notranslate nohighlight">\(k\)</span>:</p></li>
+<li><p>Multiplying row 2 by <span class="math notranslate nohighlight">\(k\)</span> can be inverted by dividing row 2 by <span class="math notranslate nohighlight">\(k\)</span>:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} \\ \frac{1}{k} R_2 \\ \phantom{x} \end{matrix}
-    \qquad \longrightarrow
+    \frac{1}{k} R_2  \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; \frac{1}{k} &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <ul class="simple">
-<li><p>Subtract <span class="math notranslate nohighlight">\(k\)</span> multiples of row 1 from row 3:</p></li>
+<li><p>Adding <span class="math notranslate nohighlight">\(k\)</span> multiples of row 1 to row 3 can be inverted by subtracting <span class="math notranslate nohighlight">\(k\)</span> multiples of row 1 from row 3:</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}
-    \begin{matrix} \\ \\ R_3 + kR_1 \end{matrix}
-    \qquad \longrightarrow
+    R_3 - kR_1 \longrightarrow
     \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ -k &amp; 0 &amp; 1 \end{pmatrix}
 \end{align*} \end{split}\]</div>
 <div class="proof theorem admonition" id="elementary-matrix-multiplication-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span> (Multiplying by an elementary matrix)</p>
 <section class="theorem-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix and <span class="math notranslate nohighlight">\(E\)</span> is an elementary matrix the product <span class="math notranslate nohighlight">\(EA\)</span> is equivalent to performing the elementary row operation used to obtain <span class="math notranslate nohighlight">\(E\)</span> on <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(n \times n\)</span> matrix and <span class="math notranslate nohighlight">\(E\)</span> is an elementary matrix, the product <span class="math notranslate nohighlight">\(EA\)</span> is equivalent to performing the elementary row operation used to obtain <span class="math notranslate nohighlight">\(E\)</span> on <span class="math notranslate nohighlight">\(A\)</span>.</p>
 </section>
 </div><p>For example, let <span class="math notranslate nohighlight">\(A = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\)</span> and consider the following row operations:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_1 \leftrightarrow R_2\)</span>:   <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_1 \leftrightarrow R_2\)</span>:   The corresponding elementrary matrix is  <span class="math notranslate nohighlight">\(E_1 = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_1A = \begin{pmatrix} 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} =  \begin{pmatrix} 2 &amp; -1 &amp; 3 \\ 1 &amp; 0 &amp; 4 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\end{split}\]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(-2R_2\)</span>:   <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
+<li><p><span class="math notranslate nohighlight">\(-2R_2\)</span>:   The elementrary matrix is <span class="math notranslate nohighlight">\(E_2 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> so</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_2A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; -2 &amp; 0 \\ 0 &amp; 0 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}=\begin{pmatrix} 1 &amp; 0 &amp; 4 \\ -4 &amp; 2 &amp; -6 \\ 0 &amp; 5 &amp; 1 \end{pmatrix}\end{split}\]</div>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_3 + 3R_2\)</span>:   <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix}\)</span> so</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_3 + 3R_2\)</span>:   The elementrary matrix is  <span class="math notranslate nohighlight">\(E_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix}\)</span> so</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}E_3A = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 3 &amp; 1 \end{pmatrix} \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 0 &amp; 5 &amp; 1 \end{pmatrix} = \begin{pmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; -1 &amp; 3 \\ 6 &amp; 2 &amp; 10 \end{pmatrix}\end{split}\]</div>
@@ -638,23 +634,25 @@ document.write(`
 <div class="proof theorem admonition" id="theorem-5">
 <span id="index-5"></span><p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
 <section class="theorem-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(A\)</span> is a non-singular square matrix then the inverse of <span class="math notranslate nohighlight">\(A\)</span> can be calculated using</p>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> is a non-singular (invertible) square matrix, then the inverse of <span class="math notranslate nohighlight">\(A\)</span> can be calculated as:</p>
 <div class="math notranslate nohighlight">
-\[A^{-1} = E_kE_{k-1}\cdots E_2E_1.\]</div>
+\[A^{-1} = E_kE_{k-1}\cdots E_2E_1\]</div>
+<p>Where <span class="math notranslate nohighlight">\(E_1, E_2, \ldots, E_k\)</span> are the elementary matrices corresponding to the <span class="math notranslate nohighlight">\(k\)</span> elementary row operations needed to reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Applying <span class="math notranslate nohighlight">\(k\)</span> elementary row operations with corresponding elementary matrices <span class="math notranslate nohighlight">\(E_1, E_2, \ldots, E_k\)</span> to row reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form then</p>
+<p>Proof. Since <span class="math notranslate nohighlight">\(A\)</span> is square and non-singular, its reduced row echelon form will be the identity matrix. If we can apply <span class="math notranslate nohighlight">\(k\)</span> elementary row operations with corresponding elementary matrices <span class="math notranslate nohighlight">\(E_1, E_2, \ldots, E_k\)</span> to row reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form, then we have</p>
 <div class="math notranslate nohighlight">
-\[ I = E_k E_{k-1} \cdots E_2 E_1 A\]</div>
-<p>Multiplying <span class="math notranslate nohighlight">\(A^{-1}\)</span> to the right of both sides gives</p>
+\[E_k E_{k-1} \cdots E_2 E_1 A = I\]</div>
+<p>That is, if we multiply <span class="math notranslate nohighlight">\(A\)</span> on the left by all of the elementary matrices in turn, we will get the identity matrix.  Multiplying <span class="math notranslate nohighlight">\(A^{-1}\)</span> to the right of both sides gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
-I A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1 A A^{-1} \\
-A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1.
+ E_k E_{k-1} \cdots E_2 E_1 A A^{-1} &amp;= I A^{-1} \\
+ E_k E_{k-1} \cdots E_2 E_1 &amp;= A^{-1}
 \end{align*} \end{split}\]</div>
+<p>as required.</p>
 </div>
-<p>So we can calculate the inverse of <span class="math notranslate nohighlight">\(A\)</span> by applying the same row operations to the identity matrix as we do when we reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form. For brevity, we do this by forming an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and perform Gauss-Jordan elimination on the augmented matrix. Once this has been reduced to reduced row echelon form the matrix to the right of the partition is the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
-<p>The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient that using the adjoint-determinant formula when dealing with larger matrices (i.e., when <span class="math notranslate nohighlight">\(n &gt; 3\)</span>) since the steps can be easily programmed into a computer, and it does not require the calculation of determinants which can be computationally expensive.</p>
+<p>So we can calculate the inverse of <span class="math notranslate nohighlight">\(A\)</span> by applying the same row operations to the identity matrix as we do when we reduce <span class="math notranslate nohighlight">\(A\)</span> to reduced row echelon form. In practice, we can do this by forming an augmented matrix <span class="math notranslate nohighlight">\((A \mid I)\)</span> and performing Gauss-Jordan elimination on the augmented matrix. Once this has been converted to reduced row echelon form, the matrix to the right of the partition will then be the inverse of <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>The calculation of a matrix inverse using Gauss-Jordan elimination is more efficient than using the adjoint-determinant formula when dealing with larger matrices (i.e., when <span class="math notranslate nohighlight">\(n &gt; 3\)</span>) since the steps can be easily programmed into a computer, and it does not require the calculation of determinants - which can be computationally expensive.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WKz40mnevwE?si=xLZZRR2JT9TeQa8m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="gauss-jordan-inverse-example">
 <p class="admonition-title"><span class="caption-number">Example 2.6 </span></p>
@@ -678,42 +676,41 @@ A^{-1} &amp;= E_k E_{k-1} \cdots E_2 E_1.
       2 &amp; -1 &amp; 3 &amp; 0 &amp; 1 &amp; 0 \\
       1 &amp; 4 &amp; 4 &amp; 0 &amp; 0 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 - R_1 \end{array} \\ \\
-    \longrightarrow
+     \\ \\
+    \begin{array}{l} \\ R_2 - 2R_1 \\ R_3 - R_1 \end{array} \longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
       0 &amp; -1 &amp; -1 &amp; -2 &amp; 1 &amp; 0 \\
       0 &amp; 4 &amp; 2 &amp; -1 &amp; 0 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ -R_2 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow
+    \\ \\
+    -R_2\longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
       0 &amp; 1 &amp; 1 &amp; 2 &amp; -1 &amp; 0 \\
       0 &amp; 4 &amp; 2 &amp; -1 &amp; 0 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\  \\ R_3 - 4R_2 \end{array} \\ \\
-    \longrightarrow
+    \\ \\
+    R_3 - 4R_2 \longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
       0 &amp; 1 &amp; 1 &amp; 2 &amp; -1 &amp; 0 \\
       0 &amp; 0 &amp; -2 &amp; -9 &amp; 4 &amp; 1
     \end{array} \right)
-    \begin{array}{l} \\ \\ -\frac{1}{2}R_3 \end{array} \\ \\
-    \longrightarrow
+    \\ \\
+    -\frac{1}{2}R_3 \longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 2 &amp; 1 &amp; 0 &amp; 0 \\
       0 &amp; 1 &amp; 1 &amp; 2 &amp; -1 &amp; 0 \\
       0 &amp; 0 &amp; 1 &amp; \frac{9}{2} &amp; -2 &amp; -\frac{1}{2}
     \end{array} \right)
-    \begin{array}{l} R_1 - 2R_3 \\ R_2 - R_3 \\ \phantom{x} \end{array} \\ \\
-    \longrightarrow
+    \\ \\
+    \begin{array}{l} R_1 - 2R_3 \\ R_2 - R_3 \end{array}  \longrightarrow
     &amp;\left( \begin{array}{ccc|ccc}
       1 &amp; 0 &amp; 0 &amp; -8 &amp; 4 &amp; 1 \\
       0 &amp; 1 &amp; 1 &amp; -\frac{5}{2} &amp; 1 &amp; \frac{1}{2} \\
       0 &amp; 0 &amp; 1 &amp; \frac{9}{2} &amp; -2 &amp; -\frac{1}{2}
-    \end{array} \right)
-    \begin{array}{l} R_1 - 2R_3 \\ R_2 - R_3 \\ \phantom{x} \end{array} \\ \\
+    \end{array} \right)  
 \end{align*} \end{split}\]</div>
 <p class="sd-card-text">The augmented matrix is now in reduced row echelon form and the inverse of <span class="math notranslate nohighlight">\(A\)</span> is</p>
 <div class="math notranslate nohighlight">

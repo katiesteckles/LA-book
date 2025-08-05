@@ -427,17 +427,18 @@ document.write(`
     x_1 &amp;= \frac{de - bf}{ad - bc}, &amp; \qquad
     x_2 &amp;= \frac{af - ce}{ad - bc}.
 \end{align*} \]</div>
-<p>The solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denominator. But what about the numerator? If we consider the value of <span class="math notranslate nohighlight">\(x_1\)</span>, which is <span class="math notranslate nohighlight">\(de - bf\)</span>, we can see that it includes the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span>, and we have the difference of two products - which is similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix. In fact, we can say which matrix this is the determinant of:</p>
+<p>The solution to both variables includes the determinant of the coefficient matrix, <span class="math notranslate nohighlight">\(ad - bc\)</span>, in the denominator. But what about the numerator?</p>
+<p>If we consider the numerator of <span class="math notranslate nohighlight">\(x_1\)</span>, which is <span class="math notranslate nohighlight">\(de - bf\)</span>, we can see that it includes the constant values <span class="math notranslate nohighlight">\(e\)</span> and <span class="math notranslate nohighlight">\(f\)</span>, and it is the difference of two products - similar to the determinant of a <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrix. In fact, we can write down the matrix this is the determinant of:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     de - bf = \begin{vmatrix} e &amp; b \\ f &amp; d \end{vmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Performing a similar analysis for the solution to <span class="math notranslate nohighlight">\(x_2\)</span>, we see that the numerator is</p>
+<p>Performing a similar analysis for <span class="math notranslate nohighlight">\(x_2\)</span>, we see that the numerator is also the determinant of a matrix:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     af - ce = \begin{vmatrix} a &amp; e \\ c &amp; f \end{vmatrix}.
 \end{align*} \end{split}\]</div>
-<p>These matrices are simply the coefficient matrix <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> with columns 1 and 2 replaced by the constant vector <span class="math notranslate nohighlight">\(\begin{pmatrix} e \\ f \end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> respectively. This idea can be extended to larger systems, and is known as Cramer’s rule.</p>
+<p>On inspection, these matrices are simply the coefficient matrix <span class="math notranslate nohighlight">\(\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}\)</span> with columns 1 and 2 replaced by the constant vector <span class="math notranslate nohighlight">\(\begin{pmatrix} e \\ f \end{pmatrix}\)</span> for <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span> respectively. This idea can be extended to larger systems, and is known as Cramer’s rule.</p>
 <div class="proof theorem admonition" id="cramers-rule-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span> (Cramer’s rule)</p>
 <section class="theorem-content" id="proof-content">
@@ -453,7 +454,7 @@ document.write(`
 <p>so</p>
 <div class="math notranslate nohighlight">
 \[ \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}. \]</div>
-<p>Since <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> where <span class="math notranslate nohighlight">\(C\)</span> is the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">co-factors</a></p>
+<p>The matrix <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> - it is the transpose of the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">cofactors</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \operatorname{adj}(A) = C^\mathsf{T} = \begin{pmatrix}
     C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
@@ -464,7 +465,7 @@ document.write(`
 <p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
 <div class="math notranslate nohighlight">
 \[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
-<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span></p>
+<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} A_i = \begin{pmatrix}
         a_{11} &amp; \cdots &amp; a_{1,i-1} &amp; b_1 &amp; a_{1,i+1} &amp; \cdots &amp; a_{1n} \\
@@ -472,7 +473,7 @@ document.write(`
         \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
         a_{n1} &amp; \cdots &amp; a_{n,i-1} &amp; b_n &amp; a_{n,i+1} &amp; \cdots &amp; a_{nn}
     \end{pmatrix}. \end{split}\]</div>
-<p>Since removing the <span class="math notranslate nohighlight">\(i\)</span>th column from both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A_i\)</span> (the one with the <span class="math notranslate nohighlight">\(b\)</span> values) results in the same matrix then the cofactors of <span class="math notranslate nohighlight">\(A_i\)</span> are the same as the cofactors of <span class="math notranslate nohighlight">\(A\)</span>. If we calculate <span class="math notranslate nohighlight">\(\det(A_i)\)</span> by expanding along the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A_i\)</span> then</p>
+<p>Since removing the <span class="math notranslate nohighlight">\(i\)</span>th column from both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A_i\)</span> (the one with the <span class="math notranslate nohighlight">\(b\)</span> values) results in the same matrix, then the cofactors of <span class="math notranslate nohighlight">\(A_i\)</span> are the same as the cofactors of <span class="math notranslate nohighlight">\(A\)</span>. If we calculate <span class="math notranslate nohighlight">\(\det(A_i)\)</span> by expanding along the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A_i\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[ \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j, \]</div>
 <p>so <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span>.</p>
