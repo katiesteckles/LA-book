@@ -204,14 +204,14 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations inverse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.7. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.4. Solving systems of linear equations inverse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.5. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.6. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.7. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.8. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.9. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.10. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.11. Systems of Linear Equations Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -430,30 +430,31 @@ document.write(`
 <div class="proof definition admonition" id="dot-product-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.6 </span> (The dot product)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>dot product</strong> (also known as the <strong>scalar product</strong>) of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, is defined by</p>
+<p>The <strong>dot product</strong> (also known as the <strong>scalar product</strong>) of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, is defined as</p>
 <div class="math notranslate nohighlight" id="equation-arithmetic-dot-product-equation">
 <span class="eqno">(3.3)<a class="headerlink" href="#equation-arithmetic-dot-product-equation" title="Link to this equation">#</a></span>\[ \mathbf{a} \cdot \mathbf{b} = \sum_{i=1}^n a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n. \]</div>
-<p>The <strong>dot product</strong> of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, can be defined in geometric terms by</p>
+<p>The <strong>dot product</strong> of two vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> can be defined in geometric terms as</p>
 <div class="math notranslate nohighlight" id="equation-geometric-dot-product-equation">
 <span class="eqno">(3.4)<a class="headerlink" href="#equation-geometric-dot-product-equation" title="Link to this equation">#</a></span>\[ \mathbf{a} \cdot \mathbf{b} = \|\mathbf{a}\| \|\mathbf{b}\| \cos(\theta), \]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle between <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> (<a class="reference internal" href="#dot-product-figure"><span class="std std-numref">Fig. 3.8</span></a>).</p>
 <figure class="align-default" id="dot-product-figure">
 <a class="reference internal image-reference" href="../_images/3_dot_product.svg"><img alt="../_images/3_dot_product.svg" src="../_images/3_dot_product.svg" width="175" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">The dot product <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{b}\)</span> is a scalar that is related to the angle between <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#dot-product-figure" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">The dot product <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{b}\)</span></span><a class="headerlink" href="#dot-product-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</div><p>From the <a class="reference internal" href="#dot-product-definition">definition of the dot product</a>, we can observe the following:</p>
+</div><p>Roughly, we can think of the dot product <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{b}\)</span> as a scalar that describes the angle between <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>. If two vectors point roughly in the same direction, we would expect their dot product to be larger than the dot product of two vectors pointing in completely different directions.</p>
+<p>From the <a class="reference internal" href="#dot-product-definition">definition of the dot product</a>, we can say:</p>
 <ul class="simple">
-<li><p>The dot product produces is a scalar quantity (an element of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p></li>
-<li><p>The dot product of two perpendicular vectors is zero, we write <span class="math notranslate nohighlight">\(\mathbf{a}\perp\mathbf{b}\)</span> if <span class="math notranslate nohighlight">\(\mathbf{a}\cdot\mathbf{b}=0\)</span></p></li>
+<li><p>The dot product produces a scalar quantity (an element of <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>)</p></li>
+<li><p>The dot product of two perpendicular vectors is zero, and we write <span class="math notranslate nohighlight">\(\mathbf{a}\perp\mathbf{b}\)</span> if <span class="math notranslate nohighlight">\(\mathbf{a}\cdot\mathbf{b}=0\)</span></p></li>
 <li><p>The dot product of two co-directional (parallel) vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is equal to <span class="math notranslate nohighlight">\(\|\mathbf{a}\| \|\mathbf{b}\|\)</span></p></li>
 </ul>
 <div class="proof theorem admonition" id="dot-product-properties-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 3.4 </span> (Properties of the dot product)</p>
 <section class="theorem-content" id="proof-content">
-<p>For any three vectors <span class="math notranslate nohighlight">\(\mathbf{a},\mathbf{b},\mathbf{c}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> and any scalar <span class="math notranslate nohighlight">\(k\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> the following properties are satisfied</p>
+<p>For any three vectors <span class="math notranslate nohighlight">\(\mathbf{a},\mathbf{b},\mathbf{c}\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, and any scalar <span class="math notranslate nohighlight">\(k\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>, the following properties of the dot product hold:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\((\mathbf{a} + \mathbf{b})\cdot \mathbf{c} = \mathbf{a} \cdot \mathbf{c} + \mathbf{b} \cdot \mathbf{c}\)</span>   (distributive over vector addition)</p></li>
 <li><p><span class="math notranslate nohighlight">\((k \mathbf{a})\cdot \mathbf{b} = \mathbf{a} \cdot (k \mathbf{b})= k (\mathbf{a} \cdot \mathbf{b})\)</span>   (associative over scalar multiplication)</p></li>
@@ -485,13 +486,13 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><p>Note: angles should be expressed in radians at all times.</p>
+</div><p>Note: we will express angles in <a class="reference external" href="https://en.wikipedia.org/wiki/Radian">radians</a> rather than degrees. You may be used to angles given in degrees, but you will see radians used much more in university-level maths.</p>
 <section id="dot-product-in-matrix-multiplication">
 <h3>Dot product in matrix multiplication<a class="headerlink" href="#dot-product-in-matrix-multiplication" title="Link to this heading">#</a></h3>
 <p>We have already seen that the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">multiplication of two matrices</a> is defined by</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{ij} = \sum_{k = 1}^n a_{ik}b_{kj}. \]</div>
-<p>You may note that the term in the summation is similar to the dot product. In fact, when we multiply two matrices together we are calculating the dot product between the rows of the left-hand matrix and the columns of the right-hand matrix, i.e.,</p>
+<p>You may have noticed that the term in this summation is similar in structure to the dot product. In fact, when we multiply two matrices together, we are calculating the dot product of the rows of the left-hand matrix and the columns of the right-hand matrix. We have:</p>
 <div class="math notranslate nohighlight">
 \[ [AB]_{ij} = \mathbf{a}_i \cdot \mathbf{b}_j, \]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathbf{a}_i\)</span> is row <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}_j\)</span> is column <span class="math notranslate nohighlight">\(j\)</span> of <span class="math notranslate nohighlight">\(B\)</span>.</p>
@@ -503,7 +504,7 @@ document.write(`
 <div class="proof definition admonition" id="cross-product-definition">
 <p class="admonition-title"><span class="caption-number">Definition 3.7 </span> (The cross product)</p>
 <section class="definition-content" id="proof-content">
-<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated using a <a class="reference internal" href="1.4_Determinants.html#determinant-section"><span class="std std-ref">determinant</span></a> where</p>
+<p>The <strong>cross product</strong> (also known as the <strong>vector product</strong>) of two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>, <span class="math notranslate nohighlight">\(\mathbf{a}=(a_1,a_2,a_3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}=(b_1,b_2,b_3)\)</span> can be calculated as the <a class="reference internal" href="1.4_Determinants.html#determinant-section"><span class="std std-ref">determinant</span></a> of a matrix constructed using the elements of <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>, and a set of vectors <span class="math notranslate nohighlight">\(\mathbf{i}, \)</span>\mathbf{j}<span class="math notranslate nohighlight">\( and \)</span>\mathbf{k}$:</p>
 <div class="math notranslate nohighlight" id="equation-cross-product-equation">
 <span class="eqno">(3.5)<a class="headerlink" href="#equation-cross-product-equation" title="Link to this equation">#</a></span>\[\begin{split}\mathbf{a} \times \mathbf{b} = \det 
 \begin{pmatrix}
@@ -515,11 +516,14 @@ document.write(`
 <figure class="align-default" id="cross-product-figure">
 <a class="reference internal image-reference" href="../_images/3_cross_product.svg"><img alt="../_images/3_cross_product.svg" src="../_images/3_cross_product.svg" width="175" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">The cross product <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is another vector perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#cross-product-figure" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">The cross product <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</span><a class="headerlink" href="#cross-product-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-</div><div class="proof theorem admonition" id="cross-product-properties-theorem">
+</div><p>In order to calculate this product, we can leave the vectors <span class="math notranslate nohighlight">\(\mathbf{i}, \)</span>\mathbf{j}<span class="math notranslate nohighlight">\( and \)</span>\mathbf{k}<span class="math notranslate nohighlight">\( in vector form, and expand along the top row of the matrix to calculate the determinant. Once we have obtained an excpression for the determinant in terms of \)</span>\mathbf{i}, <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{k}\)</span>, we can use it to calculate the final value.</p>
+<p>Roughly, the cross product returns a vector perpendicular to the two vectors being multiplied together, if they were both starting at the same point. The length of this vector depends on the angle between the two vectors you are taking the product of, and can be calculated as <span class="math notranslate nohighlight">\(\|\mathbf{a}\| \|\mathbf{b}\| \sin(\theta)\)</span>.</p>
+<p>The cross product is only defined for vectors in three-dimensional space.</p>
+<div class="proof theorem admonition" id="cross-product-properties-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 3.5 </span> (Properties of the cross product)</p>
 <section class="theorem-content" id="proof-content">
 <p>Given three vectors <span class="math notranslate nohighlight">\(\mathbf{a}, \mathbf{b}, \mathbf{c} \in \mathbb{R}^3\)</span> the following properties are satisfied:</p>
@@ -540,7 +544,9 @@ document.write(`
 <section class="example-content" id="proof-content">
 <p>Calculate the cross product between the vectors <span class="math notranslate nohighlight">\(\mathbf{a} = (1, 2, 3)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b} = (4, 5, 6)\)</span> and show that it is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 <hr class="docutils" />
-<p><strong>Solution</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{a} \times \mathbf{b} &amp;= \begin{vmatrix} \mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\ 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{vmatrix}
@@ -548,7 +554,7 @@ document.write(`
     &amp;= -3\mathbf{i} + 6 \mathbf{j} - 3\mathbf{k}
     = (-3, 6, -3).
 \end{align*} \end{split}\]</div>
-<p>To show that <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} \perp \mathbf{a}, \mathbf{b}\)</span> we check whether the dot product between <span class="math notranslate nohighlight">\((3, 6, -3)\)</span> and the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is zero</p>
+<p class="sd-card-text">To show that <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b} \perp \mathbf{a}, \mathbf{b}\)</span> we check whether the dot product between <span class="math notranslate nohighlight">\((3, 6, -3)\)</span> and the vectors <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is zero</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{a} \cdot (\mathbf{a} \times \mathbf{b}) &amp;= 
@@ -560,8 +566,9 @@ document.write(`
     \begin{pmatrix} -3 \\ 6 \\ -3 \end{pmatrix}
     = -12 + 30 - 18 = 0,
 \end{align*} \end{split}\]</div>
-<p>therefore <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
-</section>
+<p class="sd-card-text">therefore <span class="math notranslate nohighlight">\(\mathbf{a} \times \mathbf{b}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\mathbf{a}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
+</div>
+</details></section>
 </div></section>
 </section>
 

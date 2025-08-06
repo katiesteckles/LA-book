@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.7. Gauss-Jordan elimination &#8212; Linear Algebra</title>
+    <title>2.8. Gauss-Jordan elimination &#8212; Linear Algebra</title>
   
   
   
@@ -66,8 +66,8 @@
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.8. Consistent, inconsistent and indeterminate systems" href="2.6_Consistent_systems.html" />
-    <link rel="prev" title="2.6. Partial pivoting" href="2.4_Partial_pivoting.html" />
+    <link rel="next" title="2.9. Consistent, inconsistent and indeterminate systems" href="2.6_Consistent_systems.html" />
+    <link rel="prev" title="2.7. Partial pivoting" href="2.4_Partial_pivoting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,14 +204,14 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations inverse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.7. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.4. Solving systems of linear equations inverse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.5. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.6. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.7. Partial pivoting</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.8. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.9. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.10. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.11. Systems of Linear Equations Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -405,8 +405,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.7.1. Elementary matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.7.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.8.1. Elementary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.8.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
 </ul>
             </nav>
         </div>
@@ -419,7 +419,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="gauss-jordan-elimination">
-<span id="index-1"></span><span id="index-0"></span><span id="gauss-jordan-elimination-section"></span><h1><span class="section-number">2.7. </span>Gauss-Jordan elimination<a class="headerlink" href="#gauss-jordan-elimination" title="Link to this heading">#</a></h1>
+<span id="index-1"></span><span id="index-0"></span><span id="gauss-jordan-elimination-section"></span><h1><span class="section-number">2.8. </span>Gauss-Jordan elimination<a class="headerlink" href="#gauss-jordan-elimination" title="Link to this heading">#</a></h1>
 <figure class="margin align-default" id="id1">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png"><img alt="Wilhelm Jordan" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Wilhelm_Jordan.png" style="width: 200px;" />
 </a>
@@ -543,7 +543,7 @@ document.write(`
 </div><p>For any given matrix, its reduced row echelon form is unique. If the matrix is square (<span class="math notranslate nohighlight">\(n \times n\)</span>) and non-singular (invertible), the reduced row echelon form of the matrix will be <span class="math notranslate nohighlight">\(I_n\)</span>, the <span class="math notranslate nohighlight">\(n \times n\)</span> identity matrix.</p>
 <hr class="docutils" />
 <section id="elementary-matrices">
-<span id="index-4"></span><h2><span class="section-number">2.7.1. </span>Elementary matrices<a class="headerlink" href="#elementary-matrices" title="Link to this heading">#</a></h2>
+<span id="index-4"></span><h2><span class="section-number">2.8.1. </span>Elementary matrices<a class="headerlink" href="#elementary-matrices" title="Link to this heading">#</a></h2>
 <p>Gauss-Jordan elimination allows us to calculate the inverse of matrices, and is much more computationally efficient than the <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-definition">adjoint-determinant formula</a>. To show how we can use row operations to calculate the inverse of a matrix, we first need to consider elementary matrices.</p>
 <div class="proof definition admonition" id="elementary-matrices-definition">
 <p class="admonition-title"><span class="caption-number">Definition 2.6 </span> (Elementary matrices)</p>
@@ -630,7 +630,7 @@ document.write(`
 </section>
 <hr class="docutils" />
 <section id="calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">
-<h2><span class="section-number">2.7.2. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">2.8.2. </span>Calculating the inverse of a matrix using Gauss-Jordan elimination<a class="headerlink" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination" title="Link to this heading">#</a></h2>
 <div class="proof theorem admonition" id="theorem-5">
 <span id="index-5"></span><p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
 <section class="theorem-content" id="proof-content">
@@ -776,7 +776,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.6. </span>Partial pivoting</p>
+        <p class="prev-next-title"><span class="section-number">2.7. </span>Partial pivoting</p>
       </div>
     </a>
     <a class="right-next"
@@ -784,7 +784,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.8. </span>Consistent, inconsistent and indeterminate systems</p>
+        <p class="prev-next-title"><span class="section-number">2.9. </span>Consistent, inconsistent and indeterminate systems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -804,8 +804,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.7.1. Elementary matrices</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.7.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-matrices">2.8.1. Elementary matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-inverse-of-a-matrix-using-gauss-jordan-elimination">2.8.2. Calculating the inverse of a matrix using Gauss-Jordan elimination</a></li>
 </ul>
   </nav></div>
 
