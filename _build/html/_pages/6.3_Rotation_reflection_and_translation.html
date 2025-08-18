@@ -204,14 +204,14 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="2.0_Linear_systems.html">2. Systems of Linear Equations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.3. Solving systems of linear equations inverse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.4. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.5. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.6. Partial pivoting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.7. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.8. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.9. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.10. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.4. Solving systems of linear equations inverse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.5. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.6. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.7. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.8. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.9. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.10. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.11. Systems of Linear Equations Exercises</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -421,7 +421,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rotation-reflection-and-scaling">
 <span id="rotation-reflection-and-scaling-section"></span><h1><span class="section-number">6.3. </span>Rotation, reflection and scaling<a class="headerlink" href="#rotation-reflection-and-scaling" title="Link to this heading">#</a></h1>
-<p>Three of the most common geometrical linear transformations is rotation of vectors about the origin, reflection of vectors about a line and translation of vectors from one position to another.</p>
+<p>Linear transformations are very useful for geometrical transformations. Three of the most commonly used transformations are rotation of vectors about the origin, reflection of vectors in a line, and translation of vectors from one position to another.</p>
 <hr class="docutils" />
 <section id="rotation">
 <span id="index-0"></span><span id="rotation-section"></span><h2><span class="section-number">6.3.1. </span>Rotation<a class="headerlink" href="#rotation" title="Link to this heading">#</a></h2>
@@ -436,37 +436,39 @@ document.write(`
 <p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Rotation of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> anti-clockwise about the origin.</span><a class="headerlink" href="#rotation-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. Here we have the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> which is rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>. To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1\|\mathbf{u}\|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, by angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the original to <span class="math notranslate nohighlight">\(\mathbf{u}=(u_x, u_y)\)</span>. Forming a right-angled triangle (the blue triangle) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(\|\mathbf{u}\|\)</span> then</p>
+<p>Consider the diagram in <a class="reference internal" href="#rotation-figure"><span class="std std-numref">Fig. 6.2</span></a>. The vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> is rotated through the angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin, to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span>.</p>
+<p>To determine the linear mapping <span class="math notranslate nohighlight">\(Rot(\theta): \mathbf{u} \mapsto \mathbf{v}\)</span> we must first consider the rotation from the vector <span class="math notranslate nohighlight">\(\mathbf{e}_1\|\mathbf{u}\|\)</span>, which points along the <span class="math notranslate nohighlight">\(x\)</span>-axis and has the same magnitude as <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>. If we rotate this by an angle <span class="math notranslate nohighlight">\(\phi\)</span> anti-clockwise about the origin, we get to <span class="math notranslate nohighlight">\(\mathbf{u}=(u_x, u_y)\)</span>.</p>
+<p>We can find an expression for the coordinates of <span class="math notranslate nohighlight">\(\mathbb{u}\)</span> and <span class="math notranslate nohighlight">\(\vmathbb{v}\)</span> in terms of <span class="math notranslate nohighlight">\(\|\mathbf{u}\|\)</span> and <span class="math notranslate nohighlight">\(\phi\)</span>. Consider the right-angled triangle (shown in \textcolor{blue}{blue}) with the angle <span class="math notranslate nohighlight">\(\phi\)</span> and hypotenuse of length <span class="math notranslate nohighlight">\(\|\mathbf{u}\|\)</span>. Then</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-1">
 <span class="eqno">(6.6)<a class="headerlink" href="#equation-rotation-equation-1" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     \cos(\phi) &amp;= \frac{u_x}{\|\mathbf{u}\|} &amp; \therefore u_x &amp;= \|\mathbf{u}\| \cos(\phi), \\
     \sin(\phi) &amp;= \frac{u_y}{\|\mathbf{u}\|} &amp; \therefore u_y &amp;= \|\mathbf{u}\| \sin(\phi).
 \end{align*} \end{split}\]</div>
-<p>Doing similar for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)\)</span> (the red triangle) we have</p>
+<p>Similarly, for <span class="math notranslate nohighlight">\(\mathbf{v} = (v_x, v_y)\)</span> (the \textcolor{red}{red} triangle) we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     v_x &amp;= \|\mathbf{u}\| \cos(\phi + \theta), \\
     v_y &amp;= \|\mathbf{u}\| \sin(\phi + \theta),
 \end{align*} \end{split}\]</div>
-<p>using the <a href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Angle_sum_and_difference_identities" target="_blank">angle sum identities</a></p>
+<p>Now, the <a href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Angle_sum_and_difference_identities" target="_blank">angle sum identities</a> tell us that:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \cos(\phi + \theta) &amp;= \cos(\phi) \cos(\theta) - \sin(\phi) \sin(\theta), \\
     \sin(\phi + \theta) &amp;= \sin(\phi) \cos(\theta) + \cos(\phi) \sin(\theta),
 \end{align*} \end{split}\]</div>
-<p>then</p>
+<p>Then:</p>
 <div class="math notranslate nohighlight" id="equation-rotation-equation-2">
 <span class="eqno">(6.7)<a class="headerlink" href="#equation-rotation-equation-2" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     v_x &amp;= \|\mathbf{u}\| \cos(\phi) \cos(\theta) - \|\mathbf{u}\|\sin(\phi) \sin(\theta) \\
     v_y &amp;= \|\mathbf{u}\| \sin(\phi) \cos(\theta) + \|\mathbf{u}\|\cos(\phi) \sin(\theta).
 \end{align*} \end{split}\]</div>
-<p>Substituting equation <a class="reference internal" href="#equation-rotation-equation-1">(6.6)</a> into equation <a class="reference internal" href="#equation-rotation-equation-2">(6.7)</a></p>
+<p>Substituting equations <a class="reference internal" href="#equation-rotation-equation-1">(6.6)</a> into equations <a class="reference internal" href="#equation-rotation-equation-2">(6.7)</a>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     v_x &amp;= u_x \cos(\theta) - u_y \sin(\theta), \\
     v_y &amp;= u_y \cos(\theta) + u_x \sin(\theta).
 \end{align*} \end{split}\]</div>
-<p>Therefore the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> rotated by angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the original is</p>
+<p>Therefore the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>, rotated through the angle <span class="math notranslate nohighlight">\(\theta\)</span> anti-clockwise about the origin, is given by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta) \cdot \mathbf{u} =
     \begin{pmatrix} \cos(\theta) &amp; -\sin(\theta) \\ \sin(\theta) &amp; \cos(\theta) \end{pmatrix}
@@ -478,19 +480,19 @@ document.write(`
 <div class="proof theorem admonition" id="rotation-in-R2-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.3 </span> (Rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The rotation of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The rotation of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> <strong>anti-clockwise</strong> by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is the linear transformation <span class="math notranslate nohighlight">\(Rot(\theta): \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta) :
     \begin{pmatrix} u_x \\ u_y \end{pmatrix} \mapsto
     \begin{pmatrix} u_x \cos(\theta) - u_y \sin(\theta) \\ u_x \sin(\theta) + u_y \cos(\theta) \end{pmatrix}. \end{split}\]</div>
-<p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is</p>
+<p>The transformation matrix for rotation in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span> is:</p>
 <div class="math notranslate nohighlight" id="equation-rotation-matrix-equation">
 <span class="eqno">(6.8)<a class="headerlink" href="#equation-rotation-matrix-equation" title="Link to this equation">#</a></span>\[\begin{split} Rot(\theta) = \begin{pmatrix}
         \cos(\theta) &amp; -\sin(\theta) \\
         \sin(\theta) &amp; \cos(\theta)
     \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>The inverse transformation of rotating a vector anti-clockwise by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is rotating <strong>clockwise</strong> by the same angle. This can be achieved by negating <span class="math notranslate nohighlight">\(\theta\)</span>, since <span class="math notranslate nohighlight">\(\cos(-\theta) = \cos(\theta)\)</span> and <span class="math notranslate nohighlight">\(\sin(-\theta) = -\sin(\theta)\)</span> then</p>
+</div><p>The inverse transformation of rotating a vector anti-clockwise by an angle <span class="math notranslate nohighlight">\(\theta\)</span> is rotating <strong>clockwise</strong> by the same angle. This can be achieved by negating <span class="math notranslate nohighlight">\(\theta\)</span>. Since <span class="math notranslate nohighlight">\(\cos(-\theta) = \cos(\theta)\)</span> and <span class="math notranslate nohighlight">\(\sin(-\theta) = -\sin(\theta)\)</span>, we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot(\theta)^{-1} = \begin{pmatrix}
         \cos(-\theta) &amp; -\sin(-\theta) \\
@@ -500,7 +502,7 @@ document.write(`
        \cos(\theta) &amp; \sin(\theta) \\
        -\sin(\theta) &amp; \cos(\theta)
    \end{pmatrix}. \end{split}\]</div>
-<p>We could have also calculated the inverse of the rotation matrix to give the same result</p>
+<p>If we instead calculate the inverse of the rotation matrix, we get the same result:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Rot(\theta)^{-1} &amp;= \frac{1}{\cos^2(\theta) + \sin^2(\theta)}
@@ -516,7 +518,7 @@ document.write(`
 <div class="proof example admonition" id="rotation-example">
 <p class="admonition-title"><span class="caption-number">Example 6.6 </span></p>
 <section class="example-content" id="proof-content">
-<p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> by angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
+<p>Rotate the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span> through an angle <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{2}\)</span> anti-clockwise about the origin.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -531,7 +533,7 @@ document.write(`
         0 &amp; -1 \\
         1 &amp; 0
     \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = (2, 1)\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Rot\left( \frac{\pi}{2} \right) \cdot \mathbf{u} =
     \begin{pmatrix}
@@ -540,7 +542,7 @@ document.write(`
     \end{pmatrix}
     \begin{pmatrix} 2 \\ 1 \end{pmatrix}
     = \begin{pmatrix} -1 \\ 2 \end{pmatrix}. \end{split}\]</div>
-<p class="sd-card-text">This rotation is illustrated in the diagram below</p>
+<p class="sd-card-text">This rotation is illustrated in the diagram below:</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/6_rotation_example.svg"><img alt="../_images/6_rotation_example.svg" src="../_images/6_rotation_example.svg" width="400" /></a>
 <figcaption>
@@ -556,7 +558,8 @@ document.write(`
 <div class="proof definition admonition" id="reflection-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.7 </span> (Reflection about a line)</p>
 <section class="definition-content" id="proof-content">
-<p>The linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta): \mathbb{R}^2 \to \mathbb{R^2}\)</span> is the reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> about the line which passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis such that the distance of the head of the image vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the same as that of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p>
+<p>The linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta): \mathbb{R}^2 \to \mathbb{R^2}\)</span> is the reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^2\)</span> in the line which passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
+<p>After reflection, the distance from the head of the image vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> to this line will be the same as the distance from the head of <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> to the line.</p>
 </section>
 </div><figure class="align-default" id="reflection-figure">
 <a class="reference internal image-reference" href="../_images/6_reflection.svg"><img alt="../_images/6_reflection.svg" src="../_images/6_reflection.svg" width="300" /></a>
@@ -564,22 +567,23 @@ document.write(`
 <p><span class="caption-number">Fig. 6.4 </span><span class="caption-text">The reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about a line that passes through the origin.</span><a class="headerlink" href="#reflection-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_x, u_y)\)</span> about the <span class="math notranslate nohighlight">\(x\)</span>-axis or <span class="math notranslate nohighlight">\(y\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.5</span></a>).</p>
+<p>The simplest reflection we can perform is to reflect a vector <span class="math notranslate nohighlight">\(\mathbf{u} =(u_x, u_y)\)</span> in the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="#reflection-about-x-figure"><span class="std std-numref">Fig. 6.5</span></a>).</p>
 <figure class="align-default" id="reflection-about-x-figure">
 <a class="reference internal image-reference" href="../_images/6_reflection_about_x.svg"><img alt="../_images/6_reflection_about_x.svg" src="../_images/6_reflection_about_x.svg" width="300" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> about the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> in the <span class="math notranslate nohighlight">\(x\)</span> axis.</span><a class="headerlink" href="#reflection-about-x-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>To reflect about the <span class="math notranslate nohighlight">\(x\)</span>-axis we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate</p>
+<p>To reflect in the <span class="math notranslate nohighlight">\(x\)</span>-axis, we simply change the sign of the <span class="math notranslate nohighlight">\(y\)</span> co-ordinate:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} Re\!f(0) \cdot \mathbf{u} =
 \begin{pmatrix} u_x \\ -u_y \end{pmatrix}, \end{split}\]</div>
 <p>and the transformation matrix is</p>
 <div class="math notranslate nohighlight" id="equation-reflection-about-x-equation">
 <span class="eqno">(6.9)<a class="headerlink" href="#equation-reflection-about-x-equation" title="Link to this equation">#</a></span>\[\begin{split} Re\!f(0) = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}. \end{split}\]</div>
-<p>Note that here the line of reflection makes an angle of <span class="math notranslate nohighlight">\(\theta=0\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p>
-<p>The determine the reflection about a line that makes and arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="#reflection-about-line-1-figure"><span class="std std-numref">Fig. 6.6</span></a>). This means we can then use equation <a class="reference internal" href="#equation-reflection-about-x-equation">(6.9)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="#reflection-about-line-2-figure"><span class="std std-numref">Fig. 6.7</span></a>) before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="#reflection-about-line-3-figure"><span class="std std-numref">Fig. 6.8</span></a>).</p>
+<p>Note that here the line of reflection makes an angle of <span class="math notranslate nohighlight">\(\theta=0\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis, so the transformation is denoted <span class="math notranslate nohighlight">\(Re\!f(0)\)</span>.</p>
+<p>To determine the transformation matrix for a reflection in a line that makes an arbitrary angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis, we first perform a rotation by <span class="math notranslate nohighlight">\(-\theta\)</span> so that the line of reflection is on the <span class="math notranslate nohighlight">\(x\)</span>-axis (<a class="reference internal" href="#reflection-about-line-1-figure"><span class="std std-numref">Fig. 6.6</span></a>).</p>
+<p>This means we can then use equation <a class="reference internal" href="#equation-reflection-about-x-equation">(6.9)</a> to reflect the rotated <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> vector to give the vector <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> (<a class="reference internal" href="#reflection-about-line-2-figure"><span class="std std-numref">Fig. 6.7</span></a>), before rotating by <span class="math notranslate nohighlight">\(\theta\)</span> so that the line of reflection is back to its original position (<a class="reference internal" href="#reflection-about-line-3-figure"><span class="std std-numref">Fig. 6.8</span></a>).</p>
 <figure class="align-default" id="reflection-about-line-1-figure">
 <a class="reference internal image-reference" href="../_images/6_reflection_about_line_1.svg"><img alt="../_images/6_reflection_about_line_1.svg" src="../_images/6_reflection_about_line_1.svg" width="300" /></a>
 <figcaption>
@@ -598,7 +602,8 @@ document.write(`
 <p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Rotate by <span class="math notranslate nohighlight">\(\theta\)</span>.</span><a class="headerlink" href="#reflection-about-line-3-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Using composite transformations we can calculate the transformation matrix for reflection about a line</p>
+<p>Since these are all linear transformations, we can compose them as we have seen previously. First we rotate through <span class="math notranslate nohighlight">\(-\theta\)</span>, then reflect, then rotate through <span class="math notranslate nohighlight">\(\theta\)</span> (but remembering these will be applied in reverse order, from right to left as we write them).</p>
+<p>The transformation matrix for reflection in a line with angle <span class="math notranslate nohighlight">\(\theta\)</span> from the <span class="math notranslate nohighlight">\(x\)</span>-axis is hence given by:</p>
 <div class="math notranslate nohighlight">
 \[ Re\!f(\theta) = Rot(\theta) \cdot Re\!f(0) \cdot Rot(-\theta), \]</div>
 <p>therefore</p>
@@ -613,13 +618,13 @@ document.write(`
         2\cos(\theta)\sin(\theta) &amp; \sin^2(\theta) - \cos^2(\theta)
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Using <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Double-angle_formulae">double angle formulae</a></p>
+<p>Using <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_trigonometric_identities#Double-angle_formulae">double angle formulae</a>, we can simplify this - the formulae are:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \cos(2\theta) &amp;= \cos^2(\theta) - \sin^2(\theta), \\
     \sin(2\theta) &amp;= 2\cos(\theta) \sin(\theta),
 \end{align*} \end{split}\]</div>
-<p>then</p>
+<p>This means we can simplify to:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f(\theta) &amp;=
@@ -631,7 +636,7 @@ document.write(`
 <div class="proof theorem admonition" id="reflection-theorem">
 <p class="admonition-title"><span class="caption-number">Theorem 6.4 </span> (Reflection in <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>)</p>
 <section class="theorem-content" id="proof-content">
-<p>The reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> about a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span> defined by</p>
+<p>The reflection of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_x, u_y) \in \mathbb{R}^2\)</span> in a line which passes through the origin and makes an angle <span class="math notranslate nohighlight">\(\theta\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (i.e., <span class="math notranslate nohighlight">\(y = \tan(\theta)x\)</span>) is the linear transformation <span class="math notranslate nohighlight">\(Re\!f(\theta) : \mathbb{R}^2 \to \mathbb{R}^2\)</span>, defined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f(\theta) :
@@ -646,17 +651,17 @@ document.write(`
     \sin(2\theta) &amp; -\cos(2\theta)
 \end{pmatrix}. \end{split}\]</div>
 </section>
-</div><p>The inverse of reflecting about a line is to simply perform the reflection again, i.e.,</p>
+</div><p>The inverse of reflecting in a given line is to simply perform the reflection again. That is,</p>
 <div class="math notranslate nohighlight">
 \[Re\!f^{-1}(\theta) = Re\!f(\theta).\]</div>
 <div class="proof example admonition" id="reflection-example">
 <p class="admonition-title"><span class="caption-number">Example 6.7 </span></p>
 <section class="example-content" id="proof-content">
-<p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and has gradient of 1.</p>
+<p>Reflect the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> in the line that passes through the origin and has gradient of 1.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Since the line of reflection has gradient 1 then <span class="math notranslate nohighlight">\(\theta = \tan^{-1}(1) = \pi/4\)</span> and the reflection matrix is</p>
+<p class="sd-card-text">Since the line of reflection has gradient 1, we know <span class="math notranslate nohighlight">\(\theta = \tan^{-1}(1) = \pi/4\)</span> and the reflection matrix is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f\left( \frac{\pi}{4} \right) = \begin{pmatrix}
@@ -668,7 +673,7 @@ document.write(`
         1 &amp; 0
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span></p>
+<p class="sd-card-text">Applying the transformation to <span class="math notranslate nohighlight">\(\mathbf{u} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Re\!f\left(\frac{\pi}{4}\right) = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}
@@ -678,7 +683,7 @@ document.write(`
 <figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="../_images/6_reflection_example.svg"><img alt="../_images/6_reflection_example.svg" src="../_images/6_reflection_example.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{4}\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Reflection of the vector <span class="math notranslate nohighlight">\(\mathbf{u} = (3, -1)\)</span> about the line that passes through the origin and makes an angle of <span class="math notranslate nohighlight">\(\theta = \frac{\pi}{4}\)</span> with the <span class="math notranslate nohighlight">\(x\)</span>-axis (having a gradient of <span class="math notranslate nohighlight">\(1\)</span>).</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
@@ -687,15 +692,17 @@ document.write(`
 </section>
 <section id="scaling">
 <span id="index-2"></span><span id="scaling-section"></span><h2><span class="section-number">6.3.3. </span>Scaling<a class="headerlink" href="#scaling" title="Link to this heading">#</a></h2>
+<p>We have seen that vectors can be scaled by multiplying them by scalars - this will result in a vector pointing in the same direction, with a length given by multiplying its original length by the scalar.</p>
+<p>It’s also possible to scale an object by different amounts in different directions. This can be achieved using a <strong>scaling vector</strong>.</p>
 <div class="proof definition admonition" id="scaling-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.8 </span> (Scaling transformation)</p>
 <section class="definition-content" id="proof-content">
-<p>The linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}) : \mathbb{R}^n \to \mathbb{R}^n\)</span> where <span class="math notranslate nohighlight">\(\mathbf{s} \in \mathbb{R}^n\)</span> applied to the position vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span> scales <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> so that the head is moved closer or further away from the origin.</p>
+<p>The linear transformation <span class="math notranslate nohighlight">\(S(\mathbf{s}) : \mathbb{R}^n \to \mathbb{R}^n\)</span> (where <span class="math notranslate nohighlight">\(\mathbf{s}\)</span> is a scaling vector in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>), applied to the position vector <span class="math notranslate nohighlight">\(\mathbf{u} \in \mathbb{R}^n\)</span>, scales <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the corresponding amounts in each coordinate.</p>
 </section>
 </div><figure class="align-default" id="scaling-figure">
 <a class="reference internal image-reference" href="../_images/6_scaling.svg"><img alt="../_images/6_scaling.svg" src="../_images/6_scaling.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</span><a class="headerlink" href="#scaling-figure" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text">The scaling of the vector <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the scaling vector <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>, which changes both the direction and length of the vector.</span><a class="headerlink" href="#scaling-figure" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The scaling of a vector <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, \ldots, u_n) \in \mathbb{R}^n\)</span> by a scaling vector <span class="math notranslate nohighlight">\(\mathbf{s} = (s_1, s_2, \ldots, s_n)\)</span> is achieved by multiplying the corresponding elements in <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{s}\)</span>.</p>
@@ -708,7 +715,7 @@ document.write(`
     S(\mathbf{s}): \begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix} \mapsto
     \begin{pmatrix} s_1 u_1 \\ s_2 u_2 \\ \vdots \\ s_n u_n \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>The transformation matrix for scaling is</p>
+<p>The transformation matrix for scaling is:</p>
 <div class="math notranslate nohighlight" id="equation-scaling-matrix-equation">
 <span class="eqno">(6.11)<a class="headerlink" href="#equation-scaling-matrix-equation" title="Link to this equation">#</a></span>\[\begin{split} \begin{align*}
     S(\mathbf{s}) =
@@ -720,7 +727,9 @@ document.write(`
         \end{pmatrix}.
 \end{align*} \end{split}\]</div>
 </section>
-</div><p>Since the inverse operation of scalar multiplication is scalar division then the inverse scaling matrix is</p>
+</div><p>Since non-zero the entries in this matrix are all in separate rows and columns, the scalar multiplication will be applied to each element of the vector being scaled separately.</p>
+<p>If the entries on the diagonal of this matrix are all the same, this is just the same as standard scalar multiplication, since each entry in the vector is multiplied by the same scalar.</p>
+<p>To invert the operation of scaling by a vector, the inverse scaling matrix is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     S^{-1}(\mathbf{s}) =
