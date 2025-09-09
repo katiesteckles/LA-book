@@ -576,7 +576,7 @@ document.write(`
 <p>Calculate the co-ordinates of the triangle after each of these transformations has been applied, and determine a transformation matrix that performs all three transformations at the same time.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text">Solution (Scaling)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">Using homogeneous co-ordinates, the vertices have position vectors <span class="math notranslate nohighlight">\(\begin{pmatrix} -1 \\ -1 \\ 1  \end{pmatrix}\)</span>, <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 \\ -1 \\ 1  \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 \\ 2 \\ 1  \end{pmatrix}\)</span>. We can combine into a single matrix”</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} U =
@@ -605,7 +605,10 @@ document.write(`
 </figcaption>
 </figure>
 </div>
-</details><p>We then want to rotate by an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>, so the rotation matrix is</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution (Rotation)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We then want to rotate by an angle of <span class="math notranslate nohighlight">\(\frac{\pi}{4}\)</span>, so the rotation matrix is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     Rot\left( \frac{\pi}{4} \right) &amp;=
@@ -620,7 +623,7 @@ document.write(`
         0 &amp; 0 &amp; 1
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Applying the rotating matrix to <span class="math notranslate nohighlight">\(U_1\)</span></p>
+<p class="sd-card-text">Applying the rotating matrix to <span class="math notranslate nohighlight">\(U_1\)</span></p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     U_2 &amp;= Rot\left(\frac{\pi}{4}\right) \cdot U_1  \\
@@ -647,7 +650,11 @@ document.write(`
 <p><span class="caption-number">Fig. 6.15 </span><span class="caption-text">The scaled triangle rotated by angle <span class="math notranslate nohighlight">\(\theta=\frac{\pi}{4}\)</span> anti-clockwise.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Finally, we need to translate by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 6 \\ 4 \end{pmatrix}\)</span>, so the translation matrix is:</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution (Translation)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Finally, we need to translate by the translation vector <span class="math notranslate nohighlight">\(\mathbf{t} = \begin{pmatrix} 6 \\ 4 \end{pmatrix}\)</span>, so the translation matrix is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} T\begin{pmatrix} 6 \\ 4 \end{pmatrix} =
 \begin{pmatrix}
@@ -655,7 +662,7 @@ document.write(`
     0 &amp; 1 &amp; 4 \\
     0 &amp; 0 &amp; 1
 \end{pmatrix}. \end{split}\]</div>
-<p>Applying the translation matrix to <span class="math notranslate nohighlight">\(U_2\)</span>:</p>
+<p class="sd-card-text">Applying the translation matrix to <span class="math notranslate nohighlight">\(U_2\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     U_3 &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot U_2 \\
@@ -682,7 +689,11 @@ document.write(`
 <p><span class="caption-number">Fig. 6.16 </span><span class="caption-text">Rotated triangle translated by <span class="math notranslate nohighlight">\(\mathbf{t} = (6, 3)\)</span></span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The single transformation matrix that performs the three transformations at the same time (remembering we put the matrix for the transformation we want to apply first on the right) is:</p>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution (Combined)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The single transformation matrix that performs the three transformations at the same time (remembering we put the matrix for the transformation we want to apply first on the right) is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;= T\begin{pmatrix} 6 \\ 4 \end{pmatrix} \cdot Rot(\pi/4) \cdot S\begin{pmatrix} 2 \\ 2 \end{pmatrix} \\
@@ -713,7 +724,7 @@ document.write(`
         0 &amp; 0 &amp; 1
     \end{pmatrix}.
 \end{align*} \end{split}\]</div>
-<p>Checking that <span class="math notranslate nohighlight">\(A \cdot U = U_3\)</span> as we calculated it earlier:</p>
+<p class="sd-card-text">Checking that <span class="math notranslate nohighlight">\(A \cdot U = U_3\)</span> as we calculated it earlier:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A \cdot V &amp;= \begin{pmatrix}
@@ -732,10 +743,8 @@ document.write(`
         1 &amp; 1 &amp; 1
     \end{pmatrix} = U_3 \quad \checkmark
 \end{align*} \end{split}\]</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
-</section>
+</details></section>
 </div></section>
 </section>
 
