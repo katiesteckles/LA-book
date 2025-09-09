@@ -504,10 +504,15 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div><hr class="docutils" />
+</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+---
+
+```{index} Shortest distance ; line to line
+</pre></div>
+</div>
 </section>
 <section id="shortest-distance-between-two-lines">
-<span id="index-3"></span><h2><span class="section-number">4.4.3. </span>Shortest distance between two lines<a class="headerlink" href="#shortest-distance-between-two-lines" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.4.3. </span>Shortest distance between two lines<a class="headerlink" href="#shortest-distance-between-two-lines" title="Link to this heading">#</a></h2>
 <p>Given two lines <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span> described by the equations <span class="math notranslate nohighlight">\(\mathbf{r}_1 = \mathbf{p}_1 + t \mathbf{d}_1\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}_2 =  \mathbf{p}_2 + t \mathbf{d}_2\)</span> in <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>, we have three situations to consider if we want to calculate the shortest distance between any two points on the two lines.</p>
 <ul class="simple">
 <li><p>If the two lines intersect, then the shortest distance is 0.</p></li>
@@ -534,7 +539,7 @@ document.write(`
     \mathbf{p}_2 \cdot \hat{\mathbf{n}} + t_2 \mathbf{d}_2 \cdot \hat{\mathbf{n}} - \mathbf{p}_1 \cdot \hat{\mathbf{n}} - t_1 \mathbf{d}_1 \cdot \hat{\mathbf{n}}
     &amp;= d \hat{\mathbf{n}} \cdot \hat{\mathbf{n}}.
 \end{align*} \end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>, we know that <span class="math notranslate nohighlight">\(\mathbf{d}_1 \cdot \hat{\mathbf{n}} = \mathbf{d}_2 \cdot \hat{\mathbf{n}} = 0\)</span>, and we also have that <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} \cdot \hat{\mathbf{n}} = 1\)</span> (since it is of unit length, and <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{a} = \|\mathbf{a}\|^2\)</span> from <code class="xref std std-numref docutils literal notranslate"><span class="pre">dot-product-properties-theorem</span></code>).</p>
+<p>Since <span class="math notranslate nohighlight">\(\hat{\mathbf{n}}\)</span> is perpendicular to both <span class="math notranslate nohighlight">\(\ell_1\)</span> and <span class="math notranslate nohighlight">\(\ell_2\)</span>, we know that <span class="math notranslate nohighlight">\(\mathbf{d}_1 \cdot \hat{\mathbf{n}} = \mathbf{d}_2 \cdot \hat{\mathbf{n}} = 0\)</span>, and we also have that <span class="math notranslate nohighlight">\(\hat{\mathbf{n}} \cdot \hat{\mathbf{n}} = 1\)</span> (since it is of unit length, and <span class="math notranslate nohighlight">\(\mathbf{a} \cdot \mathbf{a} = \|\mathbf{a}\|^2\)</span> from <code class="xref std std-numref docutils literal notranslate"><span class="pre">dot-product-properties-theorem</span></code> ).</p>
 <p>Then the last line above simplifies to:</p>
 <div class="math notranslate nohighlight">
 \[ \mathbf{p}_2 \cdot \hat{\mathbf{n}} - \mathbf{p}_1 \cdot \hat{\mathbf{n}} = d, \]</div>
