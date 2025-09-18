@@ -13,27 +13,27 @@ parts:
 - caption: Chapters
   numbered: 3
   chapters:
-  - file: _pages/1.0_Matrices
+  - file: _pages/1_Matrices
     sections:
     - glob: _pages/1*
 
-  - file: _pages/2.0_Linear_systems
+  - file: _pages/2_Linear_systems
     sections:
     - glob: _pages/2*
 
-  - file: _pages/3.0_Vectors
+  - file: _pages/3_Vectors
     sections:
     - glob: _pages/3*
 
-  - file: _pages/4.0_Coordinate_geometry
+  - file: _pages/4_Coordinate_geometry
     sections:
     - glob: _pages/4*
 
-  - file: _pages/5.0_Vector_spaces
+  - file: _pages/5_Vector_spaces
     sections:
     - glob: _pages/5*
 
-  - file: _pages/6.0_Linear_transformations
+  - file: _pages/6_Linear_transformations
     sections:
     - glob: _pages/6*
 

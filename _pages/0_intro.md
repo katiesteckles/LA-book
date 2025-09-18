@@ -16,7 +16,7 @@ These are the materials that accompany the linear algebra part of the module Lin
 Matrices
 ^^^
 
-```{figure} ../_images/0_matrix.png
+```{figure} ../_images/0_matrix.svg
 ```
 ````
 
@@ -29,7 +29,7 @@ Matrices
 Systems of Linear Equations
 ^^^
 
-```{figure} ../_images/2_consistent_systems.png
+```{figure} ../_images/2_consistent_systems.svg
 :width: 250
 ```
 ````
@@ -43,7 +43,7 @@ Systems of Linear Equations
 Vectors
 ^^^
 
-```{figure} ../_images/3_dot_product.png
+```{figure} ../_images/3_dot_product.svg
 :width: 250
 ```
 ````
@@ -57,7 +57,7 @@ Vectors
 Co-ordinate Geometry
 ^^^
 
-```{figure} ../_images/4_line_line_distance.png
+```{figure} ../_images/4_line_line_distance.svg
 :width: 250
 ```
 ````
@@ -71,7 +71,7 @@ Co-ordinate Geometry
 Vector Spaces
 ^^^
 
-```{figure} ../_images/5_subspaces.png
+```{figure} ../_images/5_subspaces.svg
 :width: 250
 ```
 ````
@@ -85,7 +85,7 @@ Vector Spaces
 Linear Transformations
 ^^^
 
-```{figure} ../_images/6_linear_transformation.png
+```{figure} ../_images/6_linear_transformation.svg
 :width: 250
 ```
 ````

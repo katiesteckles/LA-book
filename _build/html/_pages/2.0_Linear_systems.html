@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Systems of Linear Equations &#8212; Linear Algebra</title>
+    <title>2.1. Systems of Linear Equations &#8212; Linear Algebra</title>
   
   
   
@@ -32,10 +32,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/proof.css?v=b4b7a797" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=982b99e0" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-proof.css?v=9dc65063" />
   
@@ -55,7 +55,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -66,8 +66,8 @@
     <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.4. Solving systems of linear equations using inverse matrices" href="2.1_Solving_using_inverse_matrix.html" />
-    <link rel="prev" title="1.8. Matrices Exercises" href="1.8_Matrices_exercises.html" />
+    <link rel="next" title="2.2. Solving systems of linear equations using inverse matrices" href="2.1_Solving_using_inverse_matrix.html" />
+    <link rel="prev" title="2. Systems of Linear Equations" href="2_Linear_systems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,7 +193,8 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapters</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="1.0_Matrices.html">1. Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="1_Matrices.html">1. Matrices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="1.0_Matrices.html">1.1. Matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.1_Matrix_operations.html">1.2. Arithmetic operations on matrices</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.2_Matrix_multiplication.html">1.3. Matrix multiplication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="1.3_Special_matrices.html">1.4. Special matrices</a></li>
@@ -203,46 +204,51 @@
 <li class="toctree-l2"><a class="reference internal" href="1.8_Matrices_exercises.html">1.8. Matrices Exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.4. Solving systems of linear equations using inverse matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.5. Cramer’s rule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.6. Gaussian elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.7. Partial pivoting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.8. Gauss-Jordan elimination</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.9. Consistent, inconsistent and indeterminate systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.10. Homogeneous systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.11. Systems of Linear Equations Exercises</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="2_Linear_systems.html">2. Systems of Linear Equations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Systems of Linear Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1_Solving_using_inverse_matrix.html">2.2. Solving systems of linear equations using inverse matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2_Cramers_rule.html">2.3. Cramer’s rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3_Gaussian_elimination.html">2.4. Gaussian elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.4_Partial_pivoting.html">2.5. Partial pivoting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5_Gauss_Jordan_elimination.html">2.6. Gauss-Jordan elimination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.6_Consistent_systems.html">2.7. Consistent, inconsistent and indeterminate systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.7_Homogeneous_systems.html">2.8. Homogeneous systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.9_Linear_systems_exercises.html">2.9. Systems of Linear Equations Exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="3.0_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.4. Arithmetic operations on vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.5. Vector magnitude</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.6. Dot and cross products</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.7. Linear combination of vectors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.8. Vectors Exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_Vectors.html">3. Vectors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.0_Vectors.html">3.1. Vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.1_Vector_arithmetic.html">3.2. Arithmetic operations on vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2_Vector_magnitude.html">3.3. Vector magnitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.3_Dot_and_cross_products.html">3.4. Dot and cross products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4_Linear_combinations.html">3.5. Linear combination of vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.5_Vectors_exercises.html">3.6. Vectors Exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="4.0_Coordinate_geometry.html">4. Co-ordinate Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_Coordinate_geometry.html">4. Co-ordinate Geometry</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.0_Coordinate_geometry.html">4.1. Co-ordinate Geometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.1_Lines.html">4.2. Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.2_Planes.html">4.3. Planes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.3_Shortest_distance_problems.html">4.4. Shortest distance problems</a></li>
 <li class="toctree-l2"><a class="reference internal" href="4.4_Coordinate_geometry_exercises.html">4.5. Co-ordinate Geometry Exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="5.0_Vector_spaces.html">5. Vector spaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.1. Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.2. Subspaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.3. Linear dependence</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.4. Basis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.5. Vector spaces exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="5_Vector_spaces.html">5. Vector spaces</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="5.0_Vector_spaces.html">5.1. Vector spaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.1_Vector_spaces_definitions.html">5.2. Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.2_Subspaces.html">5.3. Subspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.3_Linear_dependence.html">5.4. Linear dependence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.4_Basis.html">5.5. Basis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5.5_Vector_spaces_exercises.html">5.6. Vector spaces exercises</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="6.0_Linear_transformations.html">6. Linear Transformations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.1. Transformation matrices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.2. Composite linear transformations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.3. Rotation, reflection and scaling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.4. Translation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.5. Transformations exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="6_Linear_transformations.html">6. Linear Transformations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="6.0_Linear_transformations.html">6.1. Linear Transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.1_Transformation_matrices.html">6.2. Transformation matrices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.2_Composite_transformations.html">6.3. Composite linear transformations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.3_Rotation_reflection_and_translation.html">6.4. Rotation, reflection and scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.4_Translation.html">6.5. Translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6.5_Linear_transforation_exercises.html">6.6. Transformations exercises</a></li>
 </ul>
 </details></li>
 </ul>
@@ -405,9 +411,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1. Representing systems of linear equations using matrix equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.3. Requirements for a system to be solvable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1.1. Representing systems of linear equations using matrix equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.1.2. Solving systems of linear equations using algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.1.3. Requirements for a system to be solvable</a></li>
 </ul>
             </nav>
         </div>
@@ -420,7 +426,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="systems-of-linear-equations">
-<span id="systems-of-linear-equations-chapter"></span><span id="index-0"></span><h1><span class="section-number">2. </span>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Link to this heading">#</a></h1>
+<span id="systems-of-linear-equations-chapter"></span><span id="index-0"></span><h1><span class="section-number">2.1. </span>Systems of Linear Equations<a class="headerlink" href="#systems-of-linear-equations" title="Link to this heading">#</a></h1>
 <p id="index-1">Systems of linear equations, and the methods used to solve them, are a fundamental part of linear algebra. Systems of equations can be used to describe relationships between sets of variables, and have many applications including co-ordinate geometry, numerical methods, computer science, engineering and statistics. There are many techniques we can use to compute the solutions to systems of linear equations, and we will be covering the most common of these.</p>
 <p>A linear equation is an equation that involves a set of <strong>variables</strong> multiplied by scalar <strong>coefficients</strong>, where the sum of these is equal to some <strong>constant</strong> scalar value. Generally, if <span class="math notranslate nohighlight">\(x_1, x_2, \ldots, x_n\)</span> are variables, <span class="math notranslate nohighlight">\(a_1, a_2, \ldots, a_n\)</span> are coefficients and <span class="math notranslate nohighlight">\(b\)</span> is a constant value then a linear equation can take the form</p>
 <div class="math notranslate nohighlight">
@@ -447,7 +453,7 @@ document.write(`
 <p>Under the right conditions, a system of linear equations will have a single unique solution - one value that each of the variables can take if all the equations are true. For this to happen, we need the number of equations in the system to be the same as the number of unknowns, as well as some conditions on the equations themselves. We will discuss this more in the section on <a class="reference internal" href="2.6_Consistent_systems.html#consistent-inconsistent-and-indeterminate-systems-section"><span class="std std-ref">Consistent, Inconsistent and Indeterminate systems</span></a>.</p>
 <hr class="docutils" />
 <section id="representing-systems-of-linear-equations-using-matrix-equations">
-<span id="index-2"></span><h2><span class="section-number">2.1. </span>Representing systems of linear equations using matrix equations<a class="headerlink" href="#representing-systems-of-linear-equations-using-matrix-equations" title="Link to this heading">#</a></h2>
+<span id="index-2"></span><h2><span class="section-number">2.1.1. </span>Representing systems of linear equations using matrix equations<a class="headerlink" href="#representing-systems-of-linear-equations-using-matrix-equations" title="Link to this heading">#</a></h2>
 <p>Systems of linear equations are often represented using a matrix equation <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A\)</span> is an <span class="math notranslate nohighlight">\(m \times n\)</span> <strong>coefficient matrix</strong> containing the values of <span class="math notranslate nohighlight">\(a_{ij}\)</span>, <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is an <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>variable vector</strong> containing the variables <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(\mathbf{b}\)</span> is a <span class="math notranslate nohighlight">\(m \times 1\)</span> <strong>constant vector</strong> containing the constant terms <span class="math notranslate nohighlight">\(b_i\)</span>. (Vectors are more formally introduced in the <a class="reference internal" href="3.0_Vectors.html#vectors-chapter"><span class="std std-ref">next chapter</span></a>, but for now simply consider them as matrices with a single column.)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{array}{cccc}
@@ -484,7 +490,7 @@ document.write(`
 <hr class="docutils" />
 </section>
 <section id="solving-systems-of-linear-equations-using-algebra">
-<span id="solving-systems-of-linear-equations-using-algebra-section"></span><h2><span class="section-number">2.2. </span>Solving systems of linear equations using algebra<a class="headerlink" href="#solving-systems-of-linear-equations-using-algebra" title="Link to this heading">#</a></h2>
+<span id="solving-systems-of-linear-equations-using-algebra-section"></span><h2><span class="section-number">2.1.2. </span>Solving systems of linear equations using algebra<a class="headerlink" href="#solving-systems-of-linear-equations-using-algebra" title="Link to this heading">#</a></h2>
 <p>One way to solve systems of linear equations is by manipulating them using standard algebraic methods.</p>
 <p>The usual approach is to try to <strong>solve for each unknown</strong> in turn by <strong>eliminating all of the other unknowns</strong>. For example, consider the system of linear equations</p>
 <div class="math notranslate nohighlight">
@@ -507,7 +513,7 @@ document.write(`
 <p>So we know that <span class="math notranslate nohighlight">\(x_1 = 1\)</span> and <span class="math notranslate nohighlight">\(x_2 = 2\)</span> is the solution to this system. While this approach is simple to implement for small systems of linear equations, the algebra will soon become unwieldy for larger systems, which is why we use the methods that are covered in this chapter.</p>
 </section>
 <section id="requirements-for-a-system-to-be-solvable">
-<span id="requirements-for-systems-of-linear-equations-to-be-solvable-section"></span><h2><span class="section-number">2.3. </span>Requirements for a system to be solvable<a class="headerlink" href="#requirements-for-a-system-to-be-solvable" title="Link to this heading">#</a></h2>
+<span id="requirements-for-systems-of-linear-equations-to-be-solvable-section"></span><h2><span class="section-number">2.1.3. </span>Requirements for a system to be solvable<a class="headerlink" href="#requirements-for-a-system-to-be-solvable" title="Link to this heading">#</a></h2>
 <p>Consider this system of two linear equations:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
@@ -547,8 +553,6 @@ document.write(`
 \end{align*} \end{split}\]</div>
 <p>We see that the requirement for the system to have a solution is the same as the requirement for matrix to be invertible, i.e, that the value of <span class="math notranslate nohighlight">\(ad-bc\)</span> is non-zero. As we will see, inverse matrices are an important tool in solving systems of linear equations.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -582,12 +586,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="1.8_Matrices_exercises.html"
+       href="2_Linear_systems.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.8. </span>Matrices Exercises</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Systems of Linear Equations</p>
       </div>
     </a>
     <a class="right-next"
@@ -595,7 +599,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>Solving systems of linear equations using inverse matrices</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Solving systems of linear equations using inverse matrices</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -615,9 +619,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1. Representing systems of linear equations using matrix equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.2. Solving systems of linear equations using algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.3. Requirements for a system to be solvable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representing-systems-of-linear-equations-using-matrix-equations">2.1.1. Representing systems of linear equations using matrix equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-systems-of-linear-equations-using-algebra">2.1.2. Solving systems of linear equations using algebra</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-for-a-system-to-be-solvable">2.1.3. Requirements for a system to be solvable</a></li>
 </ul>
   </nav></div>
 
