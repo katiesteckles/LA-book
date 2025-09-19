@@ -29,7 +29,7 @@ Matrices
 Systems of Linear Equations
 ^^^
 
-```{figure} ../_images/2_consistent_systems.svg
+```{figure} ../_images/2_consistent_systems.png
 :width: 250
 ```
 ````
