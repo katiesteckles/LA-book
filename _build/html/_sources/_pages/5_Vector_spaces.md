@@ -8,3 +8,5 @@ In this section:
 * [Subspaces](subspaces-section)
 * [Linear dependence](linear-dependence-section)
 * [Basis](basis-section)
+
+* [Exercises](vector-spaces-exercises-section)
