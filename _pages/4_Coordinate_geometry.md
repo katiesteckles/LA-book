@@ -6,3 +6,5 @@ In this section:
 * [Lines](lines-section)
 * [Planes](planes-section)
 * [Shortest distance problems](shortest-distance-problems)
+
+* [Exercises](coordinate-geometry-exercises)

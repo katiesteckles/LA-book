@@ -10,3 +10,5 @@ In this section:
 * [Determinants](determinant-section)
 * [Inverse Matrices](inverse-matrix-section)
 * [Matrix Algebra](matrix-algebra-section)
+
+* [Exercises](matrices-exercises)

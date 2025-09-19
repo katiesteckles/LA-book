@@ -11,3 +11,5 @@ In this section:
 * [Gauss-Jordan elimination](gauss-jordan-eliminatio-sectio)
 * [Consistent, inconsistent and indeterminate systems](consistent-inconsistent-and-indeterminate-systems-section)
 * [Homogeneous systems](homogeneous-systems-section)
+
+* [Exercises](linear-systems-exercises)
