@@ -487,7 +487,7 @@ document.write(`
 </ul>
 </section>
 </div><p>In the solution to the linear system of equations shown above, we used a type I row operation in step 1, a type II row operation in step 3 and type III row operations in steps 2 and 4.</p>
-<div class="proof example admonition" id="ge-example">
+<div class="proof example admonition" id="rowops-example">
 <p class="admonition-title"><span class="caption-number">Example 2.4 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(A\)</span> be the matrix:</p>
@@ -500,9 +500,9 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">(i)   $<span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 5 &amp; 6 \\ 1 &amp; 2 &amp; 3 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\)</span>$</p>
-<p class="sd-card-text">(ii)   $<span class="math notranslate nohighlight">\(\begin{pmatrix}  1 &amp; 2 &amp; 3 \\ 12 &amp; 15 &amp; 18 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\)</span>$</p>
-<p class="sd-card-text">(iiii)   $<span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 15 &amp; 18 &amp; 21 \end{pmatrix}\)</span>$</p>
+<p class="sd-card-text">(i)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 4 &amp; 5 &amp; 6 \\ 1 &amp; 2 &amp; 3 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\)</span></p>
+<p class="sd-card-text">(ii)   <span class="math notranslate nohighlight">\(\begin{pmatrix}  1 &amp; 2 &amp; 3 \\ 12 &amp; 15 &amp; 18 \\ 7 &amp; 8 &amp; 9\end{pmatrix}\)</span></p>
+<p class="sd-card-text">(iiii)   <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 15 &amp; 18 &amp; 21 \end{pmatrix}\)</span></p>
 </div>
 </details></section>
 </div><p id="index-3">We can represent linear system using matrices for convenience. We begin by expressing the linear system using an <strong>augmented matrix</strong>, made by concatenating together <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> - so any EROs that are applied to the augmented matrix are applied to the coefficients and the constant terms at the same time.</p>
@@ -539,7 +539,24 @@ document.write(`
     &amp;\begin{pmatrix} 0 &amp; \color{red}{1} &amp; 3\\ 0 &amp; 0 &amp; \color{red}{4} \\ 0 &amp; 0 &amp; 0\end{pmatrix}.
 \end{align*} \end{split}\]</div>
 <p>Note that the elements below the pivot elements are all zero. We say that a system of linear equations is in row echelon form if the corresponding augmented matrix is in row echelon form.</p>
-<hr class="docutils" />
+<div class="proof example admonition" id="rowops-example">
+<p class="admonition-title"><span class="caption-number">Example 2.4 </span></p>
+<section class="example-content" id="proof-content">
+<p>Which of the following matrices are in row echelon form, and which are not?</p>
+<p>(i) <span class="math notranslate nohighlight">\(\begin{pmatrix} 5 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 4 &amp; 3 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 2 \\  \end{pmatrix}\)</span>  </p>
+<p>(ii) <span class="math notranslate nohighlight">\(\begin{pmatrix} 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 6 &amp; 2 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 2 \\  \end{pmatrix}\)</span>  </p>
+<p>(iii) <span class="math notranslate nohighlight">\(\begin{pmatrix} 6 &amp; 0 &amp; 0 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\  \end{pmatrix}\)</span>  </p>
+<p>(iv) <span class="math notranslate nohighlight">\(\begin{pmatrix} 1 &amp; 3 &amp; 4 &amp; 5 \\ 1 &amp; 2 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 3 &amp; 1 \\  \end{pmatrix}\)</span></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">(i)   Yes, this is in row echelon form</p>
+<p class="sd-card-text">(ii)   No, this is not - all zero rows must be below all non-zero rows</p>
+<p class="sd-card-text">(iii)   Yes, this is in row echelon form</p>
+<p class="sd-card-text">(iv)   No, this is not - all pivot elements must be to the right of the pivot element in the row above</p>
+</div>
+</details></section>
+</div><hr class="docutils" />
 <section id="row-reduction">
 <span id="index-6"></span><h2><span class="section-number">2.4.1. </span>Row reduction<a class="headerlink" href="#row-reduction" title="Link to this heading">#</a></h2>
 <p>The process of transforming a matrix into row echelon form using elementary row operations is known as <strong>row reduction</strong>. For example, we will use Gaussian elimination to solve the same system of linear equations from earlier:</p>
@@ -714,7 +731,7 @@ document.write(`
 </div><p>This starts by finding the pivot in each row (looking for the first entry that is non-zero, and making sure it’s further left than all the ones below it by swapping rows) then subtracting appropriate multiples of that row from all the others, repeating until complete.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iBp-ZUE-G4w?si=SWn6VXnJTyFlNhJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <div class="proof example admonition" id="ge-example">
-<p class="admonition-title"><span class="caption-number">Example 2.4 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
 <section class="example-content" id="proof-content">
 <p>Use Gaussian elimination to solve the following systems of linear equations:</p>
 <p>(i)   <span class="math notranslate nohighlight">\( \begin{align*}
