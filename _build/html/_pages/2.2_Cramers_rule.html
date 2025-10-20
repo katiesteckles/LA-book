@@ -453,38 +453,7 @@ document.write(`
 <span class="eqno">(2.1)<a class="headerlink" href="#equation-cramers-rule-equation" title="Link to this equation">#</a></span>\[ x_i = \frac{\det(A_i)}{\det(A)}, \]</div>
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix obtained by replacing column <span class="math notranslate nohighlight">\(i\)</span> of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated as <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
-<div class="math notranslate nohighlight">
-\[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
-<p>so</p>
-<div class="math notranslate nohighlight">
-\[ \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}. \]</div>
-<p>The matrix <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> - it is the transpose of the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">cofactors</a>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} \operatorname{adj}(A) = C^\mathsf{T} = \begin{pmatrix}
-    C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
-    C_{12} &amp; C_{22} &amp; \cdots &amp; C_{n2} \\
-    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-    C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
-\end{pmatrix}. \end{split}\]</div>
-<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
-<div class="math notranslate nohighlight">
-\[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
-<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} A_i = \begin{pmatrix}
-        a_{11} &amp; \cdots &amp; a_{1,i-1} &amp; b_1 &amp; a_{1,i+1} &amp; \cdots &amp; a_{1n} \\
-        a_{21} &amp; \cdots &amp; a_{2,i-1} &amp; b_2 &amp; a_{2,i+1} &amp; \cdots &amp; a_{2n} \\
-        \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-        a_{n1} &amp; \cdots &amp; a_{n,i-1} &amp; b_n &amp; a_{n,i+1} &amp; \cdots &amp; a_{nn}
-    \end{pmatrix}. \end{split}\]</div>
-<p>Since removing the <span class="math notranslate nohighlight">\(i\)</span>th column from both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A_i\)</span> (the one with the <span class="math notranslate nohighlight">\(b\)</span> values) results in the same matrix, then the cofactors of <span class="math notranslate nohighlight">\(A_i\)</span> are the same as the cofactors of <span class="math notranslate nohighlight">\(A\)</span>. If we calculate <span class="math notranslate nohighlight">\(\det(A_i)\)</span> by expanding along the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A_i\)</span> then</p>
-<div class="math notranslate nohighlight">
-\[ \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j, \]</div>
-<p>so <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span>.</p>
-</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WrH5fwtiRzo?si=CPfDBgmROmllInQ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div><iframe width="560" height="315" src="https://www.youtube.com/embed/WrH5fwtiRzo?si=CPfDBgmROmllInQ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div class="proof example admonition" id="cramers-rule-example">
 <p class="admonition-title"><span class="caption-number">Example 2.2 </span></p>
 <section class="example-content" id="proof-content">
@@ -549,7 +518,39 @@ document.write(`
 \end{align*} \end{split}\]</div>
 </div>
 </details></section>
-</div></section>
+</div><p>A proof of Cramer’s rule is given below.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. The solution to a system of linear equations <span class="math notranslate nohighlight">\(A \mathbf{x} = \mathbf{b}\)</span> can be calculated as <span class="math notranslate nohighlight">\(\mathbf{x} = A^{-1} \mathbf{b}\)</span>, where <span class="math notranslate nohighlight">\(A^{-1}\)</span> is the inverse of the coefficient matrix <span class="math notranslate nohighlight">\(A\)</span>. The <a class="reference internal" href="1.5_Inverse_matrix.html#adjoint-determinant-formula-theorem">adjoint-determinant formula</a> for calculating the inverse is</p>
+<div class="math notranslate nohighlight">
+\[ A^{-1} = \frac{\operatorname{adj}(A)}{\det(A)}, \]</div>
+<p>so</p>
+<div class="math notranslate nohighlight">
+\[ \mathbf{x} = \frac{1}{\det(A)} \operatorname{adj}(A) \mathbf{b}. \]</div>
+<p>The matrix <span class="math notranslate nohighlight">\(\operatorname{adj}(A) = C^\mathsf{T}\)</span> - it is the transpose of the matrix of <a class="reference internal" href="1.4_Determinants.html#cofactor-definition">cofactors</a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \operatorname{adj}(A) = C^\mathsf{T} = \begin{pmatrix}
+    C_{11} &amp; C_{21} &amp; \cdots &amp; C_{n1} \\
+    C_{12} &amp; C_{22} &amp; \cdots &amp; C_{n2} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    C_{1n} &amp; C_{2n} &amp; \cdots &amp; C_{nn}
+\end{pmatrix}. \end{split}\]</div>
+<p>then for the <span class="math notranslate nohighlight">\(i\)</span>th element of <span class="math notranslate nohighlight">\(\mathbf{x}\)</span>, using the <a class="reference internal" href="1.2_Matrix_multiplication.html#matrix-multiplication-definition">definition of matrix multiplication</a> we have</p>
+<div class="math notranslate nohighlight">
+\[ x_i = \frac{1}{\det(A)} \sum_{j=1}^n C_{ji} b_j \]</div>
+<p>In Cramer’s rule, <span class="math notranslate nohighlight">\(A_i\)</span> is the matrix formed by replacing the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A\)</span> with <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A_i = \begin{pmatrix}
+        a_{11} &amp; \cdots &amp; a_{1,i-1} &amp; b_1 &amp; a_{1,i+1} &amp; \cdots &amp; a_{1n} \\
+        a_{21} &amp; \cdots &amp; a_{2,i-1} &amp; b_2 &amp; a_{2,i+1} &amp; \cdots &amp; a_{2n} \\
+        \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+        a_{n1} &amp; \cdots &amp; a_{n,i-1} &amp; b_n &amp; a_{n,i+1} &amp; \cdots &amp; a_{nn}
+    \end{pmatrix}. \end{split}\]</div>
+<p>Since removing the <span class="math notranslate nohighlight">\(i\)</span>th column from both <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A_i\)</span> (the one with the <span class="math notranslate nohighlight">\(b\)</span> values) results in the same matrix, then the cofactors of <span class="math notranslate nohighlight">\(A_i\)</span> are the same as the cofactors of <span class="math notranslate nohighlight">\(A\)</span>. If we calculate <span class="math notranslate nohighlight">\(\det(A_i)\)</span> by expanding along the <span class="math notranslate nohighlight">\(i\)</span>th column of <span class="math notranslate nohighlight">\(A_i\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[ \det(A_i) = b_1 C_{1i} + b_2 C_{2i} + \cdots + b_n C_{ni} = \sum_{j=1}^n C_{ji} b_j, \]</div>
+<p>so <span class="math notranslate nohighlight">\(x_i = \dfrac{\det(A_i)}{\det(A)}\)</span>.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
