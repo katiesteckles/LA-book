@@ -496,13 +496,13 @@ document.write(`
     &amp;= 1.
 \end{align*} \end{split}\]</div>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=vLdzzaq7grb2XNfV&amp;start=381" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3-LCn_dGzaY?si=1ClDXIQgpP4VzgiA&amp;controls=0&amp;start=381" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div class="proof example admonition" id="normalising-a-vector-example">
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
 <section class="example-content" id="proof-content">
 <p>Find the unit vectors parallel to the following vectors:</p>
 <p>(i)   <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 2, 3)\)</span>;  
-(ii)   <span class="math notranslate nohighlight">\((5, -12, 0)\)</span>;  
+(ii)   <span class="math notranslate nohighlight">\(\mathbf{v} = (5, -12, 0)\)</span>;  
 (iii)   <span class="math notranslate nohighlight">\(\mathbf{w} = (1, 0, 1)\)</span></p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
@@ -512,37 +512,27 @@ document.write(`
 \[ \hat{\mathbf{u}} = \dfrac{\mathbf{u}}{\|\mathbf{u}\|} = \dfrac{(1, 2, 3)}{\sqrt{14}} = \left( \frac{1}{\sqrt{14}}, \frac{2}{\sqrt{14}}, \frac{3}{\sqrt{14}}\right)\]</div>
 <div class="math notranslate nohighlight">
 \[= \left( \frac{\sqrt{14}}{14}, \frac{\sqrt{14}}{7}, \frac{3\sqrt{14}}{14} \right)\]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{u}}\)</span></p>
+<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{u}}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align*}
-    \|\hat{\mathbf{u}}\| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \]</div>
-<div class="math notranslate nohighlight">
-\[= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark
-\end{align*} \]</div>
+\[\begin{split} \begin{align*} \|\hat{\mathbf{u}}\| &amp;= \sqrt{ \left( \frac{\sqrt{14}}{14} \right)^2 + \left( \frac{\sqrt{14}}{7} \right)^2 + \left(\frac{3\sqrt{14}}{14} \right)^2} \\
+&amp;= \sqrt{ \frac{14}{196} +\frac{14}{49} + \frac{126}{196}} = \sqrt{1} = 1 \qquad \checkmark \end{align*}
+ \end{split}\]</div>
 <p class="sd-card-text">(ii)</p>
 <div class="math notranslate nohighlight">
 \[ \hat{\mathbf{v}} = \dfrac{\mathbf{v}}{\|\mathbf{v}\|} = \dfrac{(5, -12, 0)}{13} = \left( \frac{5}{13}, -\frac{12}{13}, 0 \right) \]</div>
-<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{v}}\)</span></p>
+<p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{v}}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align*}
-    \|\hat{\mathbf{v}}\| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} 
-    = \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} \]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$= \sqrt{1} = 1 \qquad \checkmark
-</pre></div>
-</div>
-<p class="sd-card-text">\end{align*} $$</p>
+\[\begin{split}\begin{align*}\|\hat{\mathbf{v}}\| &amp;= \sqrt{ \left(\frac{5}{13} \right)^2 + \left( -\frac{12}{13} \right)^2 + 0^2} \\
+    &amp;= \sqrt{ \frac{25}{169} + \frac{144}{169} + 0} \\
+	&amp;= \sqrt{1} = 1 \qquad \checkmark \end{align*} \end{split}\]</div>
 <p class="sd-card-text">(iii)</p>
 <div class="math notranslate nohighlight">
 \[ \hat{\mathbf{w}} = \dfrac{\mathbf{w}}{\|\mathbf{w}\|} = \dfrac{(1, 0, 1)}{\sqrt{2}} = \left( \frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}} \right) = \left( \frac{\sqrt{2}}{2}, 0, \frac{\sqrt{2}}{2} \right)\]</div>
 <p class="sd-card-text">Check magnitude of <span class="math notranslate nohighlight">\(\hat{\mathbf{w}}\)</span></p>
 <div class="math notranslate nohighlight">
-\[ \begin{align*}
-    \|\hat{\mathbf{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } 
-    = \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} }\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$ = \sqrt{1} = 1 \qquad \checkmark
-</pre></div>
-</div>
-<p class="sd-card-text">\end{align*} $$</p>
+\[\begin{split} \begin{align*} \|\hat{\mathbf{w}}| &amp;= \sqrt{ \left( \frac{\sqrt{2}}{2} \right)^2 + 0^2 + \left( \frac{\sqrt{2}}{2} \right)^2 } 
+    &amp;= \sqrt{ \frac{2}{4} + 0 + \frac{2}{4} } \\
+    &amp;= \sqrt{1} = 1 \qquad \checkmark \end{align*}\end{split}\]</div>
 </div>
 </details></section>
 </div></section>
