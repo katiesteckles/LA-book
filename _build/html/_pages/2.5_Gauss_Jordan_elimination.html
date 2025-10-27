@@ -477,30 +477,6 @@ document.write(`
 <p class="sd-card-text">(iv)   Yes, this is in reduced row echelon form. The non-zero element in the top right is allowed, as it is not in the same column as a pivot element.</p>
 </div>
 </details></section>
-</div><p>The method of Gauss-Jordan elimination is summarised in <a class="reference internal" href="#gje-algorithm">Algorithm 2.3</a>.</p>
-<div class="proof algorithm admonition" id="gje-algorithm">
-<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.3 </span> (Gauss-Jordan elimination)</p>
-<section class="algorithm-content" id="proof-content">
-<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
-<p><strong>Outputs:</strong> An augmented matrix in reduced row echelon form.</p>
-<ul class="simple">
-<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \mathbf{b} )\)</span></p></li>
-<li><p>Initialise pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
-<li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
-<ul>
-<li><p>Perform a row swap of the pivot row if necessary (e.g. for partial pivoting, or if pivot element is zero)</p></li>
-<li><p>If pivot element is zero, and all elements beneath the pivot element are zero, skip to the next column by incrementing <span class="math notranslate nohighlight">\(j\)</span></p></li>
-</ul>
-</li>
-<li><p>Divide row <span class="math notranslate nohighlight">\(k\)</span> by pivot <span class="math notranslate nohighlight">\(a_{kj}\)</span></p></li>
-<li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(m\)</span> where <span class="math notranslate nohighlight">\(i \neq k\)</span>:</p>
-<ul>
-<li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
-</ul>
-</li>
-<li><p>Increment <span class="math notranslate nohighlight">\(k\)</span> to <span class="math notranslate nohighlight">\(k+1\)</span> and repeat until you have done all the rows</p></li>
-</ul>
-</section>
 </div><iframe width="560" height="315" src="https://www.youtube.com/embed/uJ_vaYUBIJo?si=W7PlxeXIlXfnloc3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div class="proof example admonition" id="gje-example">
 <p class="admonition-title"><span class="caption-number">Example 2.8 </span></p>
@@ -562,6 +538,30 @@ document.write(`
 <p class="sd-card-text">Therefore the solution is <span class="math notranslate nohighlight">\(x_1 = 1\)</span>, <span class="math notranslate nohighlight">\(x_2 = -10\)</span> and <span class="math notranslate nohighlight">\(x_3 = -4\)</span>.</p>
 </div>
 </details></section>
+</div><p>The method of Gauss-Jordan elimination is summarised in <a class="reference internal" href="#gje-algorithm">Algorithm 2.3</a>.</p>
+<div class="proof algorithm admonition" id="gje-algorithm">
+<span id="index-3"></span><p class="admonition-title"><span class="caption-number">Algorithm 2.3 </span> (Gauss-Jordan elimination)</p>
+<section class="algorithm-content" id="proof-content">
+<p><strong>Inputs:</strong> An <span class="math notranslate nohighlight">\(m \times n\)</span> coefficient matrix <span class="math notranslate nohighlight">\(A\)</span> and an <span class="math notranslate nohighlight">\(m\)</span>-element constant vector <span class="math notranslate nohighlight">\(\mathbf{b}\)</span>.</p>
+<p><strong>Outputs:</strong> An augmented matrix in reduced row echelon form.</p>
+<ul class="simple">
+<li><p>Form the augmented matrix <span class="math notranslate nohighlight">\(( A \mid \mathbf{b} )\)</span></p></li>
+<li><p>Initialise pivot row <span class="math notranslate nohighlight">\(k\)</span> to 1</p></li>
+<li><p>For each column <span class="math notranslate nohighlight">\(j\)</span> from 1 to <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<ul>
+<li><p>Perform a row swap of the pivot row if necessary (e.g. for partial pivoting, or if pivot element is zero)</p></li>
+<li><p>If pivot element is zero, and all elements beneath the pivot element are zero, skip to the next column by incrementing <span class="math notranslate nohighlight">\(j\)</span></p></li>
+</ul>
+</li>
+<li><p>Divide row <span class="math notranslate nohighlight">\(k\)</span> by pivot <span class="math notranslate nohighlight">\(a_{kj}\)</span></p></li>
+<li><p>For each row <span class="math notranslate nohighlight">\(i\)</span> from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(m\)</span> where <span class="math notranslate nohighlight">\(i \neq k\)</span>:</p>
+<ul>
+<li><p>Subtract <span class="math notranslate nohighlight">\(\dfrac{a_{ij}}{a_{jj}}\)</span> times row <span class="math notranslate nohighlight">\(j\)</span> from row <span class="math notranslate nohighlight">\(i\)</span></p></li>
+</ul>
+</li>
+<li><p>Increment <span class="math notranslate nohighlight">\(k\)</span> to <span class="math notranslate nohighlight">\(k+1\)</span> and repeat until you have done all the rows</p></li>
+</ul>
+</section>
 </div><p>For any given matrix, its reduced row echelon form is unique. If the matrix is square (<span class="math notranslate nohighlight">\(n \times n\)</span>) and non-singular (invertible), the reduced row echelon form of the matrix will be <span class="math notranslate nohighlight">\(I_n\)</span>, the <span class="math notranslate nohighlight">\(n \times n\)</span> identity matrix.</p>
 <hr class="docutils" />
 <section id="elementary-matrices">
