@@ -459,7 +459,12 @@ document.write(`
         {\color{red}{1}} &amp; 0 &amp; 2 &amp; 0 \\
         0 &amp; {\color{red}{1}} &amp; 3 &amp; 0 \\
         0 &amp; 0 &amp; 0 &amp; {\color{red}{1}}
-    \end{pmatrix}
+    \end{pmatrix} &amp;
+    &amp; \left(\begin{array}{ccc|c}
+        {\color{red}{1}} &amp; 0 &amp; 0 &amp; -1 \\
+        0 &amp; {\color{red}{1}} &amp; 0 &amp; 5 \\
+        0 &amp; 0  &amp; {\color{red}{1}} &amp; 3
+    \end{array} \right)
 \end{align*} \end{split}\]</div>
 <div class="proof example admonition" id="rowech-example">
 <p class="admonition-title"><span class="caption-number">Example 2.7 </span></p>
@@ -478,7 +483,13 @@ document.write(`
 <p class="sd-card-text">(iv)   Yes, this is in reduced row echelon form. The non-zero element in the top right is allowed, as it is not in the same column as a pivot element.</p>
 </div>
 </details></section>
-</div><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uJ_vaYUBIJo?si=W7PlxeXIlXfnloc3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div><p>To perform Gauss-Jordan Elimination:</p>
+<ul class="simple">
+<li><p>First perform Gaussian elimination to get the matrix into row echelon form</p></li>
+<li><p>Divide through rows by their pivot elements to make the pivots all equal 1</p></li>
+<li><p>Eliminate values above each pivot as well as below</p></li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uJ_vaYUBIJo?si=W7PlxeXIlXfnloc3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <div class="proof example admonition" id="gje-example">
 <p class="admonition-title"><span class="caption-number">Example 2.8 </span></p>
 <section class="example-content" id="proof-content">
