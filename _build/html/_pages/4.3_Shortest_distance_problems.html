@@ -609,19 +609,19 @@ document.write(`
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Solution</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">First, find the point-normal form of the plane. The normal vector is given by the coefficients of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> in the equation, so it will be <span class="math notranslate nohighlight">\(\mathbf{n} = (2, -2, 5)\)</span>, and to normalise it to unit length we divide by its magnitude:</p>
+<p class="sd-card-text">First, find the unit normal vector to the plane. The normal vector is given by the coefficients of <span class="math notranslate nohighlight">\(x,y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> in the equation, so it will be <span class="math notranslate nohighlight">\(\mathbf{n} = (2, -2, 5)\)</span>, and to normalise it to unit length we divide by its magnitude:</p>
 <div class="math notranslate nohighlight">
 \[ \|\mathbf{n}\| = \sqrt{2^2 + (-2)^2 + 5^2} = \sqrt{4 + 4 + 25} = \sqrt{33} \]</div>
 <div class="math notranslate nohighlight">
 \[\hat{\mathbf{n}} = (\frac{2}{\sqrt{33}}, \frac{-2}{\sqrt{33}}, \frac{5}{\sqrt{33}})\]</div>
-<p class="sd-card-text">A point in the plane will satisfy the equation <span class="math notranslate nohighlight">\(2x-2y+5z+8=0\)</span>, and a point of this form can be found by setting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=0\)</span>, at which point <span class="math notranslate nohighlight">\(5z = -8\)</span>, so <span class="math notranslate nohighlight">\(z = -\frac{8}{5}\)</span>; so, the point <span class="math notranslate nohighlight">\(\mathbf{P}_0 = (0, 0, -\frac{8}{5})\)</span> lies in the plane.</p>
+<p class="sd-card-text">Any point in the plane will satisfy the equation <span class="math notranslate nohighlight">\(2x-2y+5z+8=0\)</span>, and a single point of this form can be found by setting <span class="math notranslate nohighlight">\(x=0\)</span> and <span class="math notranslate nohighlight">\(y=0\)</span>. At this point, <span class="math notranslate nohighlight">\(5z = -8\)</span>, so <span class="math notranslate nohighlight">\(z = -\frac{8}{5}\)</span>; so, the point <span class="math notranslate nohighlight">\(\mathbf{P}_0 = (0, 0, -\frac{8}{5})\)</span> lies in the plane.</p>
 <p class="sd-card-text">Then to calculate the distance, we take the difference between the points <span class="math notranslate nohighlight">\(\mathbf{P}\)</span> and <span class="math notranslate nohighlight">\(\mathbf{P}_0\)</span>, and then take the dot product of this with the unit normal vector. This gives</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}&amp; (\mathbf{P} - \mathbf{P}_0)\cdot \hat{\mathbf{n}}\\
 &amp;= (4, -4,3) - (0, 0, -\frac{8}{5}) \cdot (\frac{2}{\sqrt{33}}, \frac{-2}{\sqrt{33}}, \frac{5}{\sqrt{33}})\\
 &amp;= (4, -4, \frac{23}{5}) \cdot (\frac{2}{\sqrt{33}}, \frac{-2}{\sqrt{33}}, \frac{5}{\sqrt{33}})\\
 &amp;= 4 \cdot \frac{2}{\sqrt{33}} + (-4) \cdot \frac{-2}{\sqrt{33}} + \frac{23}{5} \cdot \frac{5}{\sqrt{33}}\\
-&amp;= \frac{8 + 8 + 23}{\sqrt{33}} = \frac{39}{sqrt{33}} \approx 6.8
+&amp;= \frac{8 + 8 + 23}{\sqrt{33}} = \frac{39}{\sqrt{33}} \approx 6.8
 \end{align*}\]</div>
 </div>
 </details></section>
