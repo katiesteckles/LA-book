@@ -199,7 +199,7 @@ $$\begin{vmatrix}
         0 & 0 & 4 & 2 
     \end{vmatrix} = 24 \neq 0$$
     
-    Hence this is a spanning set, and hence it is a basis.
+Hence this is a spanning set, and hence it is a basis.
 
 Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors to create a basis.
 ```
