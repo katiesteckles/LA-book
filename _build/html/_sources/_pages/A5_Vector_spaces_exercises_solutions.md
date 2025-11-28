@@ -33,7 +33,7 @@ $$ \mathbf{u} + \alpha \mathbf{v} =
     \end{pmatrix} \in U, $$
 therefore $U$ is a subspace.
 
-(b) &emsp; $V$ is non-empty since $(1,2,0) \in V$. However $\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V$ for $\alpha \in \mathbb{R}$ so $V$ is not a subspace.
+(b) &emsp; $V$ is non-empty since $(1,2,0) \in V$. By the subspace condition, if $\mathbf{u}, \mathbf{v} \in V$ and $\alpha \in \mathbb{R}$, we must have that $\mathbf{u} = \mathbf{v} = (1,2,0)$ since this is the only element. Then for values of $\alpha \neq 0$, $(1, 2, 0) + \alpha (1, 2, 0) = (1+ \alpha , 2 + 2\alpha , 0) \notin V$, so $V$ is not a subspace.
 
 (c) &emsp; $W$ is non-empty since $\mathbf{0} \in W$. Let $\mathbf{u} = (0, u_2, 0), \mathbf{v} = (0, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
 
@@ -44,7 +44,7 @@ $$ \mathbf{u} + \alpha \mathbf{v} =
 
 therefore $W$ is a subspace. Note that $W \subseteq U$ so since we showed $U$ is a subspace then $W$ must also be a subspace.
 
-(d) &emsp; $X$ is not a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ then $\mathbf{u} + \mathbf{v} = (0, 2, 0) \notin X$.
+(d) &emsp; $X$ is not a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ and $\alpha = 1 \in \mathbb{R}$, then $\mathbf{u} + \alpha \mathbf{v} = (0, 2, 0) \notin X$.
 ```
 ```{solution} vector-spaces-ex-M2-subspaces
 
@@ -147,7 +147,7 @@ $$ \begin{align*}
 ```{solution} vector-spaces-ex-R4-basis
 
 
-We need to find two vectors in $\mathbb{R}^4$ that are linearly independent to $(1, 1, 2, 4)$ and $(2, -1, -5, 2)$ and one another. Let's choose $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$  and check for linear dependence
+Let's choose $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$, and check that they are linearly independent to $(1, 1, 2, 4)$ and $(2, -1, -5, 2)$ and one another. Check for linear dependence:
 
 $$ \begin{align*}
     & \left( \begin{array}{cccc|c}
@@ -190,10 +190,19 @@ $$ \begin{align*}
     \end{array} \right)
 \end{align*} $$
 
-Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}$ is a basis for $\mathbb{R}^4$. Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors.
+Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}$ is a linearly independent set. To show it is a spanning set for $\mathbb{R}^4$, we can check that the system has solutions - that is, the determinant of the matrix of coefficients is non-zero.
+$$\begin{vmatrix}{cccc|c}
+        1 & 0 & 1 & 2 \\
+        0 & 1 & 1 & -1 \\
+        0 & 0 & 2 & -5 \\
+        0 & 0 & 4 & 2 
+    \end{vmatrix} = 24 \neq 0$$
+    
+    Hence this is a spanning set, and hence it is a basis.
+
+Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors to create a basis.
 ```
 ```{solution} vector-spaces-ex-R4-basis-2
-
 
 We need to find which of the vectors $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$ and $\mathbf{y}$ are linearly dependent (and therefore remove them to from the basis).
 

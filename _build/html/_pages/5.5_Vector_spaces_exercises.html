@@ -420,53 +420,29 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 5.1 </span></p>
 <section id="exercise-content">
-<p>Prove that the <a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">axioms</a> of the vector space <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> hold.</p>
+<p>Prove that the vector space<a class="reference internal" href="5.1_Vector_spaces_definitions.html#vector-space-axioms">axioms</a> hold for  <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (considered as a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>).</p>
 </section>
 </div>
 <div class="exercise admonition" id="vector-spaces-ex-R3-subspaces">
 
 <p class="admonition-title"><span class="caption-number">Exercise 5.2 </span></p>
 <section id="exercise-content">
-<p>Using the <a class="reference internal" href="5.2_Subspaces.html#subspace-condition-theorem">subspace condition</a>, determine whether the following subsets of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> are subspaces:</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>Using the <a class="reference internal" href="5.2_Subspaces.html#subspace-condition-theorem">subspace condition</a>, determine whether the following subsets of <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> (as a vector space over <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>) are subspaces:</p>
 <p>(a)   <span class="math notranslate nohighlight">\(U = \{ (x, y, 0) : x, y \in \mathbb{R} \}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
-<p>(b)   <span class="math notranslate nohighlight">\(V = \{ (1, 2, 0) \}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>(b)   <span class="math notranslate nohighlight">\(V = \{ (1, 2, 0) \}\)</span>
+Note: this is a set containing one element, which is the vector <span class="math notranslate nohighlight">\((1,2,0)\)</span>.</p>
 <p>(c)   <span class="math notranslate nohighlight">\(W = \{ (0, y, 0) : y \in \mathbb{R} \}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(d)   <span class="math notranslate nohighlight">\(X = \{ (x, y, z) : y = |x|, x, y, z \in \mathbb{R}\}\)</span></p>
-</div>
-</div>
-</div>
 </section>
 </div>
 <div class="exercise admonition" id="vector-spaces-ex-M2-subspaces">
 
 <p class="admonition-title"><span class="caption-number">Exercise 5.3 </span></p>
 <section id="exercise-content">
-<p>Which of the following sets are subspaces of <span class="math notranslate nohighlight">\(M_2(\mathbb{R})\)</span>?</p>
-<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
-<div class="sd-row docutils">
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
+<p>Which of the following sets are subspaces of <span class="math notranslate nohighlight">\(M_{2\times 2}(\mathbb{R})\)</span>?</p>
 <p>(a)   <span class="math notranslate nohighlight">\(A = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix} : a, b, c, d \in \mathbb{R}, a + b = 1,  \right\}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(b)   <span class="math notranslate nohighlight">\(B = \left\{ \begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}: a, b, c, d \in \mathbb{R}, a = c = d \right\}\)</span></p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
-<p> </p>
-</div>
-<div class="sd-col sd-d-flex-column sd-col-6 sd-col-xs-6 sd-col-sm-6 sd-col-md-6 sd-col-lg-6 docutils">
 <p>(c)   <span class="math notranslate nohighlight">\(C = \{ A \in M_{2\times 2} : A^2 = A \}\)</span></p>
-</div>
-</div>
-</div>
 </section>
 </div>
 <div class="exercise admonition" id="vector-spaces-R3-basis">
@@ -480,7 +456,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 5.5 </span></p>
 <section id="exercise-content">
-<p>Extend <span class="math notranslate nohighlight">\(\{ (1, 1, 2, 4), (2, -1, -5, 2)\}\)</span> to a basis of <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</p>
+<p>By adding two of the standard basis vectors, extend <span class="math notranslate nohighlight">\(\{ (1, 1, 2, 4), (2, -1, -5, 2)\}\)</span> to a basis of <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="vector-spaces-ex-R4-basis-2">
