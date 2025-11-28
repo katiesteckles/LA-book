@@ -444,6 +444,7 @@ document.write(`
     = A \mathbf{u}.
 \end{align*} \end{split}\]</div>
 <p>In other words, we can apply the linear transformation by multiplying <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> by the matrix <span class="math notranslate nohighlight">\(A\)</span>, which is created by applying <span class="math notranslate nohighlight">\(T\)</span> to each of the basis vectors and placing the resulting vectors into the columns of the matrix.</p>
+<p>We can use the standard basis <span class="math notranslate nohighlight">\(\mathbf{e}_1, \mathbf{e}_2, \ldots \mathbf{e}_n\)</span>, which consists of vectors of the form <span class="math notranslate nohighlight">\((1,0,0,...), (0,1,0,...),\)</span> etc.</p>
 <div class="proof definition admonition" id="transformation-matrix-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.3 </span> (Transformation matrix)</p>
 <section class="definition-content" id="proof-content">
@@ -490,7 +491,7 @@ document.write(`
     \begin{pmatrix} 4 \\ 3 \end{pmatrix}. \end{split}\]</div>
 </div>
 </details></section>
-</div><p>The effect of applying the linear transformation from <a class="reference internal" href="6.0_Linear_transformations.html#linear-transformation-example">Example 6.1</a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 6.1</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_1\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
+</div><p>The effect of applying the linear transformation from <a class="reference internal" href="6.0_Linear_transformations.html#linear-transformation-example">Example 6.1</a> is illustrated in <a class="reference internal" href="#linear-transformation-figure"><span class="std std-numref">Fig. 6.1</span></a>. Note that the transformation <span class="math notranslate nohighlight">\(T\)</span> can be thought of as changing the basis of the vector space. The unit square with respect to the basis <span class="math notranslate nohighlight">\(\{\mathbf{e}_1, \mathbf{e}_2\}\)</span> has been transformed into a unit parallelogram with respect to the basis <span class="math notranslate nohighlight">\(\{ T(\mathbf{e}_1), T(\mathbf{e}_2)\}\)</span>.</p>
 <figure class="align-default" id="linear-transformation-figure">
 <a class="reference internal image-reference" href="../_images/6_linear_transformation.svg"><img alt="../_images/6_linear_transformation.svg" src="../_images/6_linear_transformation.svg" style="width: 400px;" /></a>
 <figcaption>
@@ -531,7 +532,7 @@ document.write(`
         \downarrow &amp; \downarrow &amp; &amp; \downarrow
     \end{pmatrix}
 \end{align*} \end{split}\]</div>
-<p>Therefore we can multiply by the inverse of the matrix of vectors <span class="math notranslate nohighlight">\(\mathbb{u}_i\)</span> on the right to get an expression we can use to work out <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<p>Therefore we can multiply by the inverse of the matrix of vectors <span class="math notranslate nohighlight">\(\mathbf{u}_i\)</span> on the right to get an expression we can use to work out <span class="math notranslate nohighlight">\(A\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     A &amp;=  
@@ -587,7 +588,7 @@ document.write(`
 <div class="proof definition admonition" id="inverse-transformation-definition">
 <p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Inverse linear transformation)</p>
 <section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation with the transformation matrix <span class="math notranslate nohighlight">\(A\)</span>. Then <span class="math notranslate nohighlight">\(T\)</span> has an <strong>inverse transformation</strong> denoted by <span class="math notranslate nohighlight">\(T^{-1}: W \to V\)</span> which reverses the effects of <span class="math notranslate nohighlight">\(T\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{v} \in V\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> is the image of <span class="math notranslate nohighlight">\(v\)</span> in <span class="math notranslate nohighlight">\(W\)</span>, then:</p>
+<p>Let <span class="math notranslate nohighlight">\(T: V \to W\)</span> be a linear transformation with the transformation matrix <span class="math notranslate nohighlight">\(A\)</span>. Then <span class="math notranslate nohighlight">\(T\)</span> has an <strong>inverse transformation</strong> denoted by <span class="math notranslate nohighlight">\(T^{-1}: W \to V\)</span> which reverses the effects of <span class="math notranslate nohighlight">\(T\)</span>. If <span class="math notranslate nohighlight">\(\mathbf{v} \in V\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{w}\)</span> is the image of <span class="math notranslate nohighlight">\(\mathbf{v}\)</span> in <span class="math notranslate nohighlight">\(W\)</span>, then:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     \mathbf{w} &amp;= A \mathbf{v} \\
