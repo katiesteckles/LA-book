@@ -448,7 +448,7 @@ document.write(`
         0 
     \end{pmatrix} \in U, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(U\)</span> is a subspace.</p>
-<p>(b)   <span class="math notranslate nohighlight">\(V\)</span> is non-empty since <span class="math notranslate nohighlight">\((1,2,0) \in V\)</span>. However <span class="math notranslate nohighlight">\(\alpha (1, 2, 0) = (\alpha , 2\alpha , 0) \notin V\)</span> for <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> so <span class="math notranslate nohighlight">\(V\)</span> is not a subspace.</p>
+<p>(b)   <span class="math notranslate nohighlight">\(V\)</span> is non-empty since <span class="math notranslate nohighlight">\((1,2,0) \in V\)</span>. By the subspace condition, if <span class="math notranslate nohighlight">\(\mathbf{u}, \mathbf{v} \in V\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span>, we must have that <span class="math notranslate nohighlight">\(\mathbf{u} = \mathbf{v} = (1,2,0)\)</span> since this is the only element. Then for values of <span class="math notranslate nohighlight">\(\alpha \neq 0\)</span>, <span class="math notranslate nohighlight">\((1, 2, 0) + \alpha (1, 2, 0) = (1+ \alpha , 2 + 2\alpha , 0) \notin V\)</span>, so <span class="math notranslate nohighlight">\(V\)</span> is not a subspace.</p>
 <p>(c)   <span class="math notranslate nohighlight">\(W\)</span> is non-empty since <span class="math notranslate nohighlight">\(\mathbf{0} \in W\)</span>. Let <span class="math notranslate nohighlight">\(\mathbf{u} = (0, u_2, 0), \mathbf{v} = (0, v_2, 0) \in U\)</span> and <span class="math notranslate nohighlight">\(\alpha \in \mathbb{R}\)</span> then</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \mathbf{u} + \alpha \mathbf{v} = 
@@ -456,7 +456,7 @@ document.write(`
     \begin{pmatrix} 0 \\ v_2 \\ 0 \end{pmatrix} = 
     \begin{pmatrix} 0 \\ u_2 + \alpha v_2 \\ 0 \end{pmatrix} \in W, \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(W\)</span> is a subspace. Note that <span class="math notranslate nohighlight">\(W \subseteq U\)</span> so since we showed <span class="math notranslate nohighlight">\(U\)</span> is a subspace then <span class="math notranslate nohighlight">\(W\)</span> must also be a subspace.</p>
-<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X\)</span> then <span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (0, 2, 0) \notin X\)</span>.</p>
+<p>(d)   <span class="math notranslate nohighlight">\(X\)</span> is not a subspace since if <span class="math notranslate nohighlight">\(\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X\)</span> and <span class="math notranslate nohighlight">\(\alpha = 1 \in \mathbb{R}\)</span>, then <span class="math notranslate nohighlight">\(\mathbf{u} + \alpha \mathbf{v} = (0, 2, 0) \notin X\)</span>.</p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A5_Vector_spaces_exercises_solutions-solution-2">
@@ -559,7 +559,7 @@ document.write(`
 
 <p class="admonition-title">Solution to<a class="reference internal" href="5.5_Vector_spaces_exercises.html#vector-spaces-ex-R4-basis"> Exercise 5.5</a></p>
 <section id="solution-content">
-<p>We need to find two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that are linearly independent to <span class="math notranslate nohighlight">\((1, 1, 2, 4)\)</span> and <span class="math notranslate nohighlight">\((2, -1, -5, 2)\)</span> and one another. Let’s choose <span class="math notranslate nohighlight">\((1, 0, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((0, 1, 0, 0)\)</span>  and check for linear dependence</p>
+<p>Let’s choose <span class="math notranslate nohighlight">\((1, 0, 0, 0)\)</span> and <span class="math notranslate nohighlight">\((0, 1, 0, 0)\)</span>, and check that they are linearly independent to <span class="math notranslate nohighlight">\((1, 1, 2, 4)\)</span> and <span class="math notranslate nohighlight">\((2, -1, -5, 2)\)</span> and one another. Check for linear dependence:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align*}
     &amp; \left( \begin{array}{cccc|c}
@@ -601,7 +601,17 @@ document.write(`
         0 &amp; 0 &amp; 0 &amp; 1 &amp; 0
     \end{array} \right)
 \end{align*} \end{split}\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}\)</span> is a basis for <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>. Note that we could have used any two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that form a linearly independent set of vectors.</p>
+<p>Therefore <span class="math notranslate nohighlight">\(\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}\)</span> is a linearly independent set. To show it is a spanning set for <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span>, we can check that the system has solutions - that is, the determinant of the matrix of coefficients is non-zero.
+$<span class="math notranslate nohighlight">\(\begin{vmatrix}{cccc|c}
+        1 &amp; 0 &amp; 1 &amp; 2 \\
+        0 &amp; 1 &amp; 1 &amp; -1 \\
+        0 &amp; 0 &amp; 2 &amp; -5 \\
+        0 &amp; 0 &amp; 4 &amp; 2 
+    \end{vmatrix} = 24 \neq 0\)</span>$</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Hence this is a spanning set, and hence it is a basis.
+</pre></div>
+</div>
+<p>Note that we could have used any two vectors in <span class="math notranslate nohighlight">\(\mathbb{R}^4\)</span> that form a linearly independent set of vectors to create a basis.</p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A5_Vector_spaces_exercises_solutions-solution-5">
