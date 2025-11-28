@@ -191,7 +191,8 @@ $$ \begin{align*}
 \end{align*} $$
 
 Therefore $\{(1, 1, 2, 4), (2, -1, -5, 2), \mathbf{e}_1, \mathbf{e}_2 \}$ is a linearly independent set. To show it is a spanning set for $\mathbb{R}^4$, we can check that the system has solutions - that is, the determinant of the matrix of coefficients is non-zero.
-$$\begin{vmatrix}{cccc|c}
+
+$$\begin{vmatrix}
         1 & 0 & 1 & 2 \\
         0 & 1 & 1 & -1 \\
         0 & 0 & 2 & -5 \\
