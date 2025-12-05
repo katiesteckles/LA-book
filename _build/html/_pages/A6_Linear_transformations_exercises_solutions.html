@@ -484,6 +484,37 @@ document.write(`
     T(u) + \alpha T(v) &amp;= T(f(x)) + \alpha T(g(x)) = xf(x) + \alpha x g(x),
 \end{align*} \end{split}\]</div>
 <p>therefore <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation.</p>
+<p>(h) Let <span class="math notranslate nohighlight">\(u = (a_1 + i b_1, a_2 + i b_2), v = (a_3 + i b_3, a_4 + i b_4) \in \mathbb{C}^2\)</span> and <span class="math notranslate nohighlight">\(\alpha = c + id \in \mathbb{C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T(u + \alpha v) &amp;= T((a_1 + i b_1, a_2 + i b_2) + (c + id) (a_3 + i b_3, a_4 + i b_4)) \\ 
+&amp;= T((a_1 + i b_1 + (c + id)(a_3 + i b_3), a_2 + i b_2 + (c + id)(a_4 + i b_4)) \\ 
+&amp;= a_1 + i b_1 + (c + id)(a_3 + i b_3) + a_2 + i b_2 + (c + id)(a_4 + i b_4) \\ 
+    T(u) + \alpha T(v) &amp;= T((a_1 + i b_1, a_2 + i b_2)) + (c + id)T((a_3 + i b_3, a_4 + i b_4)) \\ 
+&amp;= a_1 + i b_1 + a_2 + i b_2 + (c + id) (a_3 + i b_3 + a_4 + i b_4)
+\end{align*} \end{split}\]</div>
+<p>This is the same, therefore <span class="math notranslate nohighlight">\(T\)</span> is a linear transformation.</p>
+<p>(i) This is not a linear transformation. Indeed, Let <span class="math notranslate nohighlight">\(u = (1 + 2i, 3+4i)\)</span> and <span class="math notranslate nohighlight">\(v = (5+ 6i, 7+8i) \in \mathbb{C}^2)\)</span> and <span class="math notranslate nohighlight">\(\alpha = 1 \in \mathbb{C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T(u + \alpha v) &amp;= T((1 + 2i + 5 + 6i, 3 + 4i + 7 + 8i)) \\ 
+&amp;= T((6 + 8i, 10 + 12i)) = (6+8i)(10+12i) = 60 + 80i + 72i - 96 \\ 
+&amp;= 152i - 36 \\
+    T(u) + \alpha T(v) &amp;= T((1 + 2i, 3+4i)) + T((5+ 6i, 7+8i)) \\
+&amp;= (1+2i)(3+4i) + (5+6i)(7+8i) \\
+&amp;= (3+6i +4i -8) + (35 + 42i + 40i - 48) \\
+&amp;= 92i-18
+\end{align*} \end{split}\]</div>
+<p>These are not the same, therefore <span class="math notranslate nohighlight">\(T\)</span> is not a linear transformation.</p>
+<p>(j) This is not a linear transformation. Indeed, let <span class="math notranslate nohighlight">\(u = (1 + 2i, 3+4i)\)</span> and <span class="math notranslate nohighlight">\(v = (5+ 6i, 7+8i) \in \mathbb{C}^2)\)</span> and <span class="math notranslate nohighlight">\(\alpha = 1+i \in \mathbb{C}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{align*}
+    T(u + \alpha v) &amp;= T((1 + 2i + (1+i)(5 + 6i), 3 + 4i + (1+i)(7 + 8i))) \\
+&amp;= T((13i, 2+19i)) = 2-19i \\ 
+    T(u) + \alpha T(v) &amp;= T((1 + 2i, 3+4i)) + (1+i) T((5+ 6i, 7+8i)) \\
+&amp;= 3-4i + (1+i)(7-8i) = 18 -5i
+\end{align*} \end{split}\]</div>
+<p>These are not the same, therefore <span class="math notranslate nohighlight">\(T\)</span> is not a linear transformation.</p>
 </section>
 </div>
 <div class="solution admonition" id="_pages/A6_Linear_transformations_exercises_solutions-solution-1">
