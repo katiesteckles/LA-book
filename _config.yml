@@ -7,7 +7,7 @@
 # Book settings
 title                 : Linear Algebra
 author                : "Dr Katie Steckles (based on original book by Dr Jon Shiach)"
-copyright             : "2025"
+copyright             : "2026"
 logo                  : "_images/LA_logo.png"
 # only_build_toc_files: true
 
