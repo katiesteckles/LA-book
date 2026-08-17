@@ -1,3 +1,7 @@
+---
+numbering: false
+---
+
 
 # Introduction
 
@@ -15,8 +19,11 @@ These are the materials that accompany the linear algebra part of the module Mat
 
 Matrices
 ^^^
-
+```{figure} ../_images/0_matrix-w.svg
+:class: hidden dark:block
+```
 ```{figure} ../_images/0_matrix.svg
+:class: dark:hidden
 ```
 ````
 
@@ -29,8 +36,13 @@ Matrices
 Systems of Linear Equations
 ^^^
 
-```{figure} ../_images/2_consistent_systems.png
+```{figure} ../_images/2_ns-consistent_systems.png
 :width: 250
+:class: dark:hidden
+```
+```{figure} ../_images/2_ns-consistent_systems-w.png
+:width: 250
+:class: hidden dark:block
 ```
 ````
 
@@ -45,6 +57,11 @@ Vectors
 
 ```{figure} ../_images/3_dot_product.svg
 :width: 250
+:class: dark:hidden
+```
+```{figure} ../_images/3_dot_product-w.svg
+:width: 250
+:class: hidden dark:block
 ```
 ````
 
@@ -59,6 +76,11 @@ Co-ordinate Geometry
 
 ```{figure} ../_images/4_line_line_distance.svg
 :width: 250
+:class: dark:hidden
+```
+```{figure} ../_images/4_line_line_distance.svg
+:width: 250
+:class: hidden dark:block
 ```
 ````
 
@@ -73,6 +95,11 @@ Vector Spaces
 
 ```{figure} ../_images/5_subspaces.svg
 :width: 250
+:class: dark:hidden
+```
+```{figure} ../_images/5_subspaces.svg
+:width: 250
+:class: hidden dark:block
 ```
 ````
 
@@ -87,6 +114,11 @@ Linear Transformations
 
 ```{figure} ../_images/6_linear_transformation.svg
 :width: 250
+:class: dark:hidden
+```
+```{figure} ../_images/6_linear_transformation.svg
+:width: 250
+:class: hidden dark:block
 ```
 ````
 `````
@@ -98,8 +130,9 @@ The examples and exercises contained in this book have the solutions hidden from
 ---
 
 `````{grid}
-````{grid-item}
 :columns: 2
+
+````{grid-item}
 ```{image} ../_images/katie_steckles.jpg
 :width: 125px
 :align: left

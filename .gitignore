@@ -15,4 +15,13 @@ _pages/.DS_Store
 .DS_Store
 .DS_Store
 .DS_Store
+<<<<<<< Updated upstream
 .DS_Store
+=======
+
+# MyST build outputs
+_build
+
+# MyST build outputs
+_build
+>>>>>>> Stashed changes

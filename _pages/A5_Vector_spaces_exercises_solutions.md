@@ -1,3 +1,6 @@
+---
+numbering: false
+---
 (vector-spaces-exercises-solutions-section)=
 
 # Vector Spaces Exercise Solutions
