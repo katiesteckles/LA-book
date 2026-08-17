@@ -78,7 +78,7 @@ Co-ordinate Geometry
 :width: 250
 :class: dark:hidden
 ```
-```{figure} ../_images/4_line_line_distance.svg
+```{figure} ../_images/4_line_line_distance-w.svg
 :width: 250
 :class: hidden dark:block
 ```
@@ -97,7 +97,7 @@ Vector Spaces
 :width: 250
 :class: dark:hidden
 ```
-```{figure} ../_images/5_subspaces.svg
+```{figure} ../_images/5_subspaces-w.svg
 :width: 250
 :class: hidden dark:block
 ```
@@ -116,7 +116,7 @@ Linear Transformations
 :width: 250
 :class: dark:hidden
 ```
-```{figure} ../_images/6_linear_transformation.svg
+```{figure} ../_images/6_linear_transformation-w.svg
 :width: 250
 :class: hidden dark:block
 ```
