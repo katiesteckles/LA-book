@@ -1,8 +1,14 @@
+---
+numbering: false
+---
 (vector-spaces-exercises-solutions-section)=
 
 # Vector Spaces Exercise Solutions
 
-```{solution} vector-spaces-ex-R3-axioms
+```{admonition} Solution to Exercise 5.1
+:class: seealso
+
+{prf:ref}`Exercise 5.1<vector-spaces-ex-R3-axioms>`
 
 
 Let $\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3$ and $\alpha, \beta \in \mathbb{R}$ then 
@@ -18,7 +24,10 @@ Let $\mathbf{u}, \mathbf{v}, \mathbf{w} \in \mathbb{R}^3$ and $\alpha, \beta \in
 
 All of the axioms of vector spaces hold for $\mathbb{R}^3$.
 ```
-```{solution} vector-spaces-ex-R3-subspaces
+```{admonition} Solution to Exercise 5.2
+:class: seealso
+
+{prf:ref}`Exercise 5.2<vector-spaces-ex-R3-subspaces>`
 
 
 (a) &emsp; $U$ is non-empty since $\mathbf{0} \in U$. Let $\mathbf{u} = (u_1, u_2, 0), \mathbf{v} = (v_1, v_2, 0) \in U$ and $\alpha \in \mathbb{R}$ then
@@ -46,7 +55,10 @@ therefore $W$ is a subspace. Note that $W \subseteq U$ so since we showed $U$ is
 
 (d) &emsp; $X$ is not a subspace since if $\mathbf{u} = (1, 1, 0), \mathbf{v} = (-1, 1, 0) \in X$ and $\alpha = 1 \in \mathbb{R}$, then $\mathbf{u} + \alpha \mathbf{v} = (0, 2, 0) \notin X$.
 ```
-```{solution} vector-spaces-ex-M2-subspaces
+```{admonition} Solution to Exercise 5.3
+:class: seealso
+
+{prf:ref}`Exercise 5.3<vector-spaces-ex-M2-subspaces>`
 
 
 (a) &emsp; $A$ is non-empty since $\begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in A$. Let $U = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in A$ then 
@@ -68,7 +80,10 @@ so $B$ is a subspace.
 
 (c) &emsp; $C$ is not a subspace since $U = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in C$ but $2U = \begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \notin C$.
 ```
-```{solution} vector-spaces-R3-basis
+```{admonition} Solution to Exercise 5.4
+:class: seealso
+
+{prf:ref}`Exercise 5.4<vector-spaces-R3-basis>`
 
 
 We need to show that the vectors in the set are {prf:ref}`linearly independent<linear-dependence-definition>`.
@@ -144,7 +159,10 @@ $$ \begin{align*}
     \begin{pmatrix} 0 \\ 1 \\ -2  \end{pmatrix}.
 \end{align*} $$
 ```
-```{solution} vector-spaces-ex-R4-basis
+```{admonition} Solution to Exercise 5.5
+:class: seealso
+
+{prf:ref}`Exercise 5.5<vector-spaces-ex-R4-basis>`
 
 
 Let's choose $(1, 0, 0, 0)$ and $(0, 1, 0, 0)$, and check that they are linearly independent to $(1, 1, 2, 4)$ and $(2, -1, -5, 2)$ and one another. Check for linear dependence:
@@ -203,7 +221,10 @@ Hence this is a spanning set, and hence it is a basis.
 
 Note that we could have used any two vectors in $\mathbb{R}^4$ that form a linearly independent set of vectors to create a basis.
 ```
-```{solution} vector-spaces-ex-R4-basis-2
+```{admonition} Solution to Exercise 5.6
+:class: seealso
+
+{prf:ref}`Exercise 5.6<vector-spaces-ex-R4-basis-2>`
 
 We need to find which of the vectors $\mathbf{u}$, $\mathbf{v}$, $\mathbf{w}$, $\mathbf{x}$ and $\mathbf{y}$ are linearly dependent (and therefore remove them to from the basis).
 

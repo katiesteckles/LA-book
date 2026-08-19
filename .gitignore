@@ -1,17 +1,6 @@
 **/.DS_Store
-.DS_Store
 
-.DS_Store
-_pages/.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-.DS_Store
-_pages/.DS_Store
-.DS_Store
-.DS_Store
+# MyST build outputs
+_build
+
 .DS_Store
