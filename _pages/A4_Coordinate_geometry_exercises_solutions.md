@@ -251,7 +251,7 @@ So the line intersects with the plane at
 
 {prf:ref}`Exercise 4.7<geometry-ex-point-plane-distance>`
 
-Using the {prf:ref}`geometric definition of a dot product<dot-product-definition>`
+Using the {prf:ref}`geometric definition of a dot product<dot-product-definition>`:
 
 \begin{align*}
     (\mathbf{q} - \mathbf{p})\cdot \mathbf{n} &= \|\mathbf{n}\|\|\mathbf{q} - \mathbf{p}\| \cos(\theta).
