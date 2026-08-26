@@ -71,14 +71,14 @@ project:
             - file: _pages/6.3_Rotation_reflection_and_translation.md
             - file: _pages/6.4_Translation.md
             - file: _pages/6.5_Linear_transforation_exercises.md
-        - title: Exercises Solutions
-          children:
-                - file: _pages/A1_Matrices_exercises_solutions.md
-                - file: _pages/A2_Linear_systems_exercises_solutions.md
-                - file: _pages/A3_Vectors_exercises_solutions.md
-                - file: _pages/A4_Coordinate_geometry_exercises_solutions.md
-                - file: _pages/A5_Vector_spaces_exercises_solutions.md
-                - file: _pages/A6_Linear_transformations_exercises_solutions.md
+#        - title: Exercises Solutions
+#          children:
+#                - file: _pages/A1_Matrices_exercises_solutions.md
+#                - file: _pages/A2_Linear_systems_exercises_solutions.md
+#                - file: _pages/A3_Vectors_exercises_solutions.md
+#                - file: _pages/A4_Coordinate_geometry_exercises_solutions.md
+#                - file: _pages/A5_Vector_spaces_exercises_solutions.md
+#                - file: _pages/A6_Linear_transformations_exercises_solutions.md
 
 site:
     template: book-theme
