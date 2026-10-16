@@ -171,7 +171,7 @@ $$ \begin{align*}
 (b) &emsp; $\det(B) = \begin{vmatrix} 3 & 0 \\ -1 & 5 \end{vmatrix} = 3(5) - 0 (-1) = 15$
 ````
 
-<!-- 
+
 ```{admonition} Solution to Exercise 1.6
 :class: seealso
 
@@ -626,4 +626,4 @@ $$ \begin{align*}
     &= \frac{1}{15} \begin{pmatrix} -10 & 45 \\ -59 & -27 \end{pmatrix}
 \end{align*} $$
 ```
- -->
+
