@@ -133,7 +133,7 @@ $$ \begin{align*}
 \end{align*} $$ 
 
 ```
-
+<!--
 
 ```{admonition} Solution to Exercise 2.3
 :class: seealso
@@ -1268,3 +1268,4 @@ $$ \begin{align*}
 
 therefore $\operatorname{rank}(A) = 2$ and $\operatorname{rank}(A \mid \mathbf{b}) = 3$. Since $\operatorname{rank}(A) < \operatorname{rank}(A \mid \mathbf{b})$ then this is an inconsistent system and does not have a solution.
 ```
+-->
