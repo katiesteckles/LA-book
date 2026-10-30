@@ -133,7 +133,7 @@ $$ \begin{align*}
 \end{align*} $$ 
 
 ```
-<!--
+
 
 ```{admonition} Solution to Exercise 2.3
 :class: seealso
@@ -632,6 +632,8 @@ $$ \begin{align*}
 \end{align*} $$ 
 
 ```
+
+<!--
 
 ```{admonition} Solution to Exercise 2.5
 :class: seealso
