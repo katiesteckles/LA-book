@@ -146,9 +146,8 @@ $$ \begin{align*}
     & \left( \begin{array}{cc|c} 
          -1 & 3 & -2 \\ 
          -2 & 1 & 1 \\ 
-    \end{array} \right) \\
-    \begin{array}{l} \phantom{x} \\ R_{2} - 2 R_{1} \end{array} 
-    \longrightarrow 
+    \end{array} \right) \\ \\
+    R_{2} - 2 R_{1} \longrightarrow 
     & \left( \begin{array}{cc|c} 
          -1 & 3 & -2 \\ 
          0 & -5 & 5 \\ 
@@ -169,16 +168,17 @@ $$ \begin{align*}
          3 & 1 & 2 & 11 \\ 
          4 & 0 & -4 & -4 \\ 
          4 & -2 & 1 & 13 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{4}{3} R_{1} \\ R_{3} - \frac{4}{3} R_{1} \end{array} & 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{2} - \frac{4}{3} R_{1} \\ \phantom{x}\\ R_{3} - \frac{4}{3} R_{1} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & 1 & 2 & 11 \\ 
+                  & & & \\
          0 & - \frac{4}{3} & - \frac{20}{3} & - \frac{56}{3} \\ 
+         & & & \\
          0 & - \frac{10}{3} & - \frac{5}{3} & - \frac{5}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{5}{2} R_{2} \end{array} \\ \\ 
-    \longrightarrow 
+    \end{array} \right) \\ \\
+    R_{3} - \frac{5}{2} R_{2}  \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & 1 & 2 & 11 \\ 
          0 & - \frac{4}{3} & - \frac{20}{3} & - \frac{56}{3} \\ 
@@ -201,15 +201,15 @@ $$ \begin{align*}
          -1 & -5 & -2 & -17 \\ 
          2 & -2 & -3 & -14 \\ 
          3 & -1 & 4 & -13 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} + 2 R_{1}\\ R_{3} + 3 R_{1}\end{array} & 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{2} + 2 R_{1}\\ R_{3} + 3 R_{1}\end{array} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          -1 & -5 & -2 & -17 \\ 
          0 & -12 & -7 & -48 \\ 
          0 & -16 & -2 & -64 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{4}{3} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{3} - \frac{4}{3} R_{2} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          -1 & -5 & -2 & -17 \\ 
@@ -233,15 +233,15 @@ $$ \begin{align*}
          -1 & -5 & -2 & -26 \\ 
          2 & -2 & -3 & -19 \\ 
          3 & -1 & -4 & -20 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} + 2 R_{1}\\ R_{3} + 3 R_{1}\end{array} & 
+    \end{array} \right) \\ \\
+    \begin{array}{l} R_{2} + 2 R_{1}\\ R_{3} + 3 R_{1}\end{array} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          -1 & -5 & -2 & -26 \\ 
          0 & -12 & -7 & -71 \\ 
          0 & -16 & -10 & -98 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{4}{3} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+     R_{3} - \frac{4}{3} R_{2}  
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          -1 & -5 & -2 & -26 \\ 
@@ -266,24 +266,24 @@ $$ \begin{align*}
          0 & -4 & 3 & -4 & 41 \\ 
          2 & 3 & 3 & -3 & 11 \\ 
          -2 & 2 & -5 & -4 & -21 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{2}{3} R_{1} \\ R_{4} + \frac{2}{3} R_{1}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l} R_{3} - \frac{2}{3} R_{1} \\ \phantom{x}\\ R_{4} + \frac{2}{3} R_{1}\end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
          0 & -4 & 3 & -4 & 41 \\ 
          0 & \frac{19}{3} & \frac{17}{3} & - \frac{7}{3} & - \frac{23}{3} \\ 
          0 & - \frac{4}{3} & - \frac{23}{3} & - \frac{14}{3} & - \frac{7}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} + \frac{19}{12} R_{2}\\ R_{4} - \frac{1}{3} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{3} + \frac{19}{12} R_{2}\\ \phantom{x}\\ R_{4} - \frac{1}{3} R_{2} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
          0 & -4 & 3 & -4 & 41 \\ 
          0 & 0 & \frac{125}{12} & - \frac{26}{3} & \frac{229}{4} \\ 
          0 & 0 & - \frac{26}{3} & - \frac{10}{3} & -16 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ \phantom{x} \\ R_{4} + \frac{104}{125} R_{3}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+     R_{4} + \frac{104}{125} R_{3} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
@@ -310,24 +310,24 @@ $$ \begin{align*}
          4 & -5 & 1 & -5 & 42 \\ 
          3 & 3 & -1 & -5 & 20 \\ 
          1 & 0 & 1 & 3 & -4 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - 2 R_{1} \\ R_{3} - \frac{3}{2} R_{1} \\ R_{4} - \frac{1}{2} R_{1} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l} R_{2} - 2 R_{1} \\ R_{3} - \frac{3}{2} R_{1}  \\ \phantom{x} \\ R_{4} - \frac{1}{2} R_{1} \end{array}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          2 & -3 & -3 & 4 & -1 \\ 
          0 & 1 & 7 & -13 & 44 \\ 
          0 & \frac{15}{2} & \frac{7}{2} & -11 & \frac{43}{2} \\ 
          0 & \frac{3}{2} & \frac{5}{2} & 1 & - \frac{7}{2} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{15}{2} R_{2} \\ R_{4} - \frac{3}{2} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{3} - \frac{15}{2} R_{2} \\ \phantom{x} \\ R_{4} - \frac{3}{2} R_{2} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          2 & -3 & -3 & 4 & -1 \\ 
          0 & 1 & 7 & -13 & 44 \\ 
          0 & 0 & -49 & \frac{173}{2} & - \frac{617}{2} \\ 
          0 & 0 & -8 & \frac{41}{2} & - \frac{139}{2} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ \phantom{x} \\ R_{4} - \frac{8}{49} R_{3} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+   R_{4} - \frac{8}{49} R_{3} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          2 & -3 & -3 & 4 & -1 \\ 
@@ -359,14 +359,13 @@ $$ \begin{align*}
     & \left( \begin{array}{cc|c} 
          -1 & 3 & -2 \\ 
          -2 & 1 & 1 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{1} \leftrightarrow R_{2} \\ \end{array} & 
-    \longrightarrow 
+    \end{array} \right) \\ \\
+   R_{1} \leftrightarrow R_{2} \longrightarrow 
     & \left( \begin{array}{cc|c} 
          -2 & 1 & 1 \\ 
          -1 & 3 & -2 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{1}{2} R_{1} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+     R_{2} - \frac{1}{2} R_{1} 
     \longrightarrow 
     & \left( \begin{array}{cc|c} 
          -2 & 1 & 1 \\ 
@@ -388,29 +387,29 @@ $$ \begin{align*}
          3 & 1 & 2 & 11 \\ 
          4 & 0 & -4 & -4 \\ 
          4 & -2 & 1 & 13 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{1} \leftrightarrow R_{2} \\ \\ \phantom{x} \end{array} & 
+    \end{array} \right) \\ \\
+   R_{1} \leftrightarrow R_{2} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          4 & 0 & -4 & -4 \\ 
          3 & 1 & 2 & 11 \\ 
          4 & -2 & 1 & 13 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{3}{4} R_{1} \\ R_{3} - R_{1} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{2} - \frac{3}{4} R_{1} \\ R_{3} - R_{1} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          4 & 0 & -4 & -4 \\ 
          0 & 1 & 5 & 14 \\ 
          0 & -2 & 5 & 17 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{2} \leftrightarrow R_{3} \\ \end{array} & 
+    \end{array} \right) \\ \\
+     R_{2} \leftrightarrow R_{3}  
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          4 & 0 & -4 & -4 \\ 
          0 & -2 & 5 & 17 \\ 
          0 & 1 & 5 & 14 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} + \frac{1}{2} R_{2}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{3} + \frac{1}{2} R_{2}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          4 & 0 & -4 & -4 \\ 
@@ -434,29 +433,29 @@ $$ \begin{align*}
          -1 & -5 & -2 & -17 \\ 
          2 & -2 & -3 & -14 \\ 
          3 & -1 & 4 & -13 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{1} \leftrightarrow R_{3} \\ \end{array} & 
+    \end{array} \right) \\ \\
+    R_{1} \leftrightarrow R_{3}  
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & 4 & -13 \\ 
          2 & -2 & -3 & -14 \\ 
          -1 & -5 & -2 & -17 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{2}{3} R_{1} \\ R_{3} + \frac{1}{3} R_{1}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{2} - \frac{2}{3} R_{1}\\ \phantom{x} \\ R_{3} + \frac{1}{3} R_{1}\end{array} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & 4 & -13 \\ 
          0 & - \frac{4}{3} & - \frac{17}{3} & - \frac{16}{3} \\ 
          0 & - \frac{16}{3} & - \frac{2}{3} & - \frac{64}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{2} \leftrightarrow R_{3} \\ \end{array} & 
+    \end{array} \right) \\ \\
+    R_{2} \leftrightarrow R_{3}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & 4 & -13 \\ 
          0 & - \frac{16}{3} & - \frac{2}{3} & - \frac{64}{3} \\ 
          0 & - \frac{4}{3} & - \frac{17}{3} & - \frac{16}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{1}{4} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+   R_{3} - \frac{1}{4} R_{2} 
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & 4 & -13 \\ 
@@ -480,29 +479,29 @@ $$ \begin{align*}
          -1 & -5 & -2 & -26 \\ 
          2 & -2 & -3 & -19 \\ 
          3 & -1 & -4 & -20 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{1} \leftrightarrow R_{3} \\ \end{array} & 
+    \end{array} \right) \\ \\
+    R_{1} \leftrightarrow R_{3}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & -4 & -20 \\ 
          2 & -2 & -3 & -19 \\ 
          -1 & -5 & -2 & -26 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{2}{3} R_{1} \\ R_{3} + \frac{1}{3} R_{1}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l} R_{2} - \frac{2}{3} R_{1} \\ \phantom{x}\\ R_{3} + \frac{1}{3} R_{1}\end{array}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & -4 & -20 \\ 
          0 & - \frac{4}{3} & - \frac{1}{3} & - \frac{17}{3} \\ 
          0 & - \frac{16}{3} & - \frac{10}{3} & - \frac{98}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{2} \leftrightarrow R_{3} \\ \end{array} & 
+    \end{array} \right) \\ \\
+     R_{2} \leftrightarrow R_{3}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & -4 & -20 \\ 
          0 & - \frac{16}{3} & - \frac{10}{3} & - \frac{98}{3} \\ 
          0 & - \frac{4}{3} & - \frac{1}{3} & - \frac{17}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{1}{4} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{3} - \frac{1}{4} R_{2}
     \longrightarrow 
     & \left( \begin{array}{ccc|c} 
          3 & -1 & -4 & -20 \\ 
@@ -527,32 +526,32 @@ $$ \begin{align*}
          0 & -4 & 3 & -4 & 41 \\ 
          2 & 3 & 3 & -3 & 11 \\ 
          -2 & 2 & -5 & -4 & -21 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} - \frac{2}{3} R_{1} \\ R_{4} + \frac{2}{3} R_{1}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{3} - \frac{2}{3} R_{1}\\ \phantom{x} \\ R_{4} + \frac{2}{3} R_{1}\end{array}  
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
          0 & -4 & 3 & -4 & 41 \\ 
          0 & \frac{19}{3} & \frac{17}{3} & - \frac{7}{3} & - \frac{23}{3} \\ 
          0 & - \frac{4}{3} & - \frac{23}{3} & - \frac{14}{3} & - \frac{7}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{2} \leftrightarrow R_{3} \\ \\ \phantom{x} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{2} \leftrightarrow R_{3}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
          0 & \frac{19}{3} & \frac{17}{3} & - \frac{7}{3} & - \frac{23}{3} \\ 
          0 & -4 & 3 & -4 & 41 \\ 
          0 & - \frac{4}{3} & - \frac{23}{3} & - \frac{14}{3} & - \frac{7}{3} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} + \frac{12}{19} R_{2}\\ R_{4} + \frac{4}{19} R_{2}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{3} + \frac{12}{19} R_{2}\\ \phantom{x} \\R_{4} + \frac{4}{19} R_{2}\end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
          0 & \frac{19}{3} & \frac{17}{3} & - \frac{7}{3} & - \frac{23}{3} \\ 
          0 & 0 & \frac{125}{19} & - \frac{104}{19} & \frac{687}{19} \\ 
          0 & 0 & - \frac{123}{19} & - \frac{98}{19} & - \frac{75}{19} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ \phantom{x} \\ R_{4} + \frac{123}{125} R_{3}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{4} + \frac{123}{125} R_{3}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          3 & -5 & -4 & -1 & 28 \\ 
@@ -579,40 +578,40 @@ $$ \begin{align*}
          4 & -5 & 1 & -5 & 42 \\ 
          3 & 3 & -1 & -5 & 20 \\ 
          1 & 0 & 1 & 3 & -4 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{1} \leftrightarrow R_{2} \\ \\ \phantom{x} \\ \phantom{x} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{1} \leftrightarrow R_{2}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          4 & -5 & 1 & -5 & 42 \\ 
          2 & -3 & -3 & 4 & -1 \\ 
          3 & 3 & -1 & -5 & 20 \\ 
          1 & 0 & 1 & 3 & -4 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - \frac{1}{2} R_{1} \\ R_{3} - \frac{3}{4} R_{1} \\ R_{4} - \frac{1}{4} R_{1} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l} R_{2} - \frac{1}{2} R_{1} \\ \phantom{x}\\ R_{3} - \frac{3}{4} R_{1} \\ \phantom{x}\\ R_{4} - \frac{1}{4} R_{1} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          4 & -5 & 1 & -5 & 42 \\ 
          0 & - \frac{1}{2} & - \frac{7}{2} & \frac{13}{2} & -22 \\ 
          0 & \frac{27}{4} & - \frac{7}{4} & - \frac{5}{4} & - \frac{23}{2} \\ 
          0 & \frac{5}{4} & \frac{3}{4} & \frac{17}{4} & - \frac{29}{2} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{2} \leftrightarrow R_{3} \\ \\ \phantom{x} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+     R_{2} \leftrightarrow R_{3} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          4 & -5 & 1 & -5 & 42 \\ 
          0 & \frac{27}{4} & - \frac{7}{4} & - \frac{5}{4} & - \frac{23}{2} \\ 
          0 & - \frac{1}{2} & - \frac{7}{2} & \frac{13}{2} & -22 \\ 
          0 & \frac{5}{4} & \frac{3}{4} & \frac{17}{4} & - \frac{29}{2} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ R_{3} + \frac{2}{27} R_{2}\\ R_{4} - \frac{5}{27} R_{2} \end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    \begin{array}{l}  R_{3} + \frac{2}{27} R_{2}\\ \phantom{x}\\ R_{4} - \frac{5}{27} R_{2} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          4 & -5 & 1 & -5 & 42 \\ 
          0 & \frac{27}{4} & - \frac{7}{4} & - \frac{5}{4} & - \frac{23}{2} \\ 
          0 & 0 & - \frac{98}{27} & \frac{173}{27} & - \frac{617}{27} \\ 
          0 & 0 & \frac{29}{27} & \frac{121}{27} & - \frac{334}{27} \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ \phantom{x} \\ R_{4} + \frac{29}{98} R_{3}\end{array} \\ \\ 
+    \end{array} \right) \\ \\
+    R_{4} + \frac{29}{98} R_{3}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          4 & -5 & 1 & -5 & 42 \\ 
