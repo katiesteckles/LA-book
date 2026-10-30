@@ -146,8 +146,8 @@ $$ \begin{align*}
     & \left( \begin{array}{cc|c} 
          -1 & 3 & -2 \\ 
          -2 & 1 & 1 \\ 
-    \end{array} \right) 
-    \begin{array}{l} \phantom{x} \\ R_{2} - 2 R_{1} \end{array} & 
+    \end{array} \right) \\
+    \begin{array}{l} \phantom{x} \\ R_{2} - 2 R_{1} \end{array} 
     \longrightarrow 
     & \left( \begin{array}{cc|c} 
          -1 & 3 & -2 \\ 
