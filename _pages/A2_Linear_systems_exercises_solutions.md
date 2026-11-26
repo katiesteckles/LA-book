@@ -908,7 +908,7 @@ $$ \begin{align*}
          3 & 3 & -1 & -5 & 20 \\ 
          1 & 0 & 1 & 3 & -4 \\ 
     \end{array} \right) \\ \\ 
-    } \frac{1}{2} R_{1}\longrightarrow 
+     \frac{1}{2} R_{1} \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          1 & - \frac{3}{2} & - \frac{3}{2} & 2 & - \frac{1}{2} \\ 
          4 & -5 & 1 & -5 & 42 \\ 
@@ -946,7 +946,7 @@ $$ \begin{align*}
          0 & 0 & 1 & - \frac{173}{98} & \frac{617}{98} \\ 
          0 & 0 & 0 & \frac{625}{98} & - \frac{1875}{98} \\ 
     \end{array} \right)  \\ \\
-    \begin{array}{l} \phantom{x} \\ \phantom{x} \\ \phantom{x} \\ \frac{98}{625} R_{4}\end{array} 
+    \frac{98}{625} R_{4}
     \longrightarrow 
     & \left( \begin{array}{cccc|c} 
          1 & 0 & 0 & - \frac{79}{49} & \frac{433}{49} \\ 
@@ -984,7 +984,7 @@ $$ \begin{align*}
          1 & - \frac{1}{2} & - \frac{1}{4} & 0 \\ 
          3 & 4 & 0 & 1 \\ 
     \end{array} \right)  \\ \\
-     R_{2} - 3 R_{1} \end{array} \longrightarrow 
+     R_{2} - 3 R_{1}  \longrightarrow 
     & \left( \begin{array}{cc|cc} 
          1 & - \frac{1}{2} & - \frac{1}{4} & 0 \\ 
          0 & \frac{11}{2} & \frac{3}{4} & 1 \\ 
