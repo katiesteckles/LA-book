@@ -126,7 +126,7 @@ Let $x=0$ then $3(0) - 2 y + 2 = 10$ so $y = -4$ and a point on the plane has co
 Let $x = 2$ then $3(2) - 2 y + 2 = 10$ so $y = -1$ and a point on the plane has co-ordinates $(2, -1, 2)$.
 ```
 
-<!--```{admonition} Solution to Exercise 4.5
+```{admonition} Solution to Exercise 4.5
 :class: seealso
 
 {prf:ref}`Exercise 4.5<geometry-ex-line-point-distance>`
@@ -210,7 +210,7 @@ Using {prf:ref}`the distance between two lines<line-line-distance-theorem>`
     &= \frac{44\sqrt{69}}{69}.
 \end{align*} 
 
-```-->
+```
 
 ```{admonition} Solution to Exercise 4.6
 :class: seealso
@@ -246,7 +246,7 @@ So the line intersects with the plane at
 \end{align*} 
 ```
 
-<!--```{admonition} Solution to Exercise 4.7
+```{admonition} Solution to Exercise 4.7
 :class: seealso
 
 {prf:ref}`Exercise 4.7<geometry-ex-point-plane-distance>`
@@ -281,5 +281,5 @@ The equation of the plane is $6 x-y-4 z=3$ so letting $x=0$ and $y=1$ then $z = 
     \begin{pmatrix} 6 \\ -1 \\ -4 \end{pmatrix} \\
     &= \frac{12 - 3 + 8}{\sqrt{53}} = \frac{17}{\sqrt{53}}
 \end{align*} 
-```-->
+```
   

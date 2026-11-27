@@ -80,6 +80,8 @@ so $B$ is a subspace.
 
 (c) &emsp; $C$ is not a subspace since $U = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix} \in C$ but $2U = \begin{pmatrix} 2 & 0 \\ 0 & 0 \end{pmatrix} \notin C$.
 ```
+<!--
+
 ```{admonition} Solution to Exercise 5.4
 :class: seealso
 
@@ -159,6 +161,8 @@ $$ \begin{align*}
     \begin{pmatrix} 0 \\ 1 \\ -2  \end{pmatrix}.
 \end{align*} $$
 ```
+
+
 ```{admonition} Solution to Exercise 5.5
 :class: seealso
 
@@ -302,4 +306,4 @@ $$ \begin{align*}
 \end{align*} $$
 
 The fifth column does not have a pivot element so $\mathbf{y}$ is linearly dependent on the other vectors, therefore a basis for $W$ is $\{ \mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{x}\}$ and $\dim(W) = 4$.
-```
+```-->
